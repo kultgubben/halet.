@@ -180,10 +180,8 @@
       }
       const geo = new THREE.ShapeGeometry(shape, 6);
       geo.rotateX(-Math.PI/2);
-      if(groundMesh){ worldGroup.remove(groundMesh); groundMesh.geometry.dispose(); }
-      groundMesh = new THREE.Mesh(geo, groundMat);
-      groundMesh.position.y = 0; groundMesh.receiveShadow = true;
-      worldGroup.add(groundMesh);
+      if(groundMesh){ groundMesh.geometry.dispose(); groundMesh.geometry = geo; }
+      else { groundMesh = new THREE.Mesh(geo, groundMat); groundMesh.position.y = 0; groundMesh.receiveShadow = true; worldGroup.add(groundMesh); }
     }
 
     // ---------- holes (player + AI) with carved pit ----------
@@ -448,8 +446,8 @@
         if(buffChanged) updateBuffs();
         boardTimer-=dt; if(boardTimer<=0){ updateBoard(); boardTimer=0.4; }
 
-        // rebuild carved ground a few times per second
-        groundRebuildT-=dt; if(groundRebuildT<=0){ rebuildGround(); groundRebuildT=0.05; }
+        // rebuild carved ground every frame so the opening tracks the ring smoothly
+        rebuildGround();
       }
 
       for(const h of holes){ if(!h.dead) updateHoleVisual(h,now); }
