@@ -192,6 +192,40 @@ tr.lead td{background:color-mix(in srgb, var(--yellow) 26%, var(--surface));font
 .rider .ag{color:var(--ink2);font-size:12.5px;white-space:nowrap}
 .rider.out .nm{text-decoration:line-through;color:var(--ink3)}
 .tag{font-size:10px;font-weight:700;letter-spacing:.05em;border-radius:5px;padding:1px 5px;background:var(--t-mtn);color:var(--t-mtn-ink)}
+/* ---------- profile chart ---------- */
+.profile{width:100%;height:auto;display:block;margin:8px 0 2px}
+.parea{fill:var(--t-mtn);opacity:.8}
+.pline{fill:none;stroke:var(--t-mtn-ink);stroke-width:1.6;stroke-linejoin:round}
+.pgrid{stroke:var(--hair);stroke-width:1}
+.plab{font:9px -apple-system,BlinkMacSystemFont,sans-serif;fill:var(--ink3)}
+.pclimbline{stroke:var(--hair2);stroke-width:1;stroke-dasharray:2 3}
+.pkom{fill:var(--red)}
+.pkom.hc{stroke:var(--ink);stroke-width:1.4}
+.pkomn{font:700 8.5px -apple-system,sans-serif;fill:#fff}
+.pspr{fill:var(--green)}
+.psprn{font:700 8px -apple-system,sans-serif;fill:#fff}
+/* ---------- climb & sprint rows ---------- */
+.climbrow{display:flex;align-items:flex-start;gap:9px;padding:6px 0;border-bottom:1px solid var(--hair)}
+.climbrow:last-child{border-bottom:none}
+.cnum{flex:0 0 20px;height:20px;border-radius:50%;background:var(--red);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.cnum.spr{background:var(--green);border-radius:5px}
+.cmid{flex:1;min-width:0}
+.cn{display:block;font-size:14px;font-weight:600}
+.csub{display:block;font-size:12px;color:var(--ink2)}
+.climbrow .tag{margin-top:2px}
+.tag.t-spr{background:var(--t-flat);color:var(--t-flat-ink)}
+.tag.t-hc{background:var(--red);color:#fff}
+/* ---------- prize cards ---------- */
+.prz{padding:12px 14px}
+.przh{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px;flex-wrap:wrap}
+.przh .j{width:20px;height:20px;border-radius:5px}
+.przh .j.j-polka{background-size:7px 7px;background-position:1px 2px}
+.przh .where{font-weight:500;color:var(--ink2);font-size:12.5px}
+.przrows{margin-top:7px}
+.przrow{display:flex;gap:8px;font-size:13.5px;padding:2.5px 0}
+.przrow .rk2{width:16px;color:var(--ink3);font-weight:600}
+.przrow .nm3{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.przrow .p{color:var(--ink2);font-weight:650;white-space:nowrap}
 /* ---------- stats ---------- */
 .kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .kpi{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
@@ -255,6 +289,92 @@ const outSet = new Set(S.abandons.map(a => a.rider));
 const typeBadge = t => `<span class="badge b-${t}">${TYPE_LBL[t]}</span>`;
 const stageByN = n => R.stages.find(s => s.n === n);
 const resByN = n => RES.stages.find(s => s.n === n);
+const fmtKm = v => String(v).replace(".", ",");
+const catTag = c => c ? (c === "HC" ? '<span class="tag t-hc">HC</span>' : `<span class="tag">Kat ${c}</span>`) : '<span class="tag">Backe</span>';
+
+/* ---------- elevation profile (SVG) ---------- */
+function altAt(pr, k){
+  for(let i = 1; i < pr.length; i++){
+    if(pr[i][0] >= k){
+      const [k0,a0] = pr[i-1], [k1,a1] = pr[i];
+      return a0 + (a1-a0) * (k-k0) / Math.max(k1-k0, 1e-6);
+    }
+  }
+  return pr[pr.length-1][1];
+}
+function profileSVG(s){
+  const pr = s.profile;
+  if(!pr || pr.length < 3) return "";
+  const W = 360, H = 150, padL = 32, padR = 8, padT = 16, padB = 16;
+  const km = s.km;
+  const alts = pr.map(p => p[1]);
+  const rawMin = Math.min(...alts), rawMax = Math.max(...alts);
+  const span = Math.max(rawMax - rawMin, 150);
+  const aMin = Math.max(0, Math.floor((rawMin - span*0.05)/50)*50);
+  const aTop = rawMax + span*0.22;
+  const X = k => padL + (W-padL-padR) * k/km;
+  const Y = a => padT + (H-padT-padB) * (1 - (a-aMin)/(aTop-aMin));
+  let line = `M${X(pr[0][0]).toFixed(1)},${Y(pr[0][1]).toFixed(1)}`;
+  for(const [k,a] of pr.slice(1)) line += `L${X(k).toFixed(1)},${Y(a).toFixed(1)}`;
+  const area = line + `L${X(km).toFixed(1)},${Y(aMin).toFixed(1)}L${X(0).toFixed(1)},${Y(aMin).toFixed(1)}Z`;
+  const step = span > 2200 ? 1000 : span > 900 ? 500 : 200;
+  let grid = "";
+  for(let a = Math.ceil(aMin/step)*step; a < aTop; a += step)
+    grid += `<line x1="${padL}" x2="${W-padR}" y1="${Y(a).toFixed(1)}" y2="${Y(a).toFixed(1)}" class="pgrid"/><text x="${padL-4}" y="${(Y(a)+3).toFixed(1)}" class="plab" text-anchor="end">${a}</text>`;
+  let marks = "";
+  (s.climbs||[]).forEach((c,i) => {
+    if(c.km == null) return;
+    const x = X(Math.min(c.km, km)), y = Y(c.altM != null ? c.altM : altAt(pr, c.km));
+    marks += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${(y-3).toFixed(1)}" y2="${Y(aMin).toFixed(1)}" class="pclimbline"/>
+      <circle cx="${x.toFixed(1)}" cy="${(y-11).toFixed(1)}" r="7.5" class="pkom${c.cat==="HC"?" hc":""}"/>
+      <text x="${x.toFixed(1)}" y="${(y-8).toFixed(1)}" class="pkomn" text-anchor="middle">${i+1}</text>`;
+  });
+  if(s.sprint && s.sprint.km != null){
+    const x = X(s.sprint.km), y = Y(altAt(pr, s.sprint.km));
+    marks += `<rect x="${(x-5.5).toFixed(1)}" y="${(y-19).toFixed(1)}" width="11" height="11" rx="2.5" class="pspr"/><text x="${x.toFixed(1)}" y="${(y-10.6).toFixed(1)}" class="psprn" text-anchor="middle">S</text>`;
+  }
+  let ticks = "";
+  if(km > 60) for(let k = 50; k < km-24; k += 50) ticks += `<text x="${X(k).toFixed(1)}" y="${H-3}" class="plab" text-anchor="middle">${k}</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" class="profile" role="img" aria-label="Höjdprofil etapp ${s.n}">
+    ${grid}<path d="${area}" class="parea"/><path d="${line}" class="pline"/>${marks}${ticks}
+    <text x="${padL}" y="${H-3}" class="plab">0 km</text>
+    <text x="${W-padR}" y="${H-3}" class="plab" text-anchor="end">${fmtKm(km)} km</text>
+  </svg>`;
+}
+function climbList(s, compact){
+  let rows = (s.climbs||[]).map((c,i) => `<div class="climbrow">
+    <span class="cnum num">${i+1}</span>
+    <span class="cmid"><span class="cn">${esc(c.name)}${c.altM ? ` <span class="muted" style="font-weight:500">· ${c.altM} m ö.h.</span>` : ""}</span>
+    <span class="csub num">${c.km != null ? `vid km ${fmtKm(c.km)}` : ""}${c.lenKm ? ` · ${fmtKm(c.lenKm)} km @ ${fmtKm(c.gradPct)} %` : ""}</span></span>
+    ${catTag(c.cat)}</div>`).join("");
+  if(s.sprint) rows += `<div class="climbrow">
+    <span class="cnum spr">S</span>
+    <span class="cmid"><span class="cn">Mellanspurt · ${esc(s.sprint.name)}</span>
+    <span class="csub num">${s.sprint.km != null ? `vid km ${fmtKm(s.sprint.km)}` : ""} · poäng till gröna tröjan (25-20-16-…)</span></span>
+    <span class="tag t-spr">Spurt</span></div>`;
+  return rows ? `<div style="margin-top:8px">${rows}</div>` : "";
+}
+function przTop(top){
+  return `<div class="przrows">${top.map((t,i) => `<div class="przrow num"><span class="rk2">${i+1}</span><span class="nm3">${esc(t.rider)}</span><span class="p">${t.pts != null ? t.pts + " p" : ""}</span></div>`).join("")}</div>`;
+}
+function prizeSection(r){
+  const pz = r.prizes;
+  if(!pz) return "";
+  let h = `<h2 class="sec disp">Poängen vid priserna</h2>`;
+  if(pz.sprint && pz.sprint.top.length)
+    h += `<div class="card prz"><div class="przh"><span class="j j-green"></span>Mellanspurten <span class="where">${esc(pz.sprint.name)}</span></div>${przTop(pz.sprint.top)}</div>`;
+  for(const c of pz.climbs){
+    h += `<div class="card prz"><div class="przh"><span class="j j-polka"></span>${esc(c.name)} <span class="where">${c.cat ? (c.cat==="HC"?"HC":"kat "+c.cat) : ""}</span></div>${
+      c.top.length ? przTop(c.top) : '<div class="small muted" style="margin-top:6px">Uppgift saknas för passagen.</div>'}</div>`;
+  }
+  if(pz.finishPoints && pz.finishPoints.length)
+    h += `<div class="card prz"><div class="przh"><span class="j j-green"></span>Poäng vid målgången</div>${przTop(pz.finishPoints)}</div>`;
+  if(pz.bonus && pz.bonus.length)
+    h += `<div class="card prz"><div class="przh"><span class="j j-yellow"></span>Bonussekunder i mål</div><div class="przrows">${
+      pz.bonus.map((b,i) => `<div class="przrow num"><span class="rk2">${i+1}</span><span class="nm3">${esc(b.rider)}</span><span class="p">−${b.sec} s</span></div>`).join("")}</div></div>`;
+  if(pz.note) h += `<div class="card"><span class="small muted">${esc(pz.note)}</span></div>`;
+  return h;
+}
 
 /* ---------- IDAG ---------- */
 function renderIdag(){
@@ -294,8 +414,9 @@ function renderIdag(){
     <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline">
       <strong>${esc(next.start)} → ${esc(next.finish)}</strong><span class="chev muted">›</span>
     </div>
-    <div class="small muted" style="margin:4px 0 8px">${fmtDate(next.date)} · ${String(next.km).replace(".",",")} km · ${typeBadge(next.type)}${next.summitFinish ? ' <span class="badge b-mountain">Toppmål</span>':""}</div>
-    <p class="small" style="margin:0">${esc(next.desc)}</p>
+    <div class="small muted" style="margin:4px 0 8px">${fmtDate(next.date)} · ${fmtKm(next.km)} km · ${typeBadge(next.type)}${next.summitFinish ? ' <span class="badge b-mountain">Toppmål</span>':""}</div>
+    ${profileSVG(next)}
+    <p class="small" style="margin:6px 0 0">${esc(next.desc)}</p>
   </button>` : ""}
   <h2 class="sec disp">Loppet hittills</h2>
   <div class="card">
@@ -352,9 +473,11 @@ function openStage(n){
   document.getElementById("det-ttl").textContent = `Etapp ${n} · ${s.start} → ${s.finish}`;
   let h = `
     <div class="card" style="margin-top:14px">
-      <div class="small muted num">${fmtDate(s.date)} · ${String(s.km).replace(".",",")} km · ${TYPE_LBL[s.type]}${s.summitFinish?" · toppmålgång":""}${s.elevationM?` · ${s.elevationM.toLocaleString("sv-SE")} höjdmeter`:""}</div>
+      <div class="small muted num">${fmtDate(s.date)} · ${fmtKm(s.km)} km · ${TYPE_LBL[s.type]}${s.summitFinish?" · toppmålgång":""}${s.elevationM?` · ${s.elevationM.toLocaleString("sv-SE")} höjdmeter`:""}</div>
+      ${profileSVG(s)}
+      ${s.profile ? `<div class="small muted num" style="margin-bottom:4px">Höjdprofil (m ö.h.) · start ${s.startAltM ?? "?"} m → mål ${s.finishAltM ?? "?"} m. Röda punkter = bergspris, grön S = mellanspurt.</div>` : ""}
       <p style="margin:8px 0 0;font-size:14.5px">${esc(s.desc)}</p>
-      ${s.climbs && s.climbs.length ? `<div style="margin-top:10px">${s.climbs.map(c => `<div style="display:flex;gap:8px;padding:3px 0;font-size:13.5px"><span class="tag">${c.cat ? (c.cat==="HC"?"HC":"Kat "+c.cat) : "Stigning"}</span><span style="flex:1">${esc(c.name)}</span></div>`).join("")}</div>` : ""}
+      ${climbList(s)}
     </div>`;
   if(r){
     h += `<h2 class="sec disp">Resultat</h2>
@@ -369,6 +492,7 @@ function openStage(n){
         `<div class="jcard"><span class="j ${c}"></span><div class="who"><div class="lab">${l}</div><div class="nm">${esc(nm)}</div></div></div>`).join("")}
     </div>
     <div class="card" style="margin-top:12px"><strong style="font-size:14px">Så gick det till</strong><p class="small" style="margin:6px 0 0">${esc(r.summary)}</p></div>
+    ${prizeSection(r)}
     ${r.abandons && r.abandons.length ? `<div class="card"><strong style="font-size:14px;color:var(--red-ink)">Lämnade loppet</strong>${r.abandons.map(a => `<div class="small" style="margin-top:6px"><strong>${esc(a.rider)}</strong> (${esc(a.team)}) — ${esc(a.reason)}</div>`).join("")}</div>` : ""}`;
   } else {
     h += `<div class="card"><span class="small muted">Etappen har inte körts ännu — körs ${fmtDate(s.date)}.</span></div>`;

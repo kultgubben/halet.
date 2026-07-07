@@ -1,0 +1,768 @@
+{
+ "pointsScales": {
+  "intermediateSprint": [
+   25,
+   20,
+   16,
+   14,
+   12,
+   10,
+   9,
+   8,
+   7,
+   6,
+   5,
+   4,
+   3,
+   2,
+   1
+  ],
+  "finishFlat": [
+   50,
+   30,
+   20,
+   18,
+   16,
+   14,
+   12,
+   10,
+   8,
+   7,
+   6,
+   5,
+   4,
+   3,
+   2
+  ],
+  "finishHillyMountain": [
+   30,
+   25,
+   22,
+   19,
+   17,
+   15,
+   13,
+   11,
+   9,
+   7,
+   6,
+   5,
+   4,
+   3,
+   2
+  ],
+  "kom": {
+   "cat4": [
+    1
+   ],
+   "cat3": [
+    2,
+    1
+   ],
+   "cat2": [
+    5,
+    3,
+    2,
+    1
+   ],
+   "cat1": [
+    10,
+    8,
+    6,
+    4,
+    2,
+    1
+   ]
+  }
+ },
+ "stages": [
+  {
+   "n": 1,
+   "date": "2026-07-04",
+   "route": "Barcelona - Barcelona (lagtempo, 19.6 km)",
+   "winner": "Team Visma | Lease a Bike (Jonas Vingegaard forst over mallinjen, 21:47)",
+   "sprint": {
+    "name": "Forsta mellantidspunkten (specialregel, ingen poang)",
+    "top": [
+     {
+      "rider": "Egan Bernal",
+      "pts": 0
+     }
+    ]
+   },
+   "climbs": [
+    {
+     "name": "Cote de Montjuic + Cote du Stade Olympique (sista ~3.7 km, specialregel)",
+     "cat": null,
+     "top": [
+      {
+       "rider": "Tadej Pogacar",
+       "pts": 0
+      }
+     ]
+    }
+   ],
+   "finishPoints": [],
+   "bonus": [],
+   "note": "Specialregler för lagtempot: varje åkare fick sin egen individuella tid (Vingegaard tog gula tröjan som snabbast över mållinjen). Gröna tröjan gick till Egan Bernal som var snabbast genom dagens första mellantidskontroll, och bergströjan till Tadej Pogačar som var snabbast från sista tidskontrollen till mål över de två Montjuïc-stigningarna (ca 3,7 km) – två sekunder snabbare än Vingegaard och Evenepoel. Inga faktiska poäng delades ut till vare sig poäng- eller bergstävlingen, och inga bonussekunder."
+  },
+  {
+   "n": 2,
+   "date": "2026-07-05",
+   "route": "Tarragona - Barcelona (168.5 km)",
+   "winner": "Isaac del Toro",
+   "sprint": {
+    "name": "Viladecans",
+    "top": [
+     {
+      "rider": "Alex Molenaar",
+      "pts": 25
+     },
+     {
+      "rider": "Felix Engelhardt",
+      "pts": 20
+     },
+     {
+      "rider": "Frank van den Broek",
+      "pts": 16
+     },
+     {
+      "rider": "Biniam Girmay",
+      "pts": 14
+     },
+     {
+      "rider": "Mads Pedersen",
+      "pts": 12
+     },
+     {
+      "rider": "Jasper Philipsen",
+      "pts": 10
+     },
+     {
+      "rider": "Anthony Turgis",
+      "pts": 9
+     },
+     {
+      "rider": "Tim Merlier",
+      "pts": 8
+     },
+     {
+      "rider": "Max Kanter",
+      "pts": 7
+     },
+     {
+      "rider": "Michael Matthews",
+      "pts": 6
+     },
+     {
+      "rider": "Soren Waerenskjold",
+      "pts": 5
+     },
+     {
+      "rider": "Davide Ballerini",
+      "pts": 4
+     },
+     {
+      "rider": "Florian Vermeersch",
+      "pts": 3
+     },
+     {
+      "rider": "Jasper Stuyven",
+      "pts": 2
+     },
+     {
+      "rider": "Tim Wellens",
+      "pts": 1
+     }
+    ]
+   },
+   "climbs": [
+    {
+     "name": "Cote de Begues (6.1 km, 6.5%)",
+     "cat": 2,
+     "top": [
+      {
+       "rider": "Alex Molenaar",
+       "pts": 5
+      },
+      {
+       "rider": "Felix Engelhardt",
+       "pts": 3
+      },
+      {
+       "rider": "Frank van den Broek",
+       "pts": 2
+      },
+      {
+       "rider": "Josh Tarling",
+       "pts": 1
+      }
+     ],
+     "note": "Topp 3 (utbrytartrion) bekraftade av Cyclingnews liveticker. 4:e platsen (1 p) framraknad ur bergstallningen pa FirstCycling - Tarling ar den ende med 1 bergspoang som inte forekommer i nagon annan passage."
+    },
+    {
+     "name": "Cote du Chateau de Montjuic, passage 1 (1.6 km, 9.3%)",
+     "cat": 3,
+     "top": [
+      {
+       "rider": "Brandon McNulty",
+       "pts": 2
+      },
+      {
+       "rider": "Tadej Pogacar",
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "Cote du Chateau de Montjuic, passage 2",
+     "cat": 3,
+     "top": [
+      {
+       "rider": "Brandon McNulty",
+       "pts": 2
+      },
+      {
+       "rider": "Matteo Jorgenson",
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "Cote du Chateau de Montjuic, passage 3",
+     "cat": 3,
+     "top": [
+      {
+       "rider": "Tobias Halland Johannessen",
+       "pts": 2
+      },
+      {
+       "rider": "Richard Carapaz",
+       "pts": 1
+      }
+     ]
+    }
+   ],
+   "finishPoints": [
+    {
+     "rider": "Isaac del Toro",
+     "pts": 30
+    },
+    {
+     "rider": "Tadej Pogacar",
+     "pts": 25
+    },
+    {
+     "rider": "Remco Evenepoel",
+     "pts": 22
+    },
+    {
+     "rider": "Jonas Vingegaard",
+     "pts": 19
+    },
+    {
+     "rider": "Mattias Skjelmose",
+     "pts": 17
+    },
+    {
+     "rider": "Tobias Halland Johannessen",
+     "pts": 15
+    },
+    {
+     "rider": "Romain Gregoire",
+     "pts": 13
+    },
+    {
+     "rider": "Lenny Martinez",
+     "pts": 11
+    },
+    {
+     "rider": "Paul Seixas",
+     "pts": 9
+    },
+    {
+     "rider": "Tom Pidcock",
+     "pts": 7
+    },
+    {
+     "rider": "Lennert Van Eetvelt",
+     "pts": 6
+    },
+    {
+     "rider": "Juan Ayuso",
+     "pts": 5
+    },
+    {
+     "rider": "Ilan Van Wilder",
+     "pts": 4
+    },
+    {
+     "rider": "Richard Carapaz",
+     "pts": 3
+    },
+    {
+     "rider": "Alex Baudin",
+     "pts": 2
+    }
+   ],
+   "bonus": [
+    {
+     "rider": "Isaac del Toro",
+     "sec": 10
+    },
+    {
+     "rider": "Tadej Pogacar",
+     "sec": 6
+    },
+    {
+     "rider": "Remco Evenepoel",
+     "sec": 4
+    }
+   ],
+   "note": "Kuperad målskala (30-25-22-…). Inga separata bonussprintar på vägen."
+  },
+  {
+   "n": 3,
+   "date": "2026-07-06",
+   "route": "Granollers - Les Angles (195.9 km)",
+   "winner": "Tadej Pogacar",
+   "sprint": {
+    "name": "Campdevanol (km 98.4)",
+    "top": [
+     {
+      "rider": "Mads Pedersen",
+      "pts": 25
+     },
+     {
+      "rider": "Joris Delbove",
+      "pts": 20
+     },
+     {
+      "rider": "Alex Baudin",
+      "pts": 16
+     },
+     {
+      "rider": "Michael Storer",
+      "pts": 14
+     },
+     {
+      "rider": "Matteo Vercher",
+      "pts": 12
+     },
+     {
+      "rider": "Harold Tejada",
+      "pts": 10
+     },
+     {
+      "rider": "Luke Plapp",
+      "pts": 9
+     },
+     {
+      "rider": "Magnus Cort",
+      "pts": 8
+     },
+     {
+      "rider": "Nelson Oliveira",
+      "pts": 7
+     },
+     {
+      "rider": "Abel Balderstone",
+      "pts": 6
+     },
+     {
+      "rider": "Mauro Schmid",
+      "pts": 5
+     },
+     {
+      "rider": "Vlad Van Mechelen",
+      "pts": 4
+     },
+     {
+      "rider": "Clement Braz Afonso",
+      "pts": 3
+     },
+     {
+      "rider": "Nicolas Prodhomme",
+      "pts": 2
+     },
+     {
+      "rider": "George Bennett",
+      "pts": 1
+     }
+    ],
+    "note": "Topp 3 bekraftade av Cyclingnews liveticker (Pedersen vann klart fore Delbove och Baudin); plats 4-15 exakt framraknade ur poangstallningens differenser pa FirstCycling."
+   },
+   "climbs": [
+    {
+     "name": "Cote de Saint Feliu de Codines (8.2 km, 4.5%, km 17.2)",
+     "cat": 3,
+     "top": [
+      {
+       "rider": "Valentin Paret-Peintre",
+       "pts": 2
+      },
+      {
+       "rider": "Javier Romo",
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "Col de Toses / Collada de Toses (9.3 km, 6.5%, km 127.7)",
+     "cat": 1,
+     "top": [
+      {
+       "rider": "Alex Baudin",
+       "pts": 10
+      },
+      {
+       "rider": "Nicolas Prodhomme",
+       "pts": 8
+      },
+      {
+       "rider": "Raul Garcia Pierna",
+       "pts": 6
+      },
+      {
+       "rider": "Vlad Van Mechelen",
+       "pts": 4
+      },
+      {
+       "rider": "Matteo Vercher",
+       "pts": 2
+      },
+      {
+       "rider": "George Bennett",
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "Col du Calvaire (11.4 km, 4.1%, km 172.3)",
+     "cat": 3,
+     "top": [
+      {
+       "rider": "Alex Baudin",
+       "pts": 2
+      },
+      {
+       "rider": "Nicolas Prodhomme",
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "Les Angles (malstigning, 1.7 km, 6.5%)",
+     "cat": 3,
+     "top": [
+      {
+       "rider": "Tadej Pogacar",
+       "pts": 2
+      },
+      {
+       "rider": "Jonas Vingegaard",
+       "pts": 1
+      }
+     ]
+    }
+   ],
+   "finishPoints": [
+    {
+     "rider": "Tadej Pogacar",
+     "pts": 30
+    },
+    {
+     "rider": "Jonas Vingegaard",
+     "pts": 25
+    },
+    {
+     "rider": "Richard Carapaz",
+     "pts": 22
+    },
+    {
+     "rider": "Paul Seixas",
+     "pts": 19
+    },
+    {
+     "rider": "Tobias Halland Johannessen",
+     "pts": 17
+    },
+    {
+     "rider": "Lennert Van Eetvelt",
+     "pts": 15
+    },
+    {
+     "rider": "Florian Lipowitz",
+     "pts": 13
+    },
+    {
+     "rider": "Remco Evenepoel",
+     "pts": 11
+    },
+    {
+     "rider": "Isaac del Toro",
+     "pts": 9
+    },
+    {
+     "rider": "Juan Ayuso",
+     "pts": 7
+    },
+    {
+     "rider": "Mattias Skjelmose",
+     "pts": 6
+    },
+    {
+     "rider": "Ilan Van Wilder",
+     "pts": 5
+    },
+    {
+     "rider": "Lenny Martinez",
+     "pts": 4
+    },
+    {
+     "rider": "Jordan Jegat",
+     "pts": 3
+    },
+    {
+     "rider": "Sergio Higuita",
+     "pts": 2
+    }
+   ],
+   "bonus": [
+    {
+     "rider": "Tadej Pogacar",
+     "sec": 10
+    },
+    {
+     "rider": "Jonas Vingegaard",
+     "sec": 6
+    },
+    {
+     "rider": "Richard Carapaz",
+     "sec": 4
+    }
+   ],
+   "note": "Baudin säkrade bergströjan med 12 p (Toses 10 + Calvaire 2). Bonussekunderna gjorde Pogačar och Vingegaard tidsmässigt lika i GC; Pogačar tog gult på bästa placeringssumma."
+  },
+  {
+   "n": 4,
+   "date": "2026-07-07",
+   "route": "Carcassonne - Foix (181.9 km)",
+   "winner": "Mads Pedersen",
+   "sprint": {
+    "name": "Quillan (km 93.4)",
+    "top": [
+     {
+      "rider": "Biniam Girmay",
+      "pts": 25
+     },
+     {
+      "rider": "Jasper Philipsen",
+      "pts": 20
+     },
+     {
+      "rider": "Mads Pedersen",
+      "pts": 16
+     },
+     {
+      "rider": "Edward Planckaert",
+      "pts": 14
+     },
+     {
+      "rider": "Quinn Simmons",
+      "pts": 12
+     },
+     {
+      "rider": "Pablo Castrillo",
+      "pts": 10
+     },
+     {
+      "rider": "Mathias Vacek",
+      "pts": 9
+     },
+     {
+      "rider": "Michael Matthews",
+      "pts": 8
+     },
+     {
+      "rider": "Nico Denz",
+      "pts": 7
+     },
+     {
+      "rider": "Alex Kirsch",
+      "pts": 6
+     },
+     {
+      "rider": "Ewen Costiou",
+      "pts": 5
+     },
+     {
+      "rider": "Joel Nicolau",
+      "pts": 4
+     },
+     {
+      "rider": "Jan Tratnik",
+      "pts": 3
+     },
+     {
+      "rider": "Kevin Vauquelin",
+      "pts": 2
+     },
+     {
+      "rider": "Romain Gregoire",
+      "pts": 1
+     }
+    ],
+    "note": "Hela sprinten gjordes upp inom 34-mannautbrytningen; Girmay slog Philipsen knappt."
+   },
+   "climbs": [
+    {
+     "name": "Col des Bedos (3.4 km, 4.4%, km 48.2)",
+     "cat": 4,
+     "top": [
+      {
+       "rider": "Alex Molenaar",
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "Col du Paradis (5.6 km, 4.3%, km 65)",
+     "cat": 3,
+     "top": [
+      {
+       "rider": "Alex Molenaar",
+       "pts": 2
+      },
+      {
+       "rider": "Georg Steinhauser",
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "Col de Coudons (10.9 km, 5.5%, km 105)",
+     "cat": 2,
+     "top": [
+      {
+       "rider": "Jan Tratnik",
+       "pts": 5
+      },
+      {
+       "rider": "Mathias Vacek",
+       "pts": 3
+      },
+      {
+       "rider": "Alex Molenaar",
+       "pts": 2
+      },
+      {
+       "rider": "Raul Garcia Pierna",
+       "pts": 1
+      }
+     ]
+    },
+    {
+     "name": "Col de Montsegur (6.9 km, 6.1%, km 147)",
+     "cat": 2,
+     "top": [
+      {
+       "rider": "Marco Frigo",
+       "pts": 5
+      },
+      {
+       "rider": "Pablo Castrillo",
+       "pts": 3
+      },
+      {
+       "rider": "Ramses Debruyne",
+       "pts": 2
+      },
+      {
+       "rider": "Torstein Traeen",
+       "pts": 1
+      }
+     ],
+     "note": "Frigo passerade Castrillo pa de sista 200 m fore krönet. Plats 3-4 (Debruyne 2, Traeen 1) framraknade ur bergstallningens differenser."
+    }
+   ],
+   "finishPoints": [
+    {
+     "rider": "Mads Pedersen",
+     "pts": 50
+    },
+    {
+     "rider": "Quinn Simmons",
+     "pts": 30
+    },
+    {
+     "rider": "Raul Garcia Pierna",
+     "pts": 20
+    },
+    {
+     "rider": "Marco Frigo",
+     "pts": 18
+    },
+    {
+     "rider": "Ramses Debruyne",
+     "pts": 16
+    },
+    {
+     "rider": "Kevin Vauquelin",
+     "pts": 14
+    },
+    {
+     "rider": "Sean Quinn",
+     "pts": 12
+    },
+    {
+     "rider": "Torstein Traeen",
+     "pts": 10
+    },
+    {
+     "rider": "Pablo Castrillo",
+     "pts": 8
+    },
+    {
+     "rider": "Mathias Vacek",
+     "pts": 7
+    },
+    {
+     "rider": "Michael Matthews",
+     "pts": 6
+    },
+    {
+     "rider": "Alexandre Delettre",
+     "pts": 5
+    },
+    {
+     "rider": "Vlad Van Mechelen",
+     "pts": 4
+    },
+    {
+     "rider": "Jasper Stuyven",
+     "pts": 3
+    },
+    {
+     "rider": "Alex Molenaar",
+     "pts": 2
+    }
+   ],
+   "bonus": [
+    {
+     "rider": "Mads Pedersen",
+     "sec": 10
+    },
+    {
+     "rider": "Quinn Simmons",
+     "sec": 6
+    },
+    {
+     "rider": "Raul Garcia Pierna",
+     "sec": 4
+    }
+   ],
+   "note": "Flack målskala (50-30-20-…): Pedersen tog 50 p i mål + 16 i spurten = 66 p på dagen. Træen tog över gula tröjan. Inga separata bonussprintar."
+  }
+ ]
+}

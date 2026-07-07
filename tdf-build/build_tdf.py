@@ -112,6 +112,51 @@ for key in ("points", "kom", "youth"):
         info = rider_info.get(row["rider"])
         row["nat"] = info["nat"] if info else row.get("nat")
 
+# ---- merge stage profiles (detailed climbs, sprint, elevation curve) ----
+profiles = json.load(open(f"{SP}/profiles.json"))
+prizes = json.load(open(f"{SP}/prizes.json"))
+
+FIXNAMES = [("Cote ", "Côte "), ("Begues", "Bègues"), ("Montjuic", "Montjuïc"),
+            ("Montsegur", "Montségur"), ("Campdevanol", "Campdevànol"),
+            (" (finish rise)", " (målstigning)"), (" (finish)", " (målstigning)")]
+def fixtxt(s):
+    if not s: return s
+    for a, b in FIXNAMES: s = s.replace(a, b)
+    return s
+
+prof_by_n = {p["n"]: p for p in profiles["stages"]}
+for s in route["stages"]:
+    p = prof_by_n.get(s["n"])
+    if not p: continue
+    if p.get("climbs"):
+        s["climbs"] = [{**c, "name": fixtxt(c["name"]),
+                        "cat": (str(c["cat"]) if c.get("cat") is not None else None)}
+                       for c in p["climbs"]]
+    sp = p.get("sprint")
+    s["sprint"] = {**sp, "name": fixtxt(sp["name"])} if sp else None
+    s["profile"] = p.get("profile")
+    s["startAltM"] = p.get("startAltM")
+    s["finishAltM"] = p.get("finishAltM")
+
+# ---- merge per-prize points into results ----
+def canon_top(top):
+    return [{"rider": rider_name(t["rider"]), "pts": t.get("pts")} for t in (top or [])]
+
+prize_by_n = {p["n"]: p for p in prizes["stages"]}
+for st in results["stages"]:
+    pz = prize_by_n.get(st["n"])
+    if not pz: continue
+    st["prizes"] = {
+        "sprint": ({"name": fixtxt(re.sub(r"\s*\([^)]*\)$", "", pz["sprint"]["name"])), "km": pz["sprint"].get("km"),
+                    "top": canon_top(pz["sprint"].get("top"))} if pz.get("sprint") else None),
+        "climbs": [{"name": fixtxt(re.sub(r"\s*\([^)]*\)$", "", c["name"])),
+                    "cat": (str(c["cat"]) if c.get("cat") is not None else None),
+                    "top": canon_top(c.get("top"))} for c in pz.get("climbs", [])],
+        "finishPoints": canon_top(pz.get("finishPoints")),
+        "bonus": [{"rider": rider_name(b["rider"]), "sec": b["sec"]} for b in (pz.get("bonus") or [])],
+        "note": pz.get("note"),
+    }
+
 # ---- derived ----
 last = results["lastCompletedStage"]
 done = [s for s in route["stages"] if s["n"] <= last]
