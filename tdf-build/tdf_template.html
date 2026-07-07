@@ -1,0 +1,511 @@
+<title>Tour de France 2026</title>
+<style>
+:root{
+  --ground:#f4efe0; --surface:#fffdf4; --surface2:#faf6e8;
+  --ink:#231d08; --ink2:#6e654a; --ink3:#9a916f;
+  --hair:#e5ddc2; --hair2:#d8cfae;
+  --gold:#7d6300; --yellow:#ffd900; --yellow-ink:#231d08;
+  --green:#1d9d51; --green-ink:#0b5c2c;
+  --red:#d5342c; --red-ink:#a8231c;
+  --shadow:0 1px 2px rgba(35,29,8,.06),0 6px 20px rgba(35,29,8,.07);
+  --t-flat:#e2ecd4; --t-flat-ink:#3c5220;
+  --t-hilly:#f3e3bd; --t-hilly-ink:#6d5313;
+  --t-mtn:#ecd3c4; --t-mtn-ink:#7c3a1c;
+  --t-tt:#d7e4ee; --t-tt-ink:#2a5474;
+  --bar:#c4a83e; --bar-lead:#ffd900;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ground:#12100a; --surface:#1e1b10; --surface2:#262213;
+    --ink:#f4eeda; --ink2:#b3aa8a; --ink3:#877e5f;
+    --hair:#332e1c; --hair2:#403a24;
+    --gold:#f2c400; --yellow:#ffd900; --yellow-ink:#231d08;
+    --green:#2fb765; --green-ink:#7fdca6;
+    --red:#ee5a4f; --red-ink:#ff938a;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
+    --t-flat:#2c3a1c; --t-flat-ink:#b8d38d;
+    --t-hilly:#413412; --t-hilly-ink:#e5c467;
+    --t-mtn:#432a1a; --t-mtn-ink:#eba071;
+    --t-tt:#1e3348; --t-tt-ink:#8fc0e8;
+    --bar:#a68c2e; --bar-lead:#ffd900;
+  }
+}
+:root[data-theme="light"]{
+  --ground:#f4efe0; --surface:#fffdf4; --surface2:#faf6e8;
+  --ink:#231d08; --ink2:#6e654a; --ink3:#9a916f;
+  --hair:#e5ddc2; --hair2:#d8cfae;
+  --gold:#7d6300; --yellow:#ffd900; --yellow-ink:#231d08;
+  --green:#1d9d51; --green-ink:#0b5c2c;
+  --red:#d5342c; --red-ink:#a8231c;
+  --shadow:0 1px 2px rgba(35,29,8,.06),0 6px 20px rgba(35,29,8,.07);
+  --t-flat:#e2ecd4; --t-flat-ink:#3c5220;
+  --t-hilly:#f3e3bd; --t-hilly-ink:#6d5313;
+  --t-mtn:#ecd3c4; --t-mtn-ink:#7c3a1c;
+  --t-tt:#d7e4ee; --t-tt-ink:#2a5474;
+  --bar:#c4a83e; --bar-lead:#ffd900;
+}
+:root[data-theme="dark"]{
+  --ground:#12100a; --surface:#1e1b10; --surface2:#262213;
+  --ink:#f4eeda; --ink2:#b3aa8a; --ink3:#877e5f;
+  --hair:#332e1c; --hair2:#403a24;
+  --gold:#f2c400; --yellow:#ffd900; --yellow-ink:#231d08;
+  --green:#2fb765; --green-ink:#7fdca6;
+  --red:#ee5a4f; --red-ink:#ff938a;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
+  --t-flat:#2c3a1c; --t-flat-ink:#b8d38d;
+  --t-hilly:#413412; --t-hilly-ink:#e5c467;
+  --t-mtn:#432a1a; --t-mtn-ink:#eba071;
+  --t-tt:#1e3348; --t-tt-ink:#8fc0e8;
+  --bar:#a68c2e; --bar-lead:#ffd900;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--ground); color:var(--ink);
+  font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+.disp{font-family:"Avenir Next Condensed","AvenirNextCondensed-Bold","Arial Narrow","Helvetica Neue",-apple-system,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+#app{max-width:640px;margin:0 auto;padding:0 14px calc(96px + env(safe-area-inset-bottom,0px))}
+/* ---------- masthead ---------- */
+.masthead{
+  margin:0 -14px; padding:calc(14px + env(safe-area-inset-top,0px)) 18px 12px;
+  background:var(--yellow); color:var(--yellow-ink);
+}
+.masthead h1{margin:0;font-size:34px;line-height:1;letter-spacing:.01em}
+.masthead h1 small{display:block;font-size:13px;letter-spacing:.28em;font-weight:600;margin-bottom:4px}
+.mast-sub{display:flex;justify-content:space-between;align-items:baseline;margin-top:6px;font-size:12.5px;font-weight:600}
+.mast-sub .upd{opacity:.75;font-weight:500}
+/* ---------- generic ---------- */
+h2.sec{font-size:20px;margin:26px 2px 10px;letter-spacing:.04em}
+h2.sec:first-of-type{margin-top:20px}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:14px;box-shadow:var(--shadow);padding:14px;margin-bottom:12px;overflow:hidden}
+.muted{color:var(--ink2)} .small{font-size:13px}
+.num{font-variant-numeric:tabular-nums}
+button{font:inherit;color:inherit;background:none;border:none;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:6px}
+/* ---------- tab bar ---------- */
+.tabbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  display:flex;justify-content:center;gap:2px;
+  padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));
+  background:color-mix(in srgb, var(--surface) 88%, transparent);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-top:1px solid var(--hair);
+}
+.tab{flex:1;max-width:120px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;border-radius:10px;color:var(--ink3);font-size:10.5px;font-weight:600;letter-spacing:.03em}
+.tab svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tab.on{color:var(--gold)}
+.tab.on .lbl{color:var(--ink)}
+/* ---------- jerseys ---------- */
+.jrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.jcard{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:10px;box-shadow:var(--shadow)}
+.j{width:34px;height:34px;border-radius:8px;flex:0 0 auto;border:1px solid rgba(0,0,0,.12);position:relative}
+.j-yellow{background:#ffd900}
+.j-green{background:#1d9d51}
+.j-polka{background:#fff;background-image:radial-gradient(#d5342c 22%,transparent 24%);background-size:11px 11px;background-position:2px 3px}
+.j-white{background:#fff}
+.j-white::after{content:"";position:absolute;inset:0;border-radius:8px;border:1px solid #ccc}
+.jcard .who{min-width:0}
+.jcard .lab{font-size:10px;letter-spacing:.1em;font-weight:700;color:var(--ink2);text-transform:uppercase}
+.jcard .nm{font-weight:650;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jcard .tm{font-size:12px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* ---------- hero ---------- */
+.hero{background:var(--yellow);color:var(--yellow-ink);border-radius:16px;padding:16px;margin-top:14px;box-shadow:var(--shadow)}
+.hero .lab{font-size:11px;letter-spacing:.22em;font-weight:700}
+.hero .name{font-size:32px;line-height:1.02;margin:4px 0 2px}
+.hero .sub{font-size:14px;font-weight:600;opacity:.85}
+.hero .gapline{margin-top:10px;font-size:13px;font-weight:600;border-top:1px solid rgba(35,29,8,.18);padding-top:9px;display:flex;justify-content:space-between}
+/* ---------- progress ---------- */
+.prog{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.prog .v{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.prog .k{font-size:11px;color:var(--ink2);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.meter{height:8px;background:var(--surface2);border:1px solid var(--hair);border-radius:99px;overflow:hidden;margin-top:10px}
+.meter i{display:block;height:100%;background:var(--yellow);border-radius:99px}
+/* ---------- stage list ---------- */
+.strip{display:flex;align-items:flex-end;gap:3px;height:64px;margin:4px 0 14px;padding:0 2px}
+.strip button{flex:1;min-width:0;border-radius:4px 4px 2px 2px;position:relative;opacity:.45}
+.strip button.done{opacity:1}
+.strip button.next{opacity:.8;box-shadow:inset 0 0 0 2px var(--gold)}
+.stage{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--surface);border:1px solid var(--hair);border-radius:14px;box-shadow:var(--shadow);padding:12px;margin-bottom:10px}
+.stage .no{flex:0 0 40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:700;background:var(--surface2);border:1px solid var(--hair)}
+.stage.done .no{background:var(--yellow);color:var(--yellow-ink);border-color:transparent}
+.stage .mid{flex:1;min-width:0}
+.stage .rt{font-weight:650;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stage .meta{font-size:12.5px;color:var(--ink2);display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:2px}
+.stage .win{font-size:12.5px;margin-top:3px;color:var(--gold);font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stage .chev{color:var(--ink3);font-size:20px;flex:0 0 auto}
+.badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:5px;padding:2px 6px}
+.b-flat{background:var(--t-flat);color:var(--t-flat-ink)}
+.b-hilly{background:var(--t-hilly);color:var(--t-hilly-ink)}
+.b-mountain{background:var(--t-mtn);color:var(--t-mtn-ink)}
+.b-itt,.b-ttt{background:var(--t-tt);color:var(--t-tt-ink)}
+.rest{display:flex;align-items:center;gap:10px;color:var(--ink2);font-size:13px;font-weight:600;margin:14px 4px}
+.rest::before,.rest::after{content:"";flex:1;border-top:1px dashed var(--hair2)}
+/* ---------- detail overlay ---------- */
+.detail{position:fixed;inset:0;z-index:60;background:var(--ground);overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}
+.detail.open{display:block}
+@media (prefers-reduced-motion: no-preference){
+  .detail.open{animation:slidein .22s ease-out}
+  @keyframes slidein{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+}
+.detail .inner{max-width:640px;margin:0 auto;padding:0 14px calc(40px + env(safe-area-inset-bottom,0px))}
+.dethead{position:sticky;top:0;z-index:5;margin:0 -14px;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;background:var(--yellow);color:var(--yellow-ink);display:flex;align-items:center;gap:8px}
+.dethead .back{font-size:15px;font-weight:700;display:flex;align-items:center;gap:2px;padding:4px 8px 4px 2px;white-space:nowrap;flex:0 0 auto}
+.dethead .ttl{font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* ---------- tables ---------- */
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);font-weight:700;text-align:left;padding:4px 6px;border-bottom:1px solid var(--hair)}
+td{padding:7px 6px;border-bottom:1px solid var(--hair);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.rk{color:var(--ink3);font-weight:600;width:26px}
+tr.lead td{background:color-mix(in srgb, var(--yellow) 26%, var(--surface));font-weight:650}
+.who2{min-width:0}
+.who2 .nm{font-weight:600}
+.who2 .tm{font-size:12px;color:var(--ink2)}
+.scrollx{overflow-x:auto;margin:0 -14px;padding:0 14px}
+/* ---------- bars ---------- */
+.bars{display:flex;flex-direction:column;gap:7px;margin-top:8px}
+.brow{display:grid;grid-template-columns:132px 1fr 48px;gap:8px;align-items:center;font-size:13px}
+.brow .bl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.brow .tr{height:14px;background:var(--surface2);border-radius:4px;overflow:hidden}
+.brow .tr i{display:block;height:100%;background:var(--bar);border-radius:0 4px 4px 0;min-width:3px}
+.brow.lead .tr i{background:var(--bar-lead)}
+.brow .bv{text-align:right;color:var(--ink2);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* ---------- segmented ---------- */
+.seg{display:flex;gap:4px;background:var(--surface2);border:1px solid var(--hair);padding:4px;border-radius:12px;margin:6px 0 14px;overflow-x:auto}
+.seg button{flex:1;padding:8px 10px;border-radius:9px;font-size:13px;font-weight:650;color:var(--ink2);white-space:nowrap}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.seg button.on.sy{background:var(--yellow);color:var(--yellow-ink)}
+/* ---------- riders ---------- */
+.search{display:flex;gap:8px;margin:6px 0 14px}
+.search input{flex:1;font:inherit;padding:10px 14px;border-radius:12px;border:1px solid var(--hair);background:var(--surface);color:var(--ink)}
+.search input::placeholder{color:var(--ink3)}
+.teamhead{display:flex;align-items:baseline;gap:8px;margin:20px 2px 8px}
+.teamhead .sn{font-size:17px}
+.teamhead .fn{font-size:12px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rider{display:flex;align-items:center;gap:10px;padding:8px 2px;border-bottom:1px solid var(--hair)}
+.rider:last-child{border-bottom:none}
+.rider .bib{flex:0 0 34px;text-align:center;font-size:12px;font-weight:700;color:var(--ink2);background:var(--surface2);border:1px solid var(--hair);border-radius:6px;padding:2px 0}
+.rider .nm{flex:1;min-width:0;font-weight:550;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rider .ag{color:var(--ink2);font-size:12.5px;white-space:nowrap}
+.rider.out .nm{text-decoration:line-through;color:var(--ink3)}
+.tag{font-size:10px;font-weight:700;letter-spacing:.05em;border-radius:5px;padding:1px 5px;background:var(--t-mtn);color:var(--t-mtn-ink)}
+/* ---------- stats ---------- */
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+.kpi .v{font-size:21px;font-weight:750;font-variant-numeric:tabular-nums;line-height:1.15}
+.kpi .k{font-size:11px;color:var(--ink2);letter-spacing:.05em;text-transform:uppercase;font-weight:650;margin-top:2px}
+.fact{background:var(--surface);border:1px solid var(--hair);border-left:4px solid var(--yellow);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:14.5px;box-shadow:var(--shadow)}
+.footer{margin:34px 4px 8px;font-size:12px;color:var(--ink3);text-align:center;line-height:1.6}
+.view{display:none}.view.on{display:block}
+</style>
+
+<div id="app">
+  <header class="masthead disp">
+    <h1><small>LE TOUR DE FRANCE</small>2026 · Statistiken</h1>
+    <div class="mast-sub"><span id="mast-stage"></span><span class="upd" id="mast-upd"></span></div>
+  </header>
+  <main>
+    <section class="view" id="v-idag"></section>
+    <section class="view" id="v-etapper"></section>
+    <section class="view" id="v-stallning"></section>
+    <section class="view" id="v-akare"></section>
+    <section class="view" id="v-stats"></section>
+  </main>
+  <div class="footer">Inofficiell statistikapp · Data från procyclingstats, cyclingnews, firstcycling &amp; Wikipedia<br><span id="foot-upd"></span></div>
+</div>
+
+<div class="detail" id="detail" role="dialog" aria-modal="true">
+  <div class="inner">
+    <div class="dethead disp">
+      <button class="back" onclick="closeStage()">‹ Tillbaka</button>
+      <div class="ttl" id="det-ttl"></div>
+    </div>
+    <div id="det-body"></div>
+  </div>
+</div>
+
+<nav class="tabbar" aria-label="Flikar">
+  <button class="tab on" data-v="idag"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/></svg><span class="lbl">Idag</span></button>
+  <button class="tab" data-v="etapper"><svg viewBox="0 0 24 24"><path d="M2.5 19.5 9 8l4 7 3.5-5.5L21.5 19.5z"/></svg><span class="lbl">Etapper</span></button>
+  <button class="tab" data-v="stallning"><svg viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 5H4.5a3 3 0 0 0 3 4.5M17 5h2.5a3 3 0 0 1-3 4.5"/><path d="M12 13v3M8.5 20h7M12 16c-1.5 0-2.5 1-3.5 4M12 16c1.5 0 2.5 1 3.5 4"/></svg><span class="lbl">Ställning</span></button>
+  <button class="tab" data-v="akare"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><path d="M2.5 20c.5-4 2.5-6 5.5-6s5 2 5.5 6"/><circle cx="17" cy="8" r="2.4"/><path d="M14.5 19.5c.4-3.2 1.6-4.8 4-4.8 1.8 0 2.8 1 3 3.3"/></svg><span class="lbl">Åkare</span></button>
+  <button class="tab" data-v="stats"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><span class="lbl">Stats</span></button>
+</nav>
+
+<script id="tdf-data" type="application/json">__TDF_DATA__</script>
+<script>
+"use strict";
+const D = JSON.parse(document.getElementById("tdf-data").textContent);
+const M = D.meta, R = D.route, RES = D.results, S = D.standings, SL = D.startlist;
+
+/* ---------- helpers ---------- */
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const flag = n => n ? String.fromCodePoint(...[...n.toUpperCase()].map(c => 127397 + c.charCodeAt(0))) : "";
+const MON = ["","jan","feb","mars","april","maj","juni","juli","aug","sep","okt","nov","dec"];
+const fmtDate = iso => { const [y,m,d] = iso.split("-").map(Number); return `${d} ${MON[m]}`; };
+const TYPE_LBL = {flat:"Platt", hilly:"Kuperad", mountain:"Berg", itt:"Tempo", ttt:"Lagtempo"};
+const NATN = {BE:"Belgien",FR:"Frankrike",NL:"Nederländerna",DE:"Tyskland",IT:"Italien",AU:"Australien",ES:"Spanien",NO:"Norge",GB:"Storbritannien",DK:"Danmark",US:"USA",SI:"Slovenien",CH:"Schweiz",CO:"Colombia",CZ:"Tjeckien",MX:"Mexiko",EC:"Ecuador",KZ:"Kazakstan",PL:"Polen",PT:"Portugal",AT:"Österrike",CA:"Kanada",IE:"Irland",LV:"Lettland",LU:"Luxemburg",NZ:"Nya Zeeland",ER:"Eritrea",BH:"Bahrain",AE:"Förenade Arabemiraten"};
+const gapSec = g => { if(!g) return 0; const p = g.replace("+","").split(":").map(Number); return p.length===3 ? p[0]*3600+p[1]*60+p[2] : p[0]*60+p[1]; };
+const teamOf = short => SL.teams.find(t => t.short === short);
+const riderNat = name => { for(const t of SL.teams) for(const r of t.riders) if(r.name===name) return r.nat; return null; };
+const outSet = new Set(S.abandons.map(a => a.rider));
+const typeBadge = t => `<span class="badge b-${t}">${TYPE_LBL[t]}</span>`;
+const stageByN = n => R.stages.find(s => s.n === n);
+const resByN = n => RES.stages.find(s => s.n === n);
+
+/* ---------- IDAG ---------- */
+function renderIdag(){
+  const gc1 = S.gc[0], gc2 = S.gc[1];
+  const last = resByN(M.lastStage), next = stageByN(M.lastStage + 1);
+  const pog = S.gc.find(r => r.rider.includes("Pogačar"));
+  const jl = last.jerseysAfter;
+  const jmeta = [
+    ["j-green","Poäng · Maillot vert", jl.green],
+    ["j-polka","Bergspris · À pois", jl.polka],
+    ["j-white","Ungdom · Blanc", jl.white],
+    ["j-yellow","Lagtävling", S.teams[0].team + " (lag)"],
+  ];
+  let h = `
+  <div class="hero">
+    <div class="lab disp">MAILLOT JAUNE · EFTER ETAPP ${S.afterStage}</div>
+    <div class="name disp">${flag(gc1.nat)} ${esc(gc1.rider)}</div>
+    <div class="sub">${esc(gc1.team)} · totaltid ${gc1.time}</div>
+    <div class="gapline num"><span>2:a ${esc(gc2.rider)} ${gc2.gap}</span><span>${pog ? "Pogačar "+pog.gap : ""}</span></div>
+  </div>
+  <h2 class="sec disp">Tröjorna</h2>
+  <div class="jrow">
+    ${jmeta.map(([c,lab,nm]) => { const info = nm && !nm.includes("(lag)") ? SL.teams.find(t=>t.riders.some(r=>r.name===nm)) : null;
+      return `<div class="jcard"><span class="j ${c}"></span><div class="who"><div class="lab">${lab}</div><div class="nm">${esc(nm)}</div>${info?`<div class="tm">${esc(info.short)}</div>`:""}</div></div>`; }).join("")}
+  </div>
+  <h2 class="sec disp">Senast · Etapp ${last.n}</h2>
+  <button class="card" style="width:100%;text-align:left" onclick="openStage(${last.n})">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline">
+      <strong>${esc(last.route)}</strong><span class="chev muted">›</span>
+    </div>
+    <div class="small muted" style="margin:4px 0 8px">${fmtDate(last.date)} · snitt ${String(last.avgSpeedKmh).replace(".",",")} km/h</div>
+    ${last.top15.slice(0,3).map(r => `<div style="display:flex;gap:8px;font-size:14px;padding:2px 0" class="num"><span class="muted" style="width:16px">${r.rank}</span><span style="flex:1">${esc(r.rider)}</span><span class="muted">${esc(r.time)}</span></div>`).join("")}
+    <p class="small" style="margin:10px 0 0">${esc(last.summary)}</p>
+  </button>
+  ${next ? `<h2 class="sec disp">Härnäst · Etapp ${next.n}</h2>
+  <button class="card" style="width:100%;text-align:left" onclick="openStage(${next.n})">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline">
+      <strong>${esc(next.start)} → ${esc(next.finish)}</strong><span class="chev muted">›</span>
+    </div>
+    <div class="small muted" style="margin:4px 0 8px">${fmtDate(next.date)} · ${String(next.km).replace(".",",")} km · ${typeBadge(next.type)}${next.summitFinish ? ' <span class="badge b-mountain">Toppmål</span>':""}</div>
+    <p class="small" style="margin:0">${esc(next.desc)}</p>
+  </button>` : ""}
+  <h2 class="sec disp">Loppet hittills</h2>
+  <div class="card">
+    <div class="prog num">
+      <div><div class="v">${M.lastStage}/21</div><div class="k">Etapper</div></div>
+      <div><div class="v">${Math.round(M.kmDone)}</div><div class="k">km körda</div></div>
+      <div><div class="v">${M.ridersLeft}</div><div class="k">Åkare kvar</div></div>
+    </div>
+    <div class="meter"><i style="width:${(100*M.kmDone/M.kmTotal).toFixed(1)}%"></i></div>
+    <div class="small muted num" style="margin-top:6px">${Math.round(M.kmDone)} av ${Math.round(M.kmTotal)} km · ${Math.round(M.kmTotal - M.kmDone)} km återstår till Paris</div>
+  </div>`;
+  document.getElementById("v-idag").innerHTML = h;
+}
+
+/* ---------- ETAPPER ---------- */
+function renderEtapper(){
+  const maxKm = Math.max(...R.stages.map(s => s.km));
+  const strip = R.stages.map(s => {
+    const cls = s.n <= M.lastStage ? "done" : (s.n === M.lastStage+1 ? "next" : "");
+    const col = getComputedStyle(document.documentElement).getPropertyValue(`--t-${s.type==="itt"||s.type==="ttt"?"tt":s.type==="mountain"?"mtn":s.type}`);
+    return `<button class="${cls}" style="height:${Math.max(22, 100*s.km/maxKm)}%;background:${col.trim()}" onclick="openStage(${s.n})" aria-label="Etapp ${s.n}"></button>`;
+  }).join("");
+  const restByAfter = {}; // rest day comes after stage finishing the day before
+  for(const rd of R.restDays){
+    const before = R.stages.filter(s => s.date < rd.date).pop();
+    if(before) restByAfter[before.n] = rd;
+  }
+  let list = "";
+  for(const s of R.stages){
+    const done = s.n <= M.lastStage;
+    list += `<button class="stage ${done?"done":""}" onclick="openStage(${s.n})">
+      <span class="no disp num">${s.n}</span>
+      <span class="mid">
+        <span class="rt">${esc(s.start)} → ${esc(s.finish)}</span>
+        <span class="meta num">${fmtDate(s.date)} · ${String(s.km).replace(".",",")} km ${typeBadge(s.type)}${s.summitFinish?' <span class="badge b-mountain">Toppmål</span>':""}</span>
+        ${done && s.winner ? `<span class="win">🏆 ${esc(s.winner)}</span>` : ""}
+      </span>
+      <span class="chev">›</span>
+    </button>`;
+    if(restByAfter[s.n]) list += `<div class="rest">Vilodag ${fmtDate(restByAfter[s.n].date)} · ${esc(restByAfter[s.n].location)}</div>`;
+  }
+  const tc = R.stageTypeCounts;
+  document.getElementById("v-etapper").innerHTML = `
+    <h2 class="sec disp">21 etapper · ${String(M.kmTotal).replace(".",",")} km</h2>
+    <div class="small muted" style="margin:0 2px 6px">${tc.flat} platta · ${tc.hilly} kuperade · ${tc.mountain} berg · ${tc.itt} tempo · ${tc.ttt} lagtempo. Tryck på en stapel eller etapp.</div>
+    <div class="strip" aria-hidden="true">${strip}</div>
+    ${list}`;
+}
+
+/* ---------- stage detail ---------- */
+let lastScroll = 0;
+function openStage(n){
+  const s = stageByN(n), r = resByN(n);
+  document.getElementById("det-ttl").textContent = `Etapp ${n} · ${s.start} → ${s.finish}`;
+  let h = `
+    <div class="card" style="margin-top:14px">
+      <div class="small muted num">${fmtDate(s.date)} · ${String(s.km).replace(".",",")} km · ${TYPE_LBL[s.type]}${s.summitFinish?" · toppmålgång":""}${s.elevationM?` · ${s.elevationM.toLocaleString("sv-SE")} höjdmeter`:""}</div>
+      <p style="margin:8px 0 0;font-size:14.5px">${esc(s.desc)}</p>
+      ${s.climbs && s.climbs.length ? `<div style="margin-top:10px">${s.climbs.map(c => `<div style="display:flex;gap:8px;padding:3px 0;font-size:13.5px"><span class="tag">${c.cat ? (c.cat==="HC"?"HC":"Kat "+c.cat) : "Stigning"}</span><span style="flex:1">${esc(c.name)}</span></div>`).join("")}</div>` : ""}
+    </div>`;
+  if(r){
+    h += `<h2 class="sec disp">Resultat</h2>
+    <div class="card"><div class="small muted num" style="margin-bottom:6px">Snittfart ${String(r.avgSpeedKmh).replace(".",",")} km/h</div>
+    <div class="scrollx"><table>
+      <tr><th></th><th>${n===1?"Lag":"Åkare"}</th><th class="r">Tid</th></tr>
+      ${r.top15.map(row => `<tr${row.rank===1?' class="lead"':""}><td class="rk num">${row.rank}</td><td><div class="who2"><div class="nm">${esc(row.rider)}</div>${n===1?"":`<div class="tm">${esc(row.team)}</div>`}</div></td><td class="r num">${esc(row.time)}</td></tr>`).join("")}
+    </table></div></div>
+    <h2 class="sec disp">Efter etappen</h2>
+    <div class="jrow">
+      ${[["j-yellow","Gul",r.jerseysAfter.yellow],["j-green","Grön",r.jerseysAfter.green],["j-polka","Bergströja",r.jerseysAfter.polka],["j-white","Vit",r.jerseysAfter.white]].map(([c,l,nm]) =>
+        `<div class="jcard"><span class="j ${c}"></span><div class="who"><div class="lab">${l}</div><div class="nm">${esc(nm)}</div></div></div>`).join("")}
+    </div>
+    <div class="card" style="margin-top:12px"><strong style="font-size:14px">Så gick det till</strong><p class="small" style="margin:6px 0 0">${esc(r.summary)}</p></div>
+    ${r.abandons && r.abandons.length ? `<div class="card"><strong style="font-size:14px;color:var(--red-ink)">Lämnade loppet</strong>${r.abandons.map(a => `<div class="small" style="margin-top:6px"><strong>${esc(a.rider)}</strong> (${esc(a.team)}) — ${esc(a.reason)}</div>`).join("")}</div>` : ""}`;
+  } else {
+    h += `<div class="card"><span class="small muted">Etappen har inte körts ännu — körs ${fmtDate(s.date)}.</span></div>`;
+  }
+  document.getElementById("det-body").innerHTML = h;
+  lastScroll = window.scrollY;
+  document.getElementById("detail").classList.add("open");
+  document.getElementById("detail").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+}
+function closeStage(){
+  document.getElementById("detail").classList.remove("open");
+  document.body.style.overflow = "";
+  window.scrollTo(0, lastScroll);
+}
+
+/* ---------- STÄLLNING ---------- */
+let segMode = "gc";
+function renderStallning(){
+  const modes = [["gc","Gul"],["points","Grön"],["kom","Berg"],["youth","Vit"],["teams","Lag"]];
+  const seg = `<div class="seg">${modes.map(([k,l]) => `<button class="${segMode===k?"on"+(k==="gc"?" sy":""):""}" onclick="setSeg('${k}')">${l}</button>`).join("")}</div>`;
+  let body = "";
+  if(segMode === "gc"){
+    const top = S.gc.slice(0,12), mx = Math.max(...top.map(r => gapSec(r.gap)));
+    body += `<div class="card"><strong style="font-size:14px">Tidsgap till gula tröjan</strong><div class="bars">${
+      top.map(r => `<div class="brow ${r.rank===1?"lead":""} num"><span class="bl">${flag(r.nat)} ${esc(shortName(r.rider))}</span><span class="tr"><i style="width:${r.rank===1?100:Math.max(2,100*gapSec(r.gap)/mx)}%"></i></span><span class="bv">${r.rank===1?"ledare":esc(r.gap)}</span></div>`).join("")
+    }</div><div class="small muted" style="margin-top:8px">Gul stapel = ledaren (full bredd). Övrigas stapel visar tidsgap.</div></div>
+    <div class="card"><div class="scrollx"><table>
+      <tr><th></th><th>Åkare</th><th class="r">Gap</th></tr>
+      ${S.gc.map(r => `<tr${r.rank===1?' class="lead"':""}><td class="rk num">${r.rank}</td><td><div class="who2"><div class="nm">${flag(r.nat)} ${esc(r.rider)}</div><div class="tm">${esc(r.team)}</div></div></td><td class="r num">${r.rank===1?esc(r.time):esc(r.gap)}</td></tr>`).join("")}
+    </table></div></div>`;
+  } else if(segMode === "teams"){
+    body += `<div class="card"><div class="scrollx"><table>
+      <tr><th></th><th>Lag</th><th class="r">Gap</th></tr>
+      ${S.teams.map(r => `<tr${r.rank===1?' class="lead"':""}><td class="rk num">${r.rank}</td><td>${esc(r.team)}</td><td class="r num">${r.rank===1?esc(r.time):esc(r.gap)}</td></tr>`).join("")}
+    </table></div></div>`;
+  } else {
+    const rows = S[segMode], isPts = segMode==="points"||segMode==="kom";
+    body += `<div class="card"><div class="scrollx"><table>
+      <tr><th></th><th>Åkare</th><th class="r">${isPts?"Poäng":"Gap"}</th></tr>
+      ${rows.map(r => `<tr${r.rank===1?' class="lead"':""}><td class="rk num">${r.rank}</td><td><div class="who2"><div class="nm">${flag(r.nat||riderNat(r.rider)||"")} ${esc(r.rider)}</div><div class="tm">${esc(r.team)}</div></div></td><td class="r num">${isPts?r.pts:(r.rank===1?esc(r.time||""):esc(r.gap))}</td></tr>`).join("")}
+    </table></div></div>`;
+  }
+  const tl = `<h2 class="sec disp">Tröjbärare etapp för etapp</h2>
+  <div class="card"><div class="scrollx"><table style="min-width:520px">
+    <tr><th>Etapp</th><th>🟡 Gul</th><th>🟢 Grön</th><th>🔴 Berg</th><th>⚪ Vit</th></tr>
+    ${D.timeline.map(t => `<tr><td class="rk num">${t.n}</td><td>${esc(shortName(t.yellow))}</td><td>${esc(shortName(t.green))}</td><td>${esc(shortName(t.polka))}</td><td>${esc(shortName(t.white))}</td></tr>`).join("")}
+  </table></div><div class="small muted" style="margin-top:8px">Tröjbäraren efter respektive etapp.</div></div>`;
+  document.getElementById("v-stallning").innerHTML = `<h2 class="sec disp">Classement · efter etapp ${S.afterStage}</h2>${seg}${body}${tl}`;
+}
+function setSeg(k){ segMode = k; renderStallning(); window.scrollTo(0,0); }
+function shortName(full){
+  if(!full) return "";
+  const parts = full.split(" ");
+  if(parts.length === 1) return full;
+  return parts[0][0] + ". " + parts.slice(1).join(" ");
+}
+
+/* ---------- ÅKARE ---------- */
+let q = "";
+function renderAkare(){
+  const qq = q.trim().toLowerCase();
+  let total = 0, h = "";
+  for(const t of SL.teams){
+    const hits = t.riders.filter(r =>
+      !qq || r.name.toLowerCase().includes(qq) || t.name.toLowerCase().includes(qq) ||
+      t.short.toLowerCase().includes(qq) || (NATN[r.nat]||"").toLowerCase().includes(qq));
+    if(!hits.length) continue;
+    total += hits.length;
+    h += `<div class="teamhead disp"><span class="sn">${flag(t.country)} ${esc(t.short)}</span><span class="fn">${esc(t.name)}</span></div>
+    <div class="card" style="padding:6px 12px">${hits.map(r => {
+      const out = outSet.has(r.name);
+      const ab = out ? S.abandons.find(a => a.rider === r.name) : null;
+      return `<div class="rider ${out?"out":""}"><span class="bib num">${r.bib}</span><span class="nm">${flag(r.nat)} ${esc(r.name)}</span>${out?`<span class="tag">Ute · etapp ${ab.stage}</span>`:""}<span class="ag num">${r.age} år</span></div>`;
+    }).join("")}</div>`;
+  }
+  document.getElementById("ak-list").innerHTML = h || `<div class="card muted">Inga träffar.</div>`;
+  document.getElementById("ak-count").textContent = qq ? (total === 1 ? "1 träff" : `${total} träffar`) : `${M.ridersStarted} åkare · 23 lag · ${M.ridersLeft} kvar i loppet`;
+}
+function initAkare(){
+  document.getElementById("v-akare").innerHTML = `
+    <h2 class="sec disp">Startlistan</h2>
+    <div class="search"><input type="search" id="ak-q" placeholder="Sök åkare, lag eller land …" autocomplete="off"></div>
+    <div class="small muted" id="ak-count" style="margin:-6px 2px 10px"></div>
+    <div id="ak-list"></div>`;
+  document.getElementById("ak-q").addEventListener("input", e => { q = e.target.value; renderAkare(); });
+  renderAkare();
+}
+
+/* ---------- STATS ---------- */
+function renderStats(){
+  const st = SL.stats;
+  const doneRes = RES.stages;
+  const spdMax = Math.max(...doneRes.map(s => s.avgSpeedKmh));
+  const natMax = st.ridersPerNation[0].count;
+  const money = v => v.toLocaleString("sv-SE") + " €";
+  const h = `
+  <h2 class="sec disp">Nyckeltal</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="v">${esc(st.defendingChampion.split(" (")[0])}</div><div class="k">Regerande mästare</div></div>
+    <div class="kpi"><div class="v num">${money(st.winnerPrizeEUR)}</div><div class="k">Till slutsegraren</div></div>
+    <div class="kpi"><div class="v num">${esc(st.youngest.name)} · ${st.youngest.age}</div><div class="k">Yngst i fältet</div></div>
+    <div class="kpi"><div class="v num">${esc(st.oldest.name)} · ${st.oldest.age}</div><div class="k">Äldst i fältet</div></div>
+    <div class="kpi"><div class="v num">${String(spdMax).replace(".",",")} km/h</div><div class="k">Snabbaste etappsnittet</div></div>
+    <div class="kpi"><div class="v num">${money(st.totalPrizeEUR)}</div><div class="k">Total prispott</div></div>
+  </div>
+  <h2 class="sec disp">Favoriternas meritlista</h2>
+  <div class="card"><div class="scrollx"><table style="min-width:540px">
+    <tr><th>Åkare</th><th class="r">Ålder</th><th class="r">TdF-segrar</th><th class="r">TdF-etapper</th><th class="r">GT-segrar</th><th class="r">Karriärsegrar</th></tr>
+    ${SL.contenders.map(c => `<tr><td><div class="who2"><div class="nm">${esc(c.name)}</div><div class="tm">${esc(c.team)}</div></div></td><td class="r num">${c.age}</td><td class="r num">${c.tdfWins}</td><td class="r num">${c.tdfStageWins}</td><td class="r num">${c.gtWins}</td><td class="r num">${c.careerWins}</td></tr>`).join("")}
+  </table></div></div>
+  ${SL.contenders.map(c => `<div class="fact"><strong>${esc(c.name)}:</strong> ${esc(c.note)}</div>`).join("")}
+  <h2 class="sec disp">Snittfart per etapp</h2>
+  <div class="card"><div class="bars">${doneRes.map(s => `<div class="brow num"><span class="bl">Etapp ${s.n} · ${esc(shortName(s.winner))}</span><span class="tr"><i style="width:${(100*s.avgSpeedKmh/spdMax).toFixed(1)}%"></i></span><span class="bv">${String(s.avgSpeedKmh).replace(".",",")}</span></div>`).join("")}</div><div class="small muted" style="margin-top:8px">km/h, vinnarens snittfart. Etapp 1 = lagtempo.</div></div>
+  <h2 class="sec disp">Nationer i klungan</h2>
+  <div class="card"><div class="bars">${st.ridersPerNation.map(nn => `<div class="brow num"><span class="bl">${flag(nn.nat)} ${esc(NATN[nn.nat]||nn.nat)}</span><span class="tr"><i style="width:${(100*nn.count/natMax).toFixed(1)}%"></i></span><span class="bv">${nn.count}</span></div>`).join("")}</div><div class="small muted" style="margin-top:8px">Antal åkare per nation (topp 10 av ${M.ridersStarted} startande). ${esc(st.mostParticipations.name)} gör alla sin ${st.mostParticipations.count}:e Tour.</div></div>
+  <h2 class="sec disp">Lämnat loppet (${S.abandons.length})</h2>
+  <div class="card">${S.abandons.map(a => `<div class="small" style="padding:5px 0;border-bottom:1px solid var(--hair)"><strong>${esc(a.rider)}</strong> (${esc(a.team)}) — etapp ${a.stage}. ${esc(a.reason)}</div>`).join("")}</div>
+  <h2 class="sec disp">Mest offensiv · Prix de la combativité</h2>
+  <div class="card">${S.combativity.map(c => `<div class="small num" style="padding:5px 0;border-bottom:1px solid var(--hair)"><strong>Etapp ${c.stage}:</strong> ${c.rider ? esc(c.rider) + (c.team ? " ("+esc(c.team)+")" : "") : esc(c.note||"—")}</div>`).join("")}</div>
+  <h2 class="sec disp">Nördfakta</h2>
+  ${st.funFacts.map(f => `<div class="fact">${esc(f)}</div>`).join("")}`;
+  document.getElementById("v-stats").innerHTML = h;
+}
+
+/* ---------- nav ---------- */
+function show(v){
+  document.querySelectorAll(".view").forEach(el => el.classList.toggle("on", el.id === "v-"+v));
+  document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", b.dataset.v === v));
+  window.scrollTo(0,0);
+}
+document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => show(b.dataset.v)));
+
+/* ---------- boot ---------- */
+document.getElementById("mast-stage").textContent = `Efter etapp ${M.lastStage} av 21`;
+document.getElementById("mast-upd").textContent = `Uppdaterad ${fmtDate(M.updated)}`;
+document.getElementById("foot-upd").textContent = `Senast uppdaterad efter etapp ${M.lastStage} · ${fmtDate(M.updated)} 2026`;
+renderIdag(); renderEtapper(); renderStallning(); initAkare(); renderStats();
+show("idag");
+</script>

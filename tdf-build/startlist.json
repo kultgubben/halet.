@@ -1,0 +1,1416 @@
+{
+ "teams": [
+  {
+   "name": "UAE Team Emirates XRG",
+   "short": "UAE",
+   "country": "AE",
+   "riders": [
+    {
+     "bib": 1,
+     "name": "Tadej Pogačar",
+     "nat": "SI",
+     "age": 27
+    },
+    {
+     "bib": 2,
+     "name": "Isaac del Toro",
+     "nat": "MX",
+     "age": 22
+    },
+    {
+     "bib": 3,
+     "name": "Felix Großschartner",
+     "nat": "AT",
+     "age": 32
+    },
+    {
+     "bib": 4,
+     "name": "Brandon McNulty",
+     "nat": "US",
+     "age": 28
+    },
+    {
+     "bib": 5,
+     "name": "Nils Politt",
+     "nat": "DE",
+     "age": 32
+    },
+    {
+     "bib": 6,
+     "name": "Florian Vermeersch",
+     "nat": "BE",
+     "age": 27
+    },
+    {
+     "bib": 7,
+     "name": "Tim Wellens",
+     "nat": "BE",
+     "age": 35
+    },
+    {
+     "bib": 8,
+     "name": "Adam Yates",
+     "nat": "GB",
+     "age": 33
+    }
+   ]
+  },
+  {
+   "name": "Team Visma | Lease a Bike",
+   "short": "Visma",
+   "country": "NL",
+   "riders": [
+    {
+     "bib": 11,
+     "name": "Jonas Vingegaard",
+     "nat": "DK",
+     "age": 29
+    },
+    {
+     "bib": 12,
+     "name": "Edoardo Affini",
+     "nat": "IT",
+     "age": 30
+    },
+    {
+     "bib": 13,
+     "name": "Bruno Armirail",
+     "nat": "FR",
+     "age": 32
+    },
+    {
+     "bib": 14,
+     "name": "Victor Campenaerts",
+     "nat": "BE",
+     "age": 34
+    },
+    {
+     "bib": 15,
+     "name": "Per Strand Hagenes",
+     "nat": "NO",
+     "age": 22
+    },
+    {
+     "bib": 16,
+     "name": "Matteo Jorgenson",
+     "nat": "US",
+     "age": 27
+    },
+    {
+     "bib": 17,
+     "name": "Sepp Kuss",
+     "nat": "US",
+     "age": 31
+    },
+    {
+     "bib": 18,
+     "name": "Davide Piganzoli",
+     "nat": "IT",
+     "age": 23
+    }
+   ]
+  },
+  {
+   "name": "Red Bull–Bora–Hansgrohe",
+   "short": "Red Bull",
+   "country": "DE",
+   "riders": [
+    {
+     "bib": 21,
+     "name": "Remco Evenepoel",
+     "nat": "BE",
+     "age": 26
+    },
+    {
+     "bib": 22,
+     "name": "Mattia Cattaneo",
+     "nat": "IT",
+     "age": 35
+    },
+    {
+     "bib": 23,
+     "name": "Nico Denz",
+     "nat": "DE",
+     "age": 32
+    },
+    {
+     "bib": 24,
+     "name": "Jai Hindley",
+     "nat": "AU",
+     "age": 30
+    },
+    {
+     "bib": 25,
+     "name": "Florian Lipowitz",
+     "nat": "DE",
+     "age": 25
+    },
+    {
+     "bib": 26,
+     "name": "Jan Tratnik",
+     "nat": "SI",
+     "age": 36
+    },
+    {
+     "bib": 27,
+     "name": "Tim van Dijke",
+     "nat": "NL",
+     "age": 26
+    },
+    {
+     "bib": 28,
+     "name": "Maxim Van Gils",
+     "nat": "BE",
+     "age": 26
+    }
+   ]
+  },
+  {
+   "name": "Lidl–Trek",
+   "short": "Lidl-Trek",
+   "country": "US",
+   "riders": [
+    {
+     "bib": 31,
+     "name": "Juan Ayuso",
+     "nat": "ES",
+     "age": 23
+    },
+    {
+     "bib": 32,
+     "name": "Derek Gee-West",
+     "nat": "CA",
+     "age": 31
+    },
+    {
+     "bib": 33,
+     "name": "Mads Pedersen",
+     "nat": "DK",
+     "age": 30
+    },
+    {
+     "bib": 34,
+     "name": "Quinn Simmons",
+     "nat": "US",
+     "age": 25
+    },
+    {
+     "bib": 35,
+     "name": "Mattias Skjelmose",
+     "nat": "DK",
+     "age": 25
+    },
+    {
+     "bib": 36,
+     "name": "Toms Skujiņš",
+     "nat": "LV",
+     "age": 35
+    },
+    {
+     "bib": 37,
+     "name": "Mathias Vacek",
+     "nat": "CZ",
+     "age": 24
+    },
+    {
+     "bib": 38,
+     "name": "Carlos Verona",
+     "nat": "ES",
+     "age": 33
+    }
+   ]
+  },
+  {
+   "name": "EF Education–EasyPost",
+   "short": "EF",
+   "country": "US",
+   "riders": [
+    {
+     "bib": 41,
+     "name": "Richard Carapaz",
+     "nat": "EC",
+     "age": 33
+    },
+    {
+     "bib": 42,
+     "name": "Kasper Asgreen",
+     "nat": "DK",
+     "age": 31
+    },
+    {
+     "bib": 43,
+     "name": "Alex Baudin",
+     "nat": "FR",
+     "age": 25
+    },
+    {
+     "bib": 44,
+     "name": "Ben Healy",
+     "nat": "IE",
+     "age": 25
+    },
+    {
+     "bib": 45,
+     "name": "Sean Quinn",
+     "nat": "US",
+     "age": 26
+    },
+    {
+     "bib": 46,
+     "name": "Georg Steinhauser",
+     "nat": "DE",
+     "age": 24
+    },
+    {
+     "bib": 47,
+     "name": "Michael Valgren",
+     "nat": "DK",
+     "age": 34
+    },
+    {
+     "bib": 48,
+     "name": "Max Walker",
+     "nat": "GB",
+     "age": 24
+    }
+   ]
+  },
+  {
+   "name": "Decathlon CMA CGM Team",
+   "short": "Decathlon",
+   "country": "FR",
+   "riders": [
+    {
+     "bib": 51,
+     "name": "Paul Seixas",
+     "nat": "FR",
+     "age": 19
+    },
+    {
+     "bib": 52,
+     "name": "Tiesj Benoot",
+     "nat": "BE",
+     "age": 32
+    },
+    {
+     "bib": 53,
+     "name": "Cees Bol",
+     "nat": "NL",
+     "age": 30
+    },
+    {
+     "bib": 54,
+     "name": "Daan Hoole",
+     "nat": "NL",
+     "age": 27
+    },
+    {
+     "bib": 55,
+     "name": "Olav Kooij",
+     "nat": "NL",
+     "age": 24
+    },
+    {
+     "bib": 56,
+     "name": "Aurélien Paret-Peintre",
+     "nat": "FR",
+     "age": 30
+    },
+    {
+     "bib": 57,
+     "name": "Nicolas Prodhomme",
+     "nat": "FR",
+     "age": 29
+    },
+    {
+     "bib": 58,
+     "name": "Matthew Riccitello",
+     "nat": "US",
+     "age": 24
+    }
+   ]
+  },
+  {
+   "name": "XDS Astana Team",
+   "short": "Astana",
+   "country": "KZ",
+   "riders": [
+    {
+     "bib": 61,
+     "name": "Sergio Higuita",
+     "nat": "CO",
+     "age": 28
+    },
+    {
+     "bib": 62,
+     "name": "Davide Ballerini",
+     "nat": "IT",
+     "age": 31
+    },
+    {
+     "bib": 63,
+     "name": "Aaron Gate",
+     "nat": "NZ",
+     "age": 35
+    },
+    {
+     "bib": 64,
+     "name": "Max Kanter",
+     "nat": "DE",
+     "age": 28
+    },
+    {
+     "bib": 65,
+     "name": "Harold Tejada",
+     "nat": "CO",
+     "age": 29
+    },
+    {
+     "bib": 66,
+     "name": "Mike Teunissen",
+     "nat": "NL",
+     "age": 33
+    },
+    {
+     "bib": 67,
+     "name": "Simone Velasco",
+     "nat": "IT",
+     "age": 30
+    },
+    {
+     "bib": 68,
+     "name": "Nicolas Vinokurov",
+     "nat": "KZ",
+     "age": 23
+    }
+   ]
+  },
+  {
+   "name": "Team Bahrain Victorious",
+   "short": "Bahrain",
+   "country": "BH",
+   "riders": [
+    {
+     "bib": 71,
+     "name": "Lenny Martinez",
+     "nat": "FR",
+     "age": 22
+    },
+    {
+     "bib": 72,
+     "name": "Phil Bauhaus",
+     "nat": "DE",
+     "age": 31
+    },
+    {
+     "bib": 73,
+     "name": "Damiano Caruso",
+     "nat": "IT",
+     "age": 38
+    },
+    {
+     "bib": 74,
+     "name": "Kamil Gradek",
+     "nat": "PL",
+     "age": 35
+    },
+    {
+     "bib": 75,
+     "name": "Robert Stannard",
+     "nat": "AU",
+     "age": 27
+    },
+    {
+     "bib": 76,
+     "name": "Matej Mohorič",
+     "nat": "SI",
+     "age": 31
+    },
+    {
+     "bib": 77,
+     "name": "Antonio Tiberi",
+     "nat": "IT",
+     "age": 25
+    },
+    {
+     "bib": 78,
+     "name": "Vlad Van Mechelen",
+     "nat": "BE",
+     "age": 22
+    }
+   ]
+  },
+  {
+   "name": "Netcompany–INEOS",
+   "short": "Ineos",
+   "country": "GB",
+   "riders": [
+    {
+     "bib": 81,
+     "name": "Egan Bernal",
+     "nat": "CO",
+     "age": 29
+    },
+    {
+     "bib": 82,
+     "name": "Thymen Arensman",
+     "nat": "NL",
+     "age": 26
+    },
+    {
+     "bib": 83,
+     "name": "Tobias Foss",
+     "nat": "NO",
+     "age": 29
+    },
+    {
+     "bib": 84,
+     "name": "Filippo Ganna",
+     "nat": "IT",
+     "age": 29
+    },
+    {
+     "bib": 85,
+     "name": "Dorian Godon",
+     "nat": "FR",
+     "age": 30
+    },
+    {
+     "bib": 86,
+     "name": "Michał Kwiatkowski",
+     "nat": "PL",
+     "age": 36
+    },
+    {
+     "bib": 87,
+     "name": "Josh Tarling",
+     "nat": "GB",
+     "age": 22
+    },
+    {
+     "bib": 88,
+     "name": "Kévin Vauquelin",
+     "nat": "FR",
+     "age": 25
+    }
+   ]
+  },
+  {
+   "name": "Soudal Quick-Step",
+   "short": "Soudal",
+   "country": "BE",
+   "riders": [
+    {
+     "bib": 91,
+     "name": "Tim Merlier",
+     "nat": "BE",
+     "age": 33
+    },
+    {
+     "bib": 92,
+     "name": "Pascal Eenkhoorn",
+     "nat": "NL",
+     "age": 29
+    },
+    {
+     "bib": 93,
+     "name": "Valentin Paret-Peintre",
+     "nat": "FR",
+     "age": 25
+    },
+    {
+     "bib": 94,
+     "name": "Jasper Stuyven",
+     "nat": "BE",
+     "age": 34
+    },
+    {
+     "bib": 95,
+     "name": "Dylan van Baarle",
+     "nat": "NL",
+     "age": 34
+    },
+    {
+     "bib": 96,
+     "name": "Bert Van Lerberghe",
+     "nat": "BE",
+     "age": 33
+    },
+    {
+     "bib": 97,
+     "name": "Ilan Van Wilder",
+     "nat": "BE",
+     "age": 26
+    },
+    {
+     "bib": 98,
+     "name": "Louis Vervaeke",
+     "nat": "BE",
+     "age": 32
+    }
+   ]
+  },
+  {
+   "name": "Alpecin–Premier Tech",
+   "short": "Alpecin",
+   "country": "BE",
+   "riders": [
+    {
+     "bib": 101,
+     "name": "Mathieu van der Poel",
+     "nat": "NL",
+     "age": 31
+    },
+    {
+     "bib": 102,
+     "name": "Ramses Debruyne",
+     "nat": "BE",
+     "age": 23
+    },
+    {
+     "bib": 103,
+     "name": "Silvan Dillier",
+     "nat": "CH",
+     "age": 35
+    },
+    {
+     "bib": 104,
+     "name": "Tim Marsman",
+     "nat": "NL",
+     "age": 25
+    },
+    {
+     "bib": 105,
+     "name": "Jasper Philipsen",
+     "nat": "BE",
+     "age": 28
+    },
+    {
+     "bib": 106,
+     "name": "Edward Planckaert",
+     "nat": "BE",
+     "age": 31
+    },
+    {
+     "bib": 107,
+     "name": "Jonas Rickaert",
+     "nat": "BE",
+     "age": 32
+    },
+    {
+     "bib": 108,
+     "name": "Emiel Verstrynge",
+     "nat": "BE",
+     "age": 24
+    }
+   ]
+  },
+  {
+   "name": "Team Jayco AlUla",
+   "short": "Jayco",
+   "country": "AU",
+   "riders": [
+    {
+     "bib": 111,
+     "name": "Ben O'Connor",
+     "nat": "AU",
+     "age": 30
+    },
+    {
+     "bib": 112,
+     "name": "Pascal Ackermann",
+     "nat": "DE",
+     "age": 32
+    },
+    {
+     "bib": 113,
+     "name": "Luke Durbridge",
+     "nat": "AU",
+     "age": 35
+    },
+    {
+     "bib": 114,
+     "name": "Felix Engelhardt",
+     "nat": "DE",
+     "age": 25
+    },
+    {
+     "bib": 115,
+     "name": "Michael Matthews",
+     "nat": "AU",
+     "age": 35
+    },
+    {
+     "bib": 116,
+     "name": "Kelland O'Brien",
+     "nat": "AU",
+     "age": 28
+    },
+    {
+     "bib": 117,
+     "name": "Luke Plapp",
+     "nat": "AU",
+     "age": 25
+    },
+    {
+     "bib": 118,
+     "name": "Mauro Schmid",
+     "nat": "CH",
+     "age": 26
+    }
+   ]
+  },
+  {
+   "name": "Uno-X Mobility",
+   "short": "Uno-X",
+   "country": "NO",
+   "riders": [
+    {
+     "bib": 121,
+     "name": "Tobias Halland Johannessen",
+     "nat": "NO",
+     "age": 26
+    },
+    {
+     "bib": 122,
+     "name": "Jonas Abrahamsen",
+     "nat": "NO",
+     "age": 30
+    },
+    {
+     "bib": 123,
+     "name": "Anthon Charmig",
+     "nat": "DK",
+     "age": 28
+    },
+    {
+     "bib": 124,
+     "name": "Magnus Cort",
+     "nat": "DK",
+     "age": 33
+    },
+    {
+     "bib": 125,
+     "name": "Anders Halland Johannessen",
+     "nat": "NO",
+     "age": 26
+    },
+    {
+     "bib": 126,
+     "name": "Anders Skaarseth",
+     "nat": "NO",
+     "age": 31
+    },
+    {
+     "bib": 127,
+     "name": "Torstein Træen",
+     "nat": "NO",
+     "age": 30
+    },
+    {
+     "bib": 128,
+     "name": "Søren Wærenskjold",
+     "nat": "NO",
+     "age": 26
+    }
+   ]
+  },
+  {
+   "name": "NSN Cycling Team",
+   "short": "NSN",
+   "country": "CH",
+   "riders": [
+    {
+     "bib": 131,
+     "name": "Biniam Girmay",
+     "nat": "ER",
+     "age": 26
+    },
+    {
+     "bib": 132,
+     "name": "Lewis Askey",
+     "nat": "GB",
+     "age": 25
+    },
+    {
+     "bib": 133,
+     "name": "George Bennett",
+     "nat": "NZ",
+     "age": 36
+    },
+    {
+     "bib": 134,
+     "name": "Marco Frigo",
+     "nat": "IT",
+     "age": 26
+    },
+    {
+     "bib": 135,
+     "name": "Matis Louvel",
+     "nat": "FR",
+     "age": 26
+    },
+    {
+     "bib": 136,
+     "name": "Krists Neilands",
+     "nat": "LV",
+     "age": 31
+    },
+    {
+     "bib": 137,
+     "name": "Jake Stewart",
+     "nat": "GB",
+     "age": 26
+    },
+    {
+     "bib": 138,
+     "name": "Tom Van Asbroeck",
+     "nat": "BE",
+     "age": 36
+    }
+   ]
+  },
+  {
+   "name": "Movistar Team",
+   "short": "Movistar",
+   "country": "ES",
+   "riders": [
+    {
+     "bib": 141,
+     "name": "Cian Uijtdebroeks",
+     "nat": "BE",
+     "age": 23
+    },
+    {
+     "bib": 142,
+     "name": "Pablo Castrillo",
+     "nat": "ES",
+     "age": 25
+    },
+    {
+     "bib": 143,
+     "name": "Jefferson Alveiro Cepeda",
+     "nat": "EC",
+     "age": 30
+    },
+    {
+     "bib": 144,
+     "name": "Raúl García Pierna",
+     "nat": "ES",
+     "age": 25
+    },
+    {
+     "bib": 145,
+     "name": "Michel Hessmann",
+     "nat": "DE",
+     "age": 25
+    },
+    {
+     "bib": 146,
+     "name": "Nelson Oliveira",
+     "nat": "PT",
+     "age": 37
+    },
+    {
+     "bib": 147,
+     "name": "Javier Romo",
+     "nat": "ES",
+     "age": 27
+    },
+    {
+     "bib": 148,
+     "name": "Einer Rubio",
+     "nat": "CO",
+     "age": 28
+    }
+   ]
+  },
+  {
+   "name": "Lotto–Intermarché",
+   "short": "Lotto",
+   "country": "BE",
+   "riders": [
+    {
+     "bib": 151,
+     "name": "Arnaud De Lie",
+     "nat": "BE",
+     "age": 24
+    },
+    {
+     "bib": 152,
+     "name": "Huub Artz",
+     "nat": "NL",
+     "age": 24
+    },
+    {
+     "bib": 153,
+     "name": "Jenno Berckmoes",
+     "nat": "BE",
+     "age": 25
+    },
+    {
+     "bib": 154,
+     "name": "Lars Craps",
+     "nat": "BE",
+     "age": 24
+    },
+    {
+     "bib": 155,
+     "name": "Liam Slock",
+     "nat": "BE",
+     "age": 25
+    },
+    {
+     "bib": 156,
+     "name": "Lennert Van Eetvelt",
+     "nat": "BE",
+     "age": 24
+    },
+    {
+     "bib": 157,
+     "name": "Baptiste Veistroffer",
+     "nat": "FR",
+     "age": 26
+    },
+    {
+     "bib": 158,
+     "name": "Georg Zimmermann",
+     "nat": "DE",
+     "age": 28
+    }
+   ]
+  },
+  {
+   "name": "Cofidis",
+   "short": "Cofidis",
+   "country": "FR",
+   "riders": [
+    {
+     "bib": 161,
+     "name": "Ion Izagirre",
+     "nat": "ES",
+     "age": 37
+    },
+    {
+     "bib": 162,
+     "name": "Piet Allegaert",
+     "nat": "BE",
+     "age": 31
+    },
+    {
+     "bib": 163,
+     "name": "Alex Aranburu",
+     "nat": "ES",
+     "age": 30
+    },
+    {
+     "bib": 164,
+     "name": "Jenthe Biermans",
+     "nat": "BE",
+     "age": 30
+    },
+    {
+     "bib": 165,
+     "name": "Milan Fretin",
+     "nat": "BE",
+     "age": 25
+    },
+    {
+     "bib": 166,
+     "name": "Alex Kirsch",
+     "nat": "LU",
+     "age": 34
+    },
+    {
+     "bib": 167,
+     "name": "Hugo Page",
+     "nat": "FR",
+     "age": 24
+    },
+    {
+     "bib": 168,
+     "name": "Benjamin Thomas",
+     "nat": "FR",
+     "age": 30
+    }
+   ]
+  },
+  {
+   "name": "Pinarello–Q36.5 Pro Cycling Team",
+   "short": "Q36.5",
+   "country": "CH",
+   "riders": [
+    {
+     "bib": 171,
+     "name": "Tom Pidcock",
+     "nat": "GB",
+     "age": 26
+    },
+    {
+     "bib": 172,
+     "name": "Xabier Azparren",
+     "nat": "ES",
+     "age": 27
+    },
+    {
+     "bib": 173,
+     "name": "Chris Harper",
+     "nat": "AU",
+     "age": 31
+    },
+    {
+     "bib": 174,
+     "name": "Quinten Hermans",
+     "nat": "BE",
+     "age": 30
+    },
+    {
+     "bib": 175,
+     "name": "Damien Howson",
+     "nat": "AU",
+     "age": 33
+    },
+    {
+     "bib": 176,
+     "name": "Xandro Meurisse",
+     "nat": "BE",
+     "age": 34
+    },
+    {
+     "bib": 177,
+     "name": "Brent Van Moer",
+     "nat": "BE",
+     "age": 28
+    },
+    {
+     "bib": 178,
+     "name": "Fred Wright",
+     "nat": "GB",
+     "age": 27
+    }
+   ]
+  },
+  {
+   "name": "Groupama–FDJ United",
+   "short": "Groupama",
+   "country": "FR",
+   "riders": [
+    {
+     "bib": 181,
+     "name": "Romain Grégoire",
+     "nat": "FR",
+     "age": 23
+    },
+    {
+     "bib": 182,
+     "name": "Clément Berthet",
+     "nat": "FR",
+     "age": 28
+    },
+    {
+     "bib": 183,
+     "name": "Clément Braz Afonso",
+     "nat": "FR",
+     "age": 26
+    },
+    {
+     "bib": 184,
+     "name": "Ewen Costiou",
+     "nat": "FR",
+     "age": 23
+    },
+    {
+     "bib": 185,
+     "name": "Lorenzo Germani",
+     "nat": "IT",
+     "age": 24
+    },
+    {
+     "bib": 186,
+     "name": "Guillaume Martin",
+     "nat": "FR",
+     "age": 33
+    },
+    {
+     "bib": 187,
+     "name": "Quentin Pacher",
+     "nat": "FR",
+     "age": 33
+    },
+    {
+     "bib": 188,
+     "name": "Clément Russo",
+     "nat": "FR",
+     "age": 31
+    }
+   ]
+  },
+  {
+   "name": "Tudor Pro Cycling Team",
+   "short": "Tudor",
+   "country": "CH",
+   "riders": [
+    {
+     "bib": 191,
+     "name": "Julian Alaphilippe",
+     "nat": "FR",
+     "age": 34
+    },
+    {
+     "bib": 192,
+     "name": "Arvid de Kleijn",
+     "nat": "NL",
+     "age": 32
+    },
+    {
+     "bib": 193,
+     "name": "Marco Haller",
+     "nat": "AT",
+     "age": 35
+    },
+    {
+     "bib": 194,
+     "name": "Marc Hirschi",
+     "nat": "CH",
+     "age": 27
+    },
+    {
+     "bib": 195,
+     "name": "Rick Pluimers",
+     "nat": "NL",
+     "age": 25
+    },
+    {
+     "bib": 196,
+     "name": "Michael Storer",
+     "nat": "AU",
+     "age": 29
+    },
+    {
+     "bib": 197,
+     "name": "Matteo Trentin",
+     "nat": "IT",
+     "age": 36
+    },
+    {
+     "bib": 198,
+     "name": "Yannis Voisard",
+     "nat": "CH",
+     "age": 27
+    }
+   ]
+  },
+  {
+   "name": "Team TotalEnergies",
+   "short": "TotalEnergies",
+   "country": "FR",
+   "riders": [
+    {
+     "bib": 201,
+     "name": "Jordan Jegat",
+     "nat": "FR",
+     "age": 27
+    },
+    {
+     "bib": 202,
+     "name": "Nicolas Breuillard",
+     "nat": "FR",
+     "age": 26
+    },
+    {
+     "bib": 203,
+     "name": "Joris Delbove",
+     "nat": "FR",
+     "age": 25
+    },
+    {
+     "bib": 204,
+     "name": "Alexandre Delettre",
+     "nat": "FR",
+     "age": 28
+    },
+    {
+     "bib": 205,
+     "name": "Thibault Guernalec",
+     "nat": "FR",
+     "age": 28
+    },
+    {
+     "bib": 206,
+     "name": "Mathis Le Berre",
+     "nat": "FR",
+     "age": 25
+    },
+    {
+     "bib": 207,
+     "name": "Anthony Turgis",
+     "nat": "FR",
+     "age": 32
+    },
+    {
+     "bib": 208,
+     "name": "Mattéo Vercher",
+     "nat": "FR",
+     "age": 25
+    }
+   ]
+  },
+  {
+   "name": "Team Picnic PostNL",
+   "short": "Picnic",
+   "country": "NL",
+   "riders": [
+    {
+     "bib": 211,
+     "name": "Warren Barguil",
+     "nat": "FR",
+     "age": 34
+    },
+    {
+     "bib": 212,
+     "name": "Frits Biesterbos",
+     "nat": "NL",
+     "age": 24
+    },
+    {
+     "bib": 213,
+     "name": "Pavel Bittner",
+     "nat": "CZ",
+     "age": 23
+    },
+    {
+     "bib": 214,
+     "name": "John Degenkolb",
+     "nat": "DE",
+     "age": 37
+    },
+    {
+     "bib": 215,
+     "name": "Robbe Dhondt",
+     "nat": "BE",
+     "age": 22
+    },
+    {
+     "bib": 216,
+     "name": "Niklas Märkl",
+     "nat": "DE",
+     "age": 27
+    },
+    {
+     "bib": 217,
+     "name": "Julius van den Berg",
+     "nat": "NL",
+     "age": 29
+    },
+    {
+     "bib": 218,
+     "name": "Frank van den Broek",
+     "nat": "NL",
+     "age": 25
+    }
+   ]
+  },
+  {
+   "name": "Caja Rural–Seguros RGA",
+   "short": "Caja Rural",
+   "country": "ES",
+   "riders": [
+    {
+     "bib": 221,
+     "name": "Fernando Gaviria",
+     "nat": "CO",
+     "age": 31
+    },
+    {
+     "bib": 222,
+     "name": "Abel Balderstone",
+     "nat": "ES",
+     "age": 25
+    },
+    {
+     "bib": 223,
+     "name": "Sebastian Berwick",
+     "nat": "AU",
+     "age": 26
+    },
+    {
+     "bib": 224,
+     "name": "Alex Molenaar",
+     "nat": "NL",
+     "age": 26
+    },
+    {
+     "bib": 225,
+     "name": "Joel Nicolau",
+     "nat": "ES",
+     "age": 28
+    },
+    {
+     "bib": 226,
+     "name": "Stefano Oldani",
+     "nat": "IT",
+     "age": 28
+    },
+    {
+     "bib": 227,
+     "name": "Jakub Otruba",
+     "nat": "CZ",
+     "age": 28
+    },
+    {
+     "bib": 228,
+     "name": "José Félix Parra",
+     "nat": "ES",
+     "age": 29
+    }
+   ]
+  }
+ ],
+ "contenders": [
+  {
+   "name": "Tadej Pogačar",
+   "team": "UAE Team Emirates XRG",
+   "age": 27,
+   "tdfWins": 4,
+   "tdfStageWins": 22,
+   "gtWins": 5,
+   "careerWins": 123,
+   "note": "Regerande mästare. Jagar en rekordtangerande femte Tour-seger (som Anquetil, Merckx, Hinault, Indurain). Tog gult på etapp 3 med sin 22:a etappseger."
+  },
+  {
+   "name": "Jonas Vingegaard",
+   "team": "Team Visma | Lease a Bike",
+   "age": 29,
+   "tdfWins": 2,
+   "tdfStageWins": 4,
+   "gtWins": 4,
+   "careerWins": 55,
+   "note": "Vann Giro d'Italia 2026 (5 etapper) och jagar nu Giro–Tour-dubbeln – senast lyckades Pantani 1998. Åttonde ryttaren i historien att vinna alla tre Grand Tours."
+  },
+  {
+   "name": "Remco Evenepoel",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "age": 26,
+   "tdfWins": 0,
+   "tdfStageWins": 2,
+   "gtWins": 1,
+   "careerWins": 70,
+   "note": "Första Touren med Red Bull–Bora. Trea 2024, Vuelta-vinnare 2022, dubbel OS-guldmedaljör 2024 och trefaldig världsmästare på tempo. Perfekt facit i 2026 års säsongsstart."
+  },
+  {
+   "name": "Isaac del Toro",
+   "team": "UAE Team Emirates XRG",
+   "age": 22,
+   "tdfWins": 0,
+   "tdfStageWins": 1,
+   "gtWins": 0,
+   "careerWins": 40,
+   "note": "Tour-debutant som vann etapp 2 – andre mexikanen någonsin att vinna en TdF-etapp (efter Raúl Alcalá). Tvåa i Giron 2025, vann UAE Tour och Tirreno–Adriatico 2026."
+  },
+  {
+   "name": "Juan Ayuso",
+   "team": "Lidl–Trek",
+   "age": 23,
+   "tdfWins": 0,
+   "tdfStageWins": 0,
+   "gtWins": 0,
+   "careerWins": 18,
+   "note": "Tour-debut i nya laget Lidl-Trek efter den uppslitande brytningen med UAE. Trea i Vueltan 2022 som 19-åring. Bar vita tröjan efter etapp 1."
+  },
+  {
+   "name": "Paul Seixas",
+   "team": "Decathlon CMA CGM Team",
+   "age": 19,
+   "tdfWins": 0,
+   "tdfStageWins": 0,
+   "gtWins": 0,
+   "careerWins": 8,
+   "note": "Yngste Tour-startaren på 89 år (sedan 1937) – och ändå fransk kapten. Vann Baskien runt och Flèche Wallonne 2026. Hela Frankrike hoppas på förste hemmasegraren sedan 1985."
+  },
+  {
+   "name": "Florian Lipowitz",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "age": 25,
+   "tdfWins": 0,
+   "tdfStageWins": 0,
+   "gtWins": 0,
+   "careerWins": 5,
+   "note": "Trea och bäste ungdom i Touren 2025 vid debuten. F.d. skidskytt. Delat kaptenskap med Evenepoel hos Red Bull–Bora."
+  }
+ ],
+ "stats": {
+  "ridersPerNation": [
+   {
+    "nat": "BE",
+    "count": 31
+   },
+   {
+    "nat": "FR",
+    "count": 30
+   },
+   {
+    "nat": "NL",
+    "count": 17
+   },
+   {
+    "nat": "DE",
+    "count": 12
+   },
+   {
+    "nat": "IT",
+    "count": 12
+   },
+   {
+    "nat": "AU",
+    "count": 11
+   },
+   {
+    "nat": "ES",
+    "count": 11
+   },
+   {
+    "nat": "NO",
+    "count": 8
+   },
+   {
+    "nat": "GB",
+    "count": 7
+   },
+   {
+    "nat": "DK",
+    "count": 7
+   }
+  ],
+  "youngest": {
+   "name": "Paul Seixas",
+   "age": 19
+  },
+  "oldest": {
+   "name": "Damiano Caruso",
+   "age": 38
+  },
+  "mostParticipations": {
+   "name": "Ion Izagirre, Warren Barguil, Luke Durbridge",
+   "count": 12
+  },
+  "defendingChampion": "Tadej Pogačar (2025, hans 4:e titel)",
+  "winnerPrizeEUR": 500000,
+  "totalPrizeEUR": 2302800,
+  "funFacts": [
+   "Pogačar jagar sin femte Tour-seger – det skulle tangera rekordet som bara Anquetil, Merckx, Hinault och Indurain (5 st) delar.",
+   "Vingegaard vann Giro d'Italia 2026 med fem etappsegrar och försöker nu ta Giro–Tour-dubbeln – ingen har klarat den sedan Marco Pantani 1998.",
+   "Paul Seixas, 19, är den yngste Tour-startaren på 89 år (sedan 1937) – och ändå Decathlon CMA CGM:s kapten med nummer 51.",
+   "Bara 30 fransmän står på startlinjen – lägst antal sedan 1963. Belgien är största nation med 31 ryttare.",
+   "Touren 2026 startade i Barcelona med lagtempo – Visma vann etapp 1 och Vingegaard tog första gula tröjan, innan Pogačar snodde den på etapp 3.",
+   "Isaac del Toro vann etapp 2 som Tour-debutant och blev blott andre mexikan att vinna en TdF-etapp, efter Raúl Alcalá (1989-90).",
+   "Pogačars etappseger på etapp 3 var hans 22:a i Touren – femte flest genom tiderna (Cavendish har rekordet med 35).",
+   "Stora frånvaron: Wout van Aert (armbågsinfektion), Roglič (satsar allt på en rekordfemte Vuelta), gröna tröjan-vinnaren Jonathan Milan (kör Giron), David Gaudu (petad) samt Oscar Onley och Felix Gall från 2025 års topp 5.",
+   "Prispotten är 2 302 800 euro – vinnaren får 500 000 euro. Potten krymper faktiskt jämfört med tidigare år.",
+   "Tre lag har nya identiteter 2026: Lotto–Intermarché (belgisk fusion), NSN Cycling Team (fd Israel-Premier Tech, numera schweizisk licens) och Netcompany–INEOS.",
+   "Juan Ayuso möter sitt gamla lag UAE efter det bittra kontraktsbrottet 2025 – nu som Lidl-Treks kapten, i samma lag som sprintstjärnan Mads Pedersen.",
+   "Ingen svensk ryttare i startfältet – men Skandinavien är starkt: Norge har 8 och Danmark 7 ryttare, inklusive hela Uno-X Mobility.",
+   "Ion Izagirre, Warren Barguil och Luke Durbridge gör alla sin 12:e Tour de France – flest i årets klunga.",
+   "Damiano Caruso, 38, är äldst i fältet – han föddes 19 år före yngste ryttaren Paul Seixas."
+  ]
+ }
+}

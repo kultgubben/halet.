@@ -1,0 +1,330 @@
+{
+  "totalDistanceKm": 3321.2,
+  "restDays": [
+    { "date": "2026-07-13", "location": "Cantal (Aurillac-området)" },
+    { "date": "2026-07-20", "location": "Haute-Savoie (Évian/Thonon-området)" }
+  ],
+  "stageTypeCounts": { "flat": 7, "hilly": 4, "mountain": 8, "itt": 1, "ttt": 1 },
+  "finalStageFinish": "Champs-Élysées, Paris — med Côte de la Butte Montmartre tre gånger i finalen (sista passagen 10,3 km från mål)",
+  "stages": [
+    {
+      "n": 1,
+      "date": "2026-07-04",
+      "start": "Barcelona",
+      "finish": "Barcelona",
+      "km": 19.6,
+      "type": "ttt",
+      "summitFinish": false,
+      "elevationM": null,
+      "climbs": [
+        { "name": "Montjuïc (avslutande stigning, 800 m @ 7%)", "cat": null }
+      ],
+      "desc": "Tourens öppning är ett lagtempolopp genom Barcelonas gator där varje åkares individuella tid räknas och avslutningen stiger upp mot Montjuïc."
+    },
+    {
+      "n": 2,
+      "date": "2026-07-05",
+      "start": "Tarragona",
+      "finish": "Barcelona",
+      "km": 168.5,
+      "type": "hilly",
+      "summitFinish": false,
+      "elevationM": 2500,
+      "climbs": [
+        { "name": "Côte du Château de Montjuïc", "cat": null },
+        { "name": "Côte du Stade Olympique", "cat": null }
+      ],
+      "desc": "Flack kustväg i första halvan följt av en explosiv avslutningskrets runt Montjuïc med branta punchiga backar och mållinje uppför mot Olympiastadion."
+    },
+    {
+      "n": 3,
+      "date": "2026-07-06",
+      "start": "Granollers",
+      "finish": "Les Angles",
+      "km": 195.9,
+      "type": "mountain",
+      "summitFinish": true,
+      "elevationM": 3850,
+      "climbs": [
+        { "name": "Sant Feliu de Codines", "cat": "4" },
+        { "name": "Collada de Toses", "cat": "2" },
+        { "name": "Col du Calvaire", "cat": "1" },
+        { "name": "Les Angles", "cat": "1" }
+      ],
+      "desc": "Tourens första bergsetapp korsar Pyrenéerna från Spanien in i Frankrike med nästan all klättring i andra halvan och toppmålgång vid skidorten Les Angles."
+    },
+    {
+      "n": 4,
+      "date": "2026-07-07",
+      "start": "Carcassonne",
+      "finish": "Foix",
+      "km": 181.9,
+      "type": "hilly",
+      "summitFinish": false,
+      "elevationM": 2800,
+      "climbs": [
+        { "name": "Col de Coudins", "cat": "2" },
+        { "name": "Col de Montségur", "cat": "2" }
+      ],
+      "desc": "Kuperad etapp genom Pyrenéernas förberg där en lång utförslutning de sista 35 km mot Foix gynnar utbrytare."
+    },
+    {
+      "n": 5,
+      "date": "2026-07-08",
+      "start": "Lannemezan",
+      "finish": "Pau",
+      "km": 158.3,
+      "type": "flat",
+      "summitFinish": false,
+      "elevationM": null,
+      "climbs": [
+        { "name": "Côte de Casteide-Doat", "cat": null },
+        { "name": "Côte de Baleix", "cat": null }
+      ],
+      "desc": "Första riktiga chansen för sprinterna – mestadels flack terräng med tre korta backar innan 26 flacka kilometer in mot Pau."
+    },
+    {
+      "n": 6,
+      "date": "2026-07-09",
+      "start": "Pau",
+      "finish": "Gavarnie-Gèdre",
+      "km": 186.2,
+      "type": "mountain",
+      "summitFinish": true,
+      "elevationM": 4100,
+      "climbs": [
+        { "name": "Col d'Aspin", "cat": "1" },
+        { "name": "Col du Tourmalet", "cat": "1" },
+        { "name": "Gavarnie-Gèdre (slutstigning 18,7 km @ 3,7%)", "cat": null }
+      ],
+      "desc": "Tung Pyrenéeretapp över Col d'Aspin och Col du Tourmalet innan en lång, gradvis slutstigning till den helt nya målplatsen vid Cirque de Gavarnie."
+    },
+    {
+      "n": 7,
+      "date": "2026-07-10",
+      "start": "Hagetmau",
+      "finish": "Bordeaux",
+      "km": 175.1,
+      "type": "flat",
+      "summitFinish": false,
+      "elevationM": null,
+      "climbs": [],
+      "desc": "Klassisk sprintetapp bort från Pyrenéerna där en masspurt i Bordeaux är närmast garanterad."
+    },
+    {
+      "n": 8,
+      "date": "2026-07-11",
+      "start": "Périgueux",
+      "finish": "Bergerac",
+      "km": 180.4,
+      "type": "flat",
+      "summitFinish": false,
+      "elevationM": null,
+      "climbs": [],
+      "desc": "Flack etapp genom Dordogne-dalen nästan helt utan hinder – ytterligare en given massspurt i Bergerac."
+    },
+    {
+      "n": 9,
+      "date": "2026-07-12",
+      "start": "Malemort",
+      "finish": "Ussel",
+      "km": 185.5,
+      "type": "hilly",
+      "summitFinish": false,
+      "elevationM": 3300,
+      "climbs": [
+        { "name": "Suc au May", "cat": null },
+        { "name": "Côte de la Croix de Pey", "cat": null },
+        { "name": "Mont Bessou", "cat": null }
+      ],
+      "desc": "Energikrävande böljande etapp genom Massif Central med 3 300 höjdmeter och flack final – perfekt för utbrytare dagen före vilodagen."
+    },
+    {
+      "n": 10,
+      "date": "2026-07-14",
+      "start": "Aurillac",
+      "finish": "Le Lioran",
+      "km": 166.6,
+      "type": "mountain",
+      "summitFinish": false,
+      "elevationM": 3900,
+      "climbs": [
+        { "name": "Puy Mary (Pas de Peyrol)", "cat": "1" },
+        { "name": "Col de Pertus", "cat": "1" },
+        { "name": "Col de la Griffoul", "cat": "2" },
+        { "name": "Col de Font de Cère", "cat": "3" }
+      ],
+      "desc": "Krävande bergsetapp i Massif Central på samma vägar som Pogacar–Vingegaard-duellen 2024, med Puy Mary och Col de Pertus tätt inpå målet i Le Lioran."
+    },
+    {
+      "n": 11,
+      "date": "2026-07-15",
+      "start": "Vichy",
+      "finish": "Nevers",
+      "km": 161.3,
+      "type": "flat",
+      "summitFinish": false,
+      "elevationM": 1800,
+      "climbs": [
+        { "name": "Côte de Billy-Chévannes", "cat": null }
+      ],
+      "desc": "Sprintvänlig etapp längs Allierfloden mot Loiredalen där dagens enda nämnvärda backe ligger för långt från mål för att stoppa spurtupploppet i Nevers."
+    },
+    {
+      "n": 12,
+      "date": "2026-07-16",
+      "start": "Circuit de Nevers Magny-Cours",
+      "finish": "Chalon-sur-Saône",
+      "km": 179.1,
+      "type": "flat",
+      "summitFinish": false,
+      "elevationM": null,
+      "climbs": [
+        { "name": "Côte de Montagny-lès-Buxy", "cat": null }
+      ],
+      "desc": "Etapp med start på racerbanan Magny-Cours och trolig massspurt i Chalon-sur-Saône, även om en sen backe 20 km från mål kan ge utbrytarna hopp."
+    },
+    {
+      "n": 13,
+      "date": "2026-07-17",
+      "start": "Dole",
+      "finish": "Belfort",
+      "km": 205.8,
+      "type": "hilly",
+      "summitFinish": false,
+      "elevationM": null,
+      "climbs": [
+        { "name": "Col des Croix", "cat": null },
+        { "name": "Ballon d'Alsace", "cat": "1" }
+      ],
+      "desc": "Tourens längsta etapp rullar genom Vogeserna över historiska Ballon d'Alsace, vars topp 30 km från mål gynnar starka utförsåkare med snabba ben."
+    },
+    {
+      "n": 14,
+      "date": "2026-07-18",
+      "start": "Mulhouse",
+      "finish": "Le Markstein Fellering",
+      "km": 155.3,
+      "type": "mountain",
+      "summitFinish": false,
+      "elevationM": 3800,
+      "climbs": [
+        { "name": "Grand Ballon", "cat": "1" },
+        { "name": "Ballon d'Alsace", "cat": "1" },
+        { "name": "Col du Haag", "cat": "1" },
+        { "name": "Col du Page", "cat": "2" },
+        { "name": "Col du Hundsruck", "cat": "3" }
+      ],
+      "desc": "Slitsam Vogeseretapp med sju klassificerade stigningar där avgörandet väntas på branta Col du Haag innan knappt sex böljande kilometer till Le Markstein."
+    },
+    {
+      "n": 15,
+      "date": "2026-07-19",
+      "start": "Champagnole",
+      "finish": "Plateau de Solaison",
+      "km": 183.9,
+      "type": "mountain",
+      "summitFinish": true,
+      "elevationM": 4700,
+      "climbs": [
+        { "name": "Col de la Croisette", "cat": "1" },
+        { "name": "Plateau de Solaison", "cat": "HC" }
+      ],
+      "desc": "Brutal etapp med cirka 4 700 höjdmeter som kulminerar i den fruktade slutstigningen till Plateau de Solaison – 11,3 km i 9,1 % snittlutning."
+    },
+    {
+      "n": 16,
+      "date": "2026-07-21",
+      "start": "Évian-les-Bains",
+      "finish": "Thonon-les-Bains",
+      "km": 26.1,
+      "type": "itt",
+      "summitFinish": false,
+      "elevationM": 500,
+      "climbs": [
+        { "name": "Tidig stigning 9,6 km @ 4,2%", "cat": null }
+      ],
+      "desc": "Tourens enda individuella tempolopp längs Genèvesjön inleds med en lång dryg stigning innan en flack avslutning – en nyckeldag för sammandraget."
+    },
+    {
+      "n": 17,
+      "date": "2026-07-22",
+      "start": "Chambéry",
+      "finish": "Voiron",
+      "km": 174.7,
+      "type": "flat",
+      "summitFinish": false,
+      "elevationM": 2400,
+      "climbs": [
+        { "name": "Col des Prés", "cat": null },
+        { "name": "Col de Couz", "cat": null }
+      ],
+      "desc": "Officiellt en flack övergångsetapp men i praktiken kuperad – tidig klättring ger utbrytarchans, men den långa utförslöpningen mot Voiron talar för spurt."
+    },
+    {
+      "n": 18,
+      "date": "2026-07-23",
+      "start": "Voiron",
+      "finish": "Orcières-Merlette",
+      "km": 185.2,
+      "type": "mountain",
+      "summitFinish": true,
+      "elevationM": 3900,
+      "climbs": [
+        { "name": "Côte d'Engins", "cat": "2" },
+        { "name": "Côte de Monteynard", "cat": "2" },
+        { "name": "Côte des Terrasses", "cat": "3" },
+        { "name": "Orcières-Merlette", "cat": "1" }
+      ],
+      "desc": "Alpernas öppningsakt bjuder på ständigt böljande terräng innan den jämna slutstigningen till skidorten Orcières-Merlette avgör."
+    },
+    {
+      "n": 19,
+      "date": "2026-07-24",
+      "start": "Gap",
+      "finish": "Alpe d'Huez",
+      "km": 127.9,
+      "type": "mountain",
+      "summitFinish": true,
+      "elevationM": null,
+      "climbs": [
+        { "name": "Col Bayard", "cat": "3" },
+        { "name": "Col du Noyer", "cat": "2" },
+        { "name": "Col d'Ornon", "cat": "2" },
+        { "name": "Alpe d'Huez", "cat": "HC" }
+      ],
+      "desc": "Kort och intensiv alpetapp där den klassiska klättringen uppför Alpe d'Huez med sina 21 hårnålskurvor (13,8 km @ 8,1 %) väntar som final."
+    },
+    {
+      "n": 20,
+      "date": "2026-07-25",
+      "start": "Le Bourg-d'Oisans",
+      "finish": "Alpe d'Huez",
+      "km": 170.9,
+      "type": "mountain",
+      "summitFinish": true,
+      "elevationM": 5450,
+      "climbs": [
+        { "name": "Col de la Croix de Fer", "cat": "HC" },
+        { "name": "Col du Télégraphe", "cat": "1" },
+        { "name": "Col du Galibier", "cat": "HC" },
+        { "name": "Alpe d'Huez via Col de Sarenne", "cat": "HC" }
+      ],
+      "desc": "Tourens kungsetapp – en koloss med 5 450 höjdmeter över Croix de Fer, Télégraphe och Galibier (tourens högsta punkt, 2 642 m) innan en andra rak toppmålgång på Alpe d'Huez, nådd via branta Col de Sarenne."
+    },
+    {
+      "n": 21,
+      "date": "2026-07-26",
+      "start": "Thoiry",
+      "finish": "Paris (Champs-Élysées)",
+      "km": 133.0,
+      "type": "flat",
+      "summitFinish": false,
+      "elevationM": null,
+      "climbs": [
+        { "name": "Côte de la Butte Montmartre (3 passager, kullersten 1,1 km @ 5,9%)", "cat": null }
+      ],
+      "desc": "Paradetappen till Paris avslutas som 2025 med tre passager över kullerstensbacken vid Montmartre – sista gången 10,3 km från mål – innan målgången på Champs-Élysées, vilket hotar den klassiska sprintfinalen."
+    }
+  ]
+}

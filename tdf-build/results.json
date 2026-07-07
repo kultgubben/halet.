@@ -1,0 +1,455 @@
+{
+ "lastCompletedStage": 4,
+ "stages": [
+  {
+   "n": 1,
+   "date": "2026-07-04",
+   "route": "Barcelona → Barcelona · lagtempo",
+   "winner": "Visma-Lease a Bike",
+   "winnerTeam": "Visma-Lease a Bike",
+   "avgSpeedKmh": 54.0,
+   "top15": [
+    {
+     "rank": 1,
+     "rider": "Team Visma | Lease a Bike",
+     "team": "Team Visma | Lease a Bike",
+     "time": "21:47"
+    },
+    {
+     "rank": 2,
+     "rider": "Netcompany INEOS",
+     "team": "Netcompany INEOS",
+     "time": "+0:08"
+    },
+    {
+     "rank": 3,
+     "rider": "UAE Team Emirates-XRG",
+     "team": "UAE Team Emirates-XRG",
+     "time": "+0:12"
+    },
+    {
+     "rank": 4,
+     "rider": "Lidl-Trek",
+     "team": "Lidl-Trek",
+     "time": "+0:16"
+    },
+    {
+     "rank": 5,
+     "rider": "Red Bull-BORA-hansgrohe",
+     "team": "Red Bull-BORA-hansgrohe",
+     "time": "+0:19"
+    },
+    {
+     "rank": 6,
+     "rider": "Decathlon CMA CGM Team",
+     "team": "Decathlon CMA CGM Team",
+     "time": "+0:39"
+    },
+    {
+     "rank": 7,
+     "rider": "Alpecin-Premier Tech",
+     "team": "Alpecin-Premier Tech",
+     "time": "+0:39"
+    },
+    {
+     "rank": 8,
+     "rider": "Groupama-FDJ United",
+     "team": "Groupama-FDJ United",
+     "time": "+0:41"
+    },
+    {
+     "rank": 9,
+     "rider": "Bahrain Victorious",
+     "team": "Bahrain Victorious",
+     "time": "+0:47"
+    },
+    {
+     "rank": 10,
+     "rider": "Team Jayco-AlUla",
+     "team": "Team Jayco-AlUla",
+     "time": "+0:51"
+    },
+    {
+     "rank": 11,
+     "rider": "EF Education-EasyPost",
+     "team": "EF Education-EasyPost",
+     "time": "+0:57"
+    },
+    {
+     "rank": 12,
+     "rider": "Pinarello-Q36.5 Pro Cycling Team",
+     "team": "Pinarello-Q36.5 Pro Cycling Team",
+     "time": "+0:57"
+    },
+    {
+     "rank": 13,
+     "rider": "Soudal Quick-Step",
+     "team": "Soudal Quick-Step",
+     "time": "+0:58"
+    },
+    {
+     "rank": 14,
+     "rider": "Uno-X Mobility",
+     "team": "Uno-X Mobility",
+     "time": "+1:00"
+    },
+    {
+     "rank": 15,
+     "rider": "Team TotalEnergies",
+     "team": "Team TotalEnergies",
+     "time": "+1:02"
+    }
+   ],
+   "jerseysAfter": {
+    "yellow": "Jonas Vingegaard",
+    "green": "Egan Bernal",
+    "polka": "Tadej Pogacar",
+    "white": "Juan Ayuso"
+   },
+   "summary": "Visma-Lease a Bike vann det inledande lagtempot i Barcelona på 21:47 (19,6 km), 8 sekunder före Netcompany-INEOS och 12 före UAE Team Emirates-XRG. Individuella tider räknades: Jonas Vingegaard släppte sina sista hjälpryttare (Jorgenson och Piganzoli) på Montjuïc-stigningen och tog gula tröjan, före Filippo Ganna (+0:08) och Tadej Pogačar (+0:12). INEOS förlorade Kévin Vauquelin till punktering 7 km från mål; specialregler gav grön tröja till Bernal och första bergströjan till Pogačar som snabbast över de sista 3,7 km.",
+   "abandons": []
+  },
+  {
+   "n": 2,
+   "date": "2026-07-05",
+   "route": "Tarragona → Barcelona",
+   "winner": "Isaac del Toro",
+   "winnerTeam": "UAE Team Emirates-XRG",
+   "avgSpeedKmh": 46.0,
+   "top15": [
+    {
+     "rank": 1,
+     "rider": "Isaac del Toro",
+     "team": "UAE Team Emirates-XRG",
+     "time": "3:40:01"
+    },
+    {
+     "rank": 2,
+     "rider": "Tadej Pogacar",
+     "team": "UAE Team Emirates-XRG",
+     "time": "s.t."
+    },
+    {
+     "rank": 3,
+     "rider": "Remco Evenepoel",
+     "team": "Red Bull-BORA-hansgrohe",
+     "time": "s.t."
+    },
+    {
+     "rank": 4,
+     "rider": "Jonas Vingegaard",
+     "team": "Team Visma | Lease a Bike",
+     "time": "s.t."
+    },
+    {
+     "rank": 5,
+     "rider": "Mattias Skjelmose",
+     "team": "Lidl-Trek",
+     "time": "+0:03"
+    },
+    {
+     "rank": 6,
+     "rider": "Tobias Halland Johannessen",
+     "team": "Uno-X Mobility",
+     "time": "+0:03"
+    },
+    {
+     "rank": 7,
+     "rider": "Romain Gregoire",
+     "team": "Groupama-FDJ United",
+     "time": "+0:03"
+    },
+    {
+     "rank": 8,
+     "rider": "Lenny Martinez",
+     "team": "Bahrain Victorious",
+     "time": "+0:03"
+    },
+    {
+     "rank": 9,
+     "rider": "Paul Seixas",
+     "team": "Decathlon CMA CGM Team",
+     "time": "+0:03"
+    },
+    {
+     "rank": 10,
+     "rider": "Tom Pidcock",
+     "team": "Pinarello-Q36.5 Pro Cycling Team",
+     "time": "+0:03"
+    },
+    {
+     "rank": 11,
+     "rider": "Lennert Van Eetvelt",
+     "team": "Lotto-Intermarche",
+     "time": "+0:03"
+    },
+    {
+     "rank": 12,
+     "rider": "Juan Ayuso",
+     "team": "Lidl-Trek",
+     "time": "+0:03"
+    },
+    {
+     "rank": 13,
+     "rider": "Ilan Van Wilder",
+     "team": "Soudal Quick-Step",
+     "time": "+0:03"
+    },
+    {
+     "rank": 14,
+     "rider": "Richard Carapaz",
+     "team": "EF Education-EasyPost",
+     "time": "+0:07"
+    },
+    {
+     "rank": 15,
+     "rider": "Alex Baudin",
+     "team": "EF Education-EasyPost",
+     "time": "+0:10"
+    }
+   ],
+   "jerseysAfter": {
+    "yellow": "Jonas Vingegaard",
+    "green": "Isaac del Toro",
+    "polka": "Alex Molenaar",
+    "white": "Isaac del Toro"
+   },
+   "summary": "En tidig utbrytning med Alex Molenaar, Felix Engelhardt och Frank van den Broek togs in inför finalvarven på Montjuïc. Isaac del Toro fick mekaniska problem cirka 60 km från mål och fick jaga länge, men UAE kontrollerade finalen; Skjelmose attackerade på sista 2 km men hämtades in, och Pogačar tycktes skänka segern till sin mexikanske lagkamrat i den branta avslutningen vid Olympiastadion. Vingegaard försvarade gula tröjan men såg Pogačar krympa försprånget från 12 till 6 sekunder tack vare bonussekunder.",
+   "abandons": [
+    {
+     "rider": "Clement Berthet",
+     "team": "Groupama-FDJ United",
+     "reason": "DNS – startade inte efter krasch på etapp 1"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "date": "2026-07-06",
+   "route": "Granollers → Les Angles",
+   "winner": "Tadej Pogacar",
+   "winnerTeam": "UAE Team Emirates-XRG",
+   "avgSpeedKmh": 41.2,
+   "top15": [
+    {
+     "rank": 1,
+     "rider": "Tadej Pogacar",
+     "team": "UAE Team Emirates-XRG",
+     "time": "4:45:11"
+    },
+    {
+     "rank": 2,
+     "rider": "Jonas Vingegaard",
+     "team": "Team Visma | Lease a Bike",
+     "time": "+0:02"
+    },
+    {
+     "rank": 3,
+     "rider": "Richard Carapaz",
+     "team": "EF Education-EasyPost",
+     "time": "+0:02"
+    },
+    {
+     "rank": 4,
+     "rider": "Paul Seixas",
+     "team": "Decathlon CMA CGM Team",
+     "time": "+0:02"
+    },
+    {
+     "rank": 5,
+     "rider": "Tobias Halland Johannessen",
+     "team": "Uno-X Mobility",
+     "time": "+0:04"
+    },
+    {
+     "rank": 6,
+     "rider": "Lennert Van Eetvelt",
+     "team": "Lotto-Intermarche",
+     "time": "+0:04"
+    },
+    {
+     "rank": 7,
+     "rider": "Florian Lipowitz",
+     "team": "Red Bull-BORA-hansgrohe",
+     "time": "+0:04"
+    },
+    {
+     "rank": 8,
+     "rider": "Remco Evenepoel",
+     "team": "Red Bull-BORA-hansgrohe",
+     "time": "+0:04"
+    },
+    {
+     "rank": 9,
+     "rider": "Isaac del Toro",
+     "team": "UAE Team Emirates-XRG",
+     "time": "+0:04"
+    },
+    {
+     "rank": 10,
+     "rider": "Juan Ayuso",
+     "team": "Lidl-Trek",
+     "time": "+0:04"
+    },
+    {
+     "rank": 11,
+     "rider": "Mattias Skjelmose",
+     "team": "Lidl-Trek",
+     "time": "+0:10"
+    },
+    {
+     "rank": 12,
+     "rider": "Ilan Van Wilder",
+     "team": "Soudal Quick-Step",
+     "time": "+0:12"
+    },
+    {
+     "rank": 13,
+     "rider": "Lenny Martinez",
+     "team": "Bahrain Victorious",
+     "time": "+0:12"
+    },
+    {
+     "rank": 14,
+     "rider": "Jordan Jegat",
+     "team": "Team TotalEnergies",
+     "time": "+0:12"
+    },
+    {
+     "rank": 15,
+     "rider": "Sergio Higuita",
+     "team": "XDS Astana Team",
+     "time": "+0:18"
+    }
+   ],
+   "jerseysAfter": {
+    "yellow": "Tadej Pogacar",
+    "green": "Tadej Pogacar",
+    "polka": "Alex Baudin",
+    "white": "Isaac del Toro"
+   },
+   "summary": "En stor utbrytning på runt 18–19 man gick efter ett par timmar och Alex Baudin gick över Collada de Toses först, tog bergströjan och var länge virtuell ledare innan gruppen hämtades in cirka 11 km från mål. Isaac del Toro drog upp den avslutande 1,7 km långa stigningen till Les Angles innan Pogačar attackerade och vann 2 sekunder före Vingegaard – hans 22:a etappseger i Tour de France. Med bonussekunderna hamnade Pogačar och Vingegaard på exakt samma totaltid, och Pogačar tog gula tröjan på särskiljning (bättre placeringar).",
+   "abandons": [
+    {
+     "rider": "Arnaud De Lie",
+     "team": "Lotto-Intermarche",
+     "reason": "DNF – bröt loppet, har kämpat med sjukdom sedan tourstarten"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "date": "2026-07-07",
+   "route": "Carcassonne → Foix",
+   "winner": "Mads Pedersen",
+   "winnerTeam": "Lidl-Trek",
+   "avgSpeedKmh": 43.5,
+   "top15": [
+    {
+     "rank": 1,
+     "rider": "Mads Pedersen",
+     "team": "Lidl-Trek",
+     "time": "4:10:45"
+    },
+    {
+     "rank": 2,
+     "rider": "Quinn Simmons",
+     "team": "Lidl-Trek",
+     "time": "s.t."
+    },
+    {
+     "rank": 3,
+     "rider": "Raul Garcia Pierna",
+     "team": "Movistar Team",
+     "time": "s.t."
+    },
+    {
+     "rank": 4,
+     "rider": "Marco Frigo",
+     "team": "NSN Cycling Team",
+     "time": "s.t."
+    },
+    {
+     "rank": 5,
+     "rider": "Ramses Debruyne",
+     "team": "Alpecin-Premier Tech",
+     "time": "s.t."
+    },
+    {
+     "rank": 6,
+     "rider": "Kevin Vauquelin",
+     "team": "Netcompany INEOS",
+     "time": "s.t."
+    },
+    {
+     "rank": 7,
+     "rider": "Sean Quinn",
+     "team": "EF Education-EasyPost",
+     "time": "s.t."
+    },
+    {
+     "rank": 8,
+     "rider": "Torstein Traeen",
+     "team": "Uno-X Mobility",
+     "time": "s.t."
+    },
+    {
+     "rank": 9,
+     "rider": "Pablo Castrillo",
+     "team": "Movistar Team",
+     "time": "s.t."
+    },
+    {
+     "rank": 10,
+     "rider": "Mathias Vacek",
+     "team": "Lidl-Trek",
+     "time": "s.t."
+    },
+    {
+     "rank": 11,
+     "rider": "Michael Matthews",
+     "team": "Team Jayco-AlUla",
+     "time": "+2:27"
+    },
+    {
+     "rank": 12,
+     "rider": "Alexandre Delettre",
+     "team": "Team TotalEnergies",
+     "time": "+2:27"
+    },
+    {
+     "rank": 13,
+     "rider": "Vlad Van Mechelen",
+     "team": "Bahrain Victorious",
+     "time": "+2:27"
+    },
+    {
+     "rank": 14,
+     "rider": "Jasper Stuyven",
+     "team": "Soudal Quick-Step",
+     "time": "+2:27"
+    },
+    {
+     "rank": 15,
+     "rider": "Alex Molenaar",
+     "team": "Caja Rural-Seguros RGA",
+     "time": "+2:27"
+    }
+   ],
+   "jerseysAfter": {
+    "yellow": "Torstein Traeen",
+    "green": "Mads Pedersen",
+    "polka": "Alex Baudin",
+    "white": "Mathias Vacek"
+   },
+   "summary": "I brutal hetta på över 40 grader gick en jätteutbrytning på 34 man som klungan lät få över 13 minuter. Tio man skiljde ut sig över Col de Montségur, och i Foix spurtade världsmästaren Mads Pedersen överlägset före lagkamraten Quinn Simmons för en Lidl-Trek-dubbel. Torstein Træen (Uno-X), åtta på etappen, tog över gula tröjan 28 sekunder före Sean Quinn, medan Pogačar föll till fjärde plats totalt, 7:53 efter.",
+   "abandons": [
+    {
+     "rider": "Kelland O'Brien",
+     "team": "Team Jayco-AlUla",
+     "reason": "OTL – utanför tidsgränsen (över 46 minuter efter segraren, gränsen var 37:37)"
+    }
+   ]
+  }
+ ]
+}
