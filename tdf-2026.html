@@ -1,0 +1,511 @@
+<title>Tour de France 2026</title>
+<style>
+:root{
+  --ground:#f4efe0; --surface:#fffdf4; --surface2:#faf6e8;
+  --ink:#231d08; --ink2:#6e654a; --ink3:#9a916f;
+  --hair:#e5ddc2; --hair2:#d8cfae;
+  --gold:#7d6300; --yellow:#ffd900; --yellow-ink:#231d08;
+  --green:#1d9d51; --green-ink:#0b5c2c;
+  --red:#d5342c; --red-ink:#a8231c;
+  --shadow:0 1px 2px rgba(35,29,8,.06),0 6px 20px rgba(35,29,8,.07);
+  --t-flat:#e2ecd4; --t-flat-ink:#3c5220;
+  --t-hilly:#f3e3bd; --t-hilly-ink:#6d5313;
+  --t-mtn:#ecd3c4; --t-mtn-ink:#7c3a1c;
+  --t-tt:#d7e4ee; --t-tt-ink:#2a5474;
+  --bar:#c4a83e; --bar-lead:#ffd900;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ground:#12100a; --surface:#1e1b10; --surface2:#262213;
+    --ink:#f4eeda; --ink2:#b3aa8a; --ink3:#877e5f;
+    --hair:#332e1c; --hair2:#403a24;
+    --gold:#f2c400; --yellow:#ffd900; --yellow-ink:#231d08;
+    --green:#2fb765; --green-ink:#7fdca6;
+    --red:#ee5a4f; --red-ink:#ff938a;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
+    --t-flat:#2c3a1c; --t-flat-ink:#b8d38d;
+    --t-hilly:#413412; --t-hilly-ink:#e5c467;
+    --t-mtn:#432a1a; --t-mtn-ink:#eba071;
+    --t-tt:#1e3348; --t-tt-ink:#8fc0e8;
+    --bar:#a68c2e; --bar-lead:#ffd900;
+  }
+}
+:root[data-theme="light"]{
+  --ground:#f4efe0; --surface:#fffdf4; --surface2:#faf6e8;
+  --ink:#231d08; --ink2:#6e654a; --ink3:#9a916f;
+  --hair:#e5ddc2; --hair2:#d8cfae;
+  --gold:#7d6300; --yellow:#ffd900; --yellow-ink:#231d08;
+  --green:#1d9d51; --green-ink:#0b5c2c;
+  --red:#d5342c; --red-ink:#a8231c;
+  --shadow:0 1px 2px rgba(35,29,8,.06),0 6px 20px rgba(35,29,8,.07);
+  --t-flat:#e2ecd4; --t-flat-ink:#3c5220;
+  --t-hilly:#f3e3bd; --t-hilly-ink:#6d5313;
+  --t-mtn:#ecd3c4; --t-mtn-ink:#7c3a1c;
+  --t-tt:#d7e4ee; --t-tt-ink:#2a5474;
+  --bar:#c4a83e; --bar-lead:#ffd900;
+}
+:root[data-theme="dark"]{
+  --ground:#12100a; --surface:#1e1b10; --surface2:#262213;
+  --ink:#f4eeda; --ink2:#b3aa8a; --ink3:#877e5f;
+  --hair:#332e1c; --hair2:#403a24;
+  --gold:#f2c400; --yellow:#ffd900; --yellow-ink:#231d08;
+  --green:#2fb765; --green-ink:#7fdca6;
+  --red:#ee5a4f; --red-ink:#ff938a;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
+  --t-flat:#2c3a1c; --t-flat-ink:#b8d38d;
+  --t-hilly:#413412; --t-hilly-ink:#e5c467;
+  --t-mtn:#432a1a; --t-mtn-ink:#eba071;
+  --t-tt:#1e3348; --t-tt-ink:#8fc0e8;
+  --bar:#a68c2e; --bar-lead:#ffd900;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--ground); color:var(--ink);
+  font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+.disp{font-family:"Avenir Next Condensed","AvenirNextCondensed-Bold","Arial Narrow","Helvetica Neue",-apple-system,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+#app{max-width:640px;margin:0 auto;padding:0 14px calc(96px + env(safe-area-inset-bottom,0px))}
+/* ---------- masthead ---------- */
+.masthead{
+  margin:0 -14px; padding:calc(14px + env(safe-area-inset-top,0px)) 18px 12px;
+  background:var(--yellow); color:var(--yellow-ink);
+}
+.masthead h1{margin:0;font-size:34px;line-height:1;letter-spacing:.01em}
+.masthead h1 small{display:block;font-size:13px;letter-spacing:.28em;font-weight:600;margin-bottom:4px}
+.mast-sub{display:flex;justify-content:space-between;align-items:baseline;margin-top:6px;font-size:12.5px;font-weight:600}
+.mast-sub .upd{opacity:.75;font-weight:500}
+/* ---------- generic ---------- */
+h2.sec{font-size:20px;margin:26px 2px 10px;letter-spacing:.04em}
+h2.sec:first-of-type{margin-top:20px}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:14px;box-shadow:var(--shadow);padding:14px;margin-bottom:12px;overflow:hidden}
+.muted{color:var(--ink2)} .small{font-size:13px}
+.num{font-variant-numeric:tabular-nums}
+button{font:inherit;color:inherit;background:none;border:none;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:6px}
+/* ---------- tab bar ---------- */
+.tabbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  display:flex;justify-content:center;gap:2px;
+  padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));
+  background:color-mix(in srgb, var(--surface) 88%, transparent);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-top:1px solid var(--hair);
+}
+.tab{flex:1;max-width:120px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;border-radius:10px;color:var(--ink3);font-size:10.5px;font-weight:600;letter-spacing:.03em}
+.tab svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tab.on{color:var(--gold)}
+.tab.on .lbl{color:var(--ink)}
+/* ---------- jerseys ---------- */
+.jrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.jcard{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:10px;box-shadow:var(--shadow)}
+.j{width:34px;height:34px;border-radius:8px;flex:0 0 auto;border:1px solid rgba(0,0,0,.12);position:relative}
+.j-yellow{background:#ffd900}
+.j-green{background:#1d9d51}
+.j-polka{background:#fff;background-image:radial-gradient(#d5342c 22%,transparent 24%);background-size:11px 11px;background-position:2px 3px}
+.j-white{background:#fff}
+.j-white::after{content:"";position:absolute;inset:0;border-radius:8px;border:1px solid #ccc}
+.jcard .who{min-width:0}
+.jcard .lab{font-size:10px;letter-spacing:.1em;font-weight:700;color:var(--ink2);text-transform:uppercase}
+.jcard .nm{font-weight:650;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jcard .tm{font-size:12px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* ---------- hero ---------- */
+.hero{background:var(--yellow);color:var(--yellow-ink);border-radius:16px;padding:16px;margin-top:14px;box-shadow:var(--shadow)}
+.hero .lab{font-size:11px;letter-spacing:.22em;font-weight:700}
+.hero .name{font-size:32px;line-height:1.02;margin:4px 0 2px}
+.hero .sub{font-size:14px;font-weight:600;opacity:.85}
+.hero .gapline{margin-top:10px;font-size:13px;font-weight:600;border-top:1px solid rgba(35,29,8,.18);padding-top:9px;display:flex;justify-content:space-between}
+/* ---------- progress ---------- */
+.prog{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.prog .v{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.prog .k{font-size:11px;color:var(--ink2);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.meter{height:8px;background:var(--surface2);border:1px solid var(--hair);border-radius:99px;overflow:hidden;margin-top:10px}
+.meter i{display:block;height:100%;background:var(--yellow);border-radius:99px}
+/* ---------- stage list ---------- */
+.strip{display:flex;align-items:flex-end;gap:3px;height:64px;margin:4px 0 14px;padding:0 2px}
+.strip button{flex:1;min-width:0;border-radius:4px 4px 2px 2px;position:relative;opacity:.45}
+.strip button.done{opacity:1}
+.strip button.next{opacity:.8;box-shadow:inset 0 0 0 2px var(--gold)}
+.stage{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--surface);border:1px solid var(--hair);border-radius:14px;box-shadow:var(--shadow);padding:12px;margin-bottom:10px}
+.stage .no{flex:0 0 40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:700;background:var(--surface2);border:1px solid var(--hair)}
+.stage.done .no{background:var(--yellow);color:var(--yellow-ink);border-color:transparent}
+.stage .mid{flex:1;min-width:0}
+.stage .rt{font-weight:650;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stage .meta{font-size:12.5px;color:var(--ink2);display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:2px}
+.stage .win{font-size:12.5px;margin-top:3px;color:var(--gold);font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stage .chev{color:var(--ink3);font-size:20px;flex:0 0 auto}
+.badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:5px;padding:2px 6px}
+.b-flat{background:var(--t-flat);color:var(--t-flat-ink)}
+.b-hilly{background:var(--t-hilly);color:var(--t-hilly-ink)}
+.b-mountain{background:var(--t-mtn);color:var(--t-mtn-ink)}
+.b-itt,.b-ttt{background:var(--t-tt);color:var(--t-tt-ink)}
+.rest{display:flex;align-items:center;gap:10px;color:var(--ink2);font-size:13px;font-weight:600;margin:14px 4px}
+.rest::before,.rest::after{content:"";flex:1;border-top:1px dashed var(--hair2)}
+/* ---------- detail overlay ---------- */
+.detail{position:fixed;inset:0;z-index:60;background:var(--ground);overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}
+.detail.open{display:block}
+@media (prefers-reduced-motion: no-preference){
+  .detail.open{animation:slidein .22s ease-out}
+  @keyframes slidein{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+}
+.detail .inner{max-width:640px;margin:0 auto;padding:0 14px calc(40px + env(safe-area-inset-bottom,0px))}
+.dethead{position:sticky;top:0;z-index:5;margin:0 -14px;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;background:var(--yellow);color:var(--yellow-ink);display:flex;align-items:center;gap:8px}
+.dethead .back{font-size:15px;font-weight:700;display:flex;align-items:center;gap:2px;padding:4px 8px 4px 2px;white-space:nowrap;flex:0 0 auto}
+.dethead .ttl{font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* ---------- tables ---------- */
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);font-weight:700;text-align:left;padding:4px 6px;border-bottom:1px solid var(--hair)}
+td{padding:7px 6px;border-bottom:1px solid var(--hair);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.rk{color:var(--ink3);font-weight:600;width:26px}
+tr.lead td{background:color-mix(in srgb, var(--yellow) 26%, var(--surface));font-weight:650}
+.who2{min-width:0}
+.who2 .nm{font-weight:600}
+.who2 .tm{font-size:12px;color:var(--ink2)}
+.scrollx{overflow-x:auto;margin:0 -14px;padding:0 14px}
+/* ---------- bars ---------- */
+.bars{display:flex;flex-direction:column;gap:7px;margin-top:8px}
+.brow{display:grid;grid-template-columns:132px 1fr 48px;gap:8px;align-items:center;font-size:13px}
+.brow .bl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.brow .tr{height:14px;background:var(--surface2);border-radius:4px;overflow:hidden}
+.brow .tr i{display:block;height:100%;background:var(--bar);border-radius:0 4px 4px 0;min-width:3px}
+.brow.lead .tr i{background:var(--bar-lead)}
+.brow .bv{text-align:right;color:var(--ink2);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* ---------- segmented ---------- */
+.seg{display:flex;gap:4px;background:var(--surface2);border:1px solid var(--hair);padding:4px;border-radius:12px;margin:6px 0 14px;overflow-x:auto}
+.seg button{flex:1;padding:8px 10px;border-radius:9px;font-size:13px;font-weight:650;color:var(--ink2);white-space:nowrap}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.seg button.on.sy{background:var(--yellow);color:var(--yellow-ink)}
+/* ---------- riders ---------- */
+.search{display:flex;gap:8px;margin:6px 0 14px}
+.search input{flex:1;font:inherit;padding:10px 14px;border-radius:12px;border:1px solid var(--hair);background:var(--surface);color:var(--ink)}
+.search input::placeholder{color:var(--ink3)}
+.teamhead{display:flex;align-items:baseline;gap:8px;margin:20px 2px 8px}
+.teamhead .sn{font-size:17px}
+.teamhead .fn{font-size:12px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rider{display:flex;align-items:center;gap:10px;padding:8px 2px;border-bottom:1px solid var(--hair)}
+.rider:last-child{border-bottom:none}
+.rider .bib{flex:0 0 34px;text-align:center;font-size:12px;font-weight:700;color:var(--ink2);background:var(--surface2);border:1px solid var(--hair);border-radius:6px;padding:2px 0}
+.rider .nm{flex:1;min-width:0;font-weight:550;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rider .ag{color:var(--ink2);font-size:12.5px;white-space:nowrap}
+.rider.out .nm{text-decoration:line-through;color:var(--ink3)}
+.tag{font-size:10px;font-weight:700;letter-spacing:.05em;border-radius:5px;padding:1px 5px;background:var(--t-mtn);color:var(--t-mtn-ink)}
+/* ---------- stats ---------- */
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+.kpi .v{font-size:21px;font-weight:750;font-variant-numeric:tabular-nums;line-height:1.15}
+.kpi .k{font-size:11px;color:var(--ink2);letter-spacing:.05em;text-transform:uppercase;font-weight:650;margin-top:2px}
+.fact{background:var(--surface);border:1px solid var(--hair);border-left:4px solid var(--yellow);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:14.5px;box-shadow:var(--shadow)}
+.footer{margin:34px 4px 8px;font-size:12px;color:var(--ink3);text-align:center;line-height:1.6}
+.view{display:none}.view.on{display:block}
+</style>
+
+<div id="app">
+  <header class="masthead disp">
+    <h1><small>LE TOUR DE FRANCE</small>2026 · Statistiken</h1>
+    <div class="mast-sub"><span id="mast-stage"></span><span class="upd" id="mast-upd"></span></div>
+  </header>
+  <main>
+    <section class="view" id="v-idag"></section>
+    <section class="view" id="v-etapper"></section>
+    <section class="view" id="v-stallning"></section>
+    <section class="view" id="v-akare"></section>
+    <section class="view" id="v-stats"></section>
+  </main>
+  <div class="footer">Inofficiell statistikapp · Data från procyclingstats, cyclingnews, firstcycling &amp; Wikipedia<br><span id="foot-upd"></span></div>
+</div>
+
+<div class="detail" id="detail" role="dialog" aria-modal="true">
+  <div class="inner">
+    <div class="dethead disp">
+      <button class="back" onclick="closeStage()">‹ Tillbaka</button>
+      <div class="ttl" id="det-ttl"></div>
+    </div>
+    <div id="det-body"></div>
+  </div>
+</div>
+
+<nav class="tabbar" aria-label="Flikar">
+  <button class="tab on" data-v="idag"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/></svg><span class="lbl">Idag</span></button>
+  <button class="tab" data-v="etapper"><svg viewBox="0 0 24 24"><path d="M2.5 19.5 9 8l4 7 3.5-5.5L21.5 19.5z"/></svg><span class="lbl">Etapper</span></button>
+  <button class="tab" data-v="stallning"><svg viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 5H4.5a3 3 0 0 0 3 4.5M17 5h2.5a3 3 0 0 1-3 4.5"/><path d="M12 13v3M8.5 20h7M12 16c-1.5 0-2.5 1-3.5 4M12 16c1.5 0 2.5 1 3.5 4"/></svg><span class="lbl">Ställning</span></button>
+  <button class="tab" data-v="akare"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><path d="M2.5 20c.5-4 2.5-6 5.5-6s5 2 5.5 6"/><circle cx="17" cy="8" r="2.4"/><path d="M14.5 19.5c.4-3.2 1.6-4.8 4-4.8 1.8 0 2.8 1 3 3.3"/></svg><span class="lbl">Åkare</span></button>
+  <button class="tab" data-v="stats"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><span class="lbl">Stats</span></button>
+</nav>
+
+<script id="tdf-data" type="application/json">{"meta":{"lastStage":4,"updated":"2026-07-07","kmDone":565.9,"kmTotal":3321.2,"ridersStarted":184,"ridersLeft":181},"route":{"totalDistanceKm":3321.2,"restDays":[{"date":"2026-07-13","location":"Cantal (Aurillac-området)"},{"date":"2026-07-20","location":"Haute-Savoie (Évian/Thonon-området)"}],"stageTypeCounts":{"flat":7,"hilly":4,"mountain":8,"itt":1,"ttt":1},"finalStageFinish":"Champs-Élysées, Paris — med Côte de la Butte Montmartre tre gånger i finalen (sista passagen 10,3 km från mål)","stages":[{"n":1,"date":"2026-07-04","start":"Barcelona","finish":"Barcelona","km":19.6,"type":"ttt","summitFinish":false,"elevationM":null,"climbs":[{"name":"Montjuïc (avslutande stigning, 800 m @ 7%)","cat":null}],"desc":"Tourens öppning är ett lagtempolopp genom Barcelonas gator där varje åkares individuella tid räknas och avslutningen stiger upp mot Montjuïc.","winner":"Visma","winnerTeam":"Visma"},{"n":2,"date":"2026-07-05","start":"Tarragona","finish":"Barcelona","km":168.5,"type":"hilly","summitFinish":false,"elevationM":2500,"climbs":[{"name":"Côte du Château de Montjuïc","cat":null},{"name":"Côte du Stade Olympique","cat":null}],"desc":"Flack kustväg i första halvan följt av en explosiv avslutningskrets runt Montjuïc med branta punchiga backar och mållinje uppför mot Olympiastadion.","winner":"Isaac del Toro","winnerTeam":"UAE"},{"n":3,"date":"2026-07-06","start":"Granollers","finish":"Les Angles","km":195.9,"type":"mountain","summitFinish":true,"elevationM":3850,"climbs":[{"name":"Sant Feliu de Codines","cat":"4"},{"name":"Collada de Toses","cat":"2"},{"name":"Col du Calvaire","cat":"1"},{"name":"Les Angles","cat":"1"}],"desc":"Tourens första bergsetapp korsar Pyrenéerna från Spanien in i Frankrike med nästan all klättring i andra halvan och toppmålgång vid skidorten Les Angles.","winner":"Tadej Pogačar","winnerTeam":"UAE"},{"n":4,"date":"2026-07-07","start":"Carcassonne","finish":"Foix","km":181.9,"type":"hilly","summitFinish":false,"elevationM":2800,"climbs":[{"name":"Col de Coudins","cat":"2"},{"name":"Col de Montségur","cat":"2"}],"desc":"Kuperad etapp genom Pyrenéernas förberg där en lång utförslutning de sista 35 km mot Foix gynnar utbrytare.","winner":"Mads Pedersen","winnerTeam":"Lidl-Trek"},{"n":5,"date":"2026-07-08","start":"Lannemezan","finish":"Pau","km":158.3,"type":"flat","summitFinish":false,"elevationM":null,"climbs":[{"name":"Côte de Casteide-Doat","cat":null},{"name":"Côte de Baleix","cat":null}],"desc":"Första riktiga chansen för sprinterna – mestadels flack terräng med tre korta backar innan 26 flacka kilometer in mot Pau."},{"n":6,"date":"2026-07-09","start":"Pau","finish":"Gavarnie-Gèdre","km":186.2,"type":"mountain","summitFinish":true,"elevationM":4100,"climbs":[{"name":"Col d'Aspin","cat":"1"},{"name":"Col du Tourmalet","cat":"1"},{"name":"Gavarnie-Gèdre (slutstigning 18,7 km @ 3,7%)","cat":null}],"desc":"Tung Pyrenéeretapp över Col d'Aspin och Col du Tourmalet innan en lång, gradvis slutstigning till den helt nya målplatsen vid Cirque de Gavarnie."},{"n":7,"date":"2026-07-10","start":"Hagetmau","finish":"Bordeaux","km":175.1,"type":"flat","summitFinish":false,"elevationM":null,"climbs":[],"desc":"Klassisk sprintetapp bort från Pyrenéerna där en masspurt i Bordeaux är närmast garanterad."},{"n":8,"date":"2026-07-11","start":"Périgueux","finish":"Bergerac","km":180.4,"type":"flat","summitFinish":false,"elevationM":null,"climbs":[],"desc":"Flack etapp genom Dordogne-dalen nästan helt utan hinder – ytterligare en given massspurt i Bergerac."},{"n":9,"date":"2026-07-12","start":"Malemort","finish":"Ussel","km":185.5,"type":"hilly","summitFinish":false,"elevationM":3300,"climbs":[{"name":"Suc au May","cat":null},{"name":"Côte de la Croix de Pey","cat":null},{"name":"Mont Bessou","cat":null}],"desc":"Energikrävande böljande etapp genom Massif Central med 3 300 höjdmeter och flack final – perfekt för utbrytare dagen före vilodagen."},{"n":10,"date":"2026-07-14","start":"Aurillac","finish":"Le Lioran","km":166.6,"type":"mountain","summitFinish":false,"elevationM":3900,"climbs":[{"name":"Puy Mary (Pas de Peyrol)","cat":"1"},{"name":"Col de Pertus","cat":"1"},{"name":"Col de la Griffoul","cat":"2"},{"name":"Col de Font de Cère","cat":"3"}],"desc":"Krävande bergsetapp i Massif Central på samma vägar som Pogacar–Vingegaard-duellen 2024, med Puy Mary och Col de Pertus tätt inpå målet i Le Lioran."},{"n":11,"date":"2026-07-15","start":"Vichy","finish":"Nevers","km":161.3,"type":"flat","summitFinish":false,"elevationM":1800,"climbs":[{"name":"Côte de Billy-Chévannes","cat":null}],"desc":"Sprintvänlig etapp längs Allierfloden mot Loiredalen där dagens enda nämnvärda backe ligger för långt från mål för att stoppa spurtupploppet i Nevers."},{"n":12,"date":"2026-07-16","start":"Circuit de Nevers Magny-Cours","finish":"Chalon-sur-Saône","km":179.1,"type":"flat","summitFinish":false,"elevationM":null,"climbs":[{"name":"Côte de Montagny-lès-Buxy","cat":null}],"desc":"Etapp med start på racerbanan Magny-Cours och trolig massspurt i Chalon-sur-Saône, även om en sen backe 20 km från mål kan ge utbrytarna hopp."},{"n":13,"date":"2026-07-17","start":"Dole","finish":"Belfort","km":205.8,"type":"hilly","summitFinish":false,"elevationM":null,"climbs":[{"name":"Col des Croix","cat":null},{"name":"Ballon d'Alsace","cat":"1"}],"desc":"Tourens längsta etapp rullar genom Vogeserna över historiska Ballon d'Alsace, vars topp 30 km från mål gynnar starka utförsåkare med snabba ben."},{"n":14,"date":"2026-07-18","start":"Mulhouse","finish":"Le Markstein Fellering","km":155.3,"type":"mountain","summitFinish":false,"elevationM":3800,"climbs":[{"name":"Grand Ballon","cat":"1"},{"name":"Ballon d'Alsace","cat":"1"},{"name":"Col du Haag","cat":"1"},{"name":"Col du Page","cat":"2"},{"name":"Col du Hundsruck","cat":"3"}],"desc":"Slitsam Vogeseretapp med sju klassificerade stigningar där avgörandet väntas på branta Col du Haag innan knappt sex böljande kilometer till Le Markstein."},{"n":15,"date":"2026-07-19","start":"Champagnole","finish":"Plateau de Solaison","km":183.9,"type":"mountain","summitFinish":true,"elevationM":4700,"climbs":[{"name":"Col de la Croisette","cat":"1"},{"name":"Plateau de Solaison","cat":"HC"}],"desc":"Brutal etapp med cirka 4 700 höjdmeter som kulminerar i den fruktade slutstigningen till Plateau de Solaison – 11,3 km i 9,1 % snittlutning."},{"n":16,"date":"2026-07-21","start":"Évian-les-Bains","finish":"Thonon-les-Bains","km":26.1,"type":"itt","summitFinish":false,"elevationM":500,"climbs":[{"name":"Tidig stigning 9,6 km @ 4,2%","cat":null}],"desc":"Tourens enda individuella tempolopp längs Genèvesjön inleds med en lång dryg stigning innan en flack avslutning – en nyckeldag för sammandraget."},{"n":17,"date":"2026-07-22","start":"Chambéry","finish":"Voiron","km":174.7,"type":"flat","summitFinish":false,"elevationM":2400,"climbs":[{"name":"Col des Prés","cat":null},{"name":"Col de Couz","cat":null}],"desc":"Officiellt en flack övergångsetapp men i praktiken kuperad – tidig klättring ger utbrytarchans, men den långa utförslöpningen mot Voiron talar för spurt."},{"n":18,"date":"2026-07-23","start":"Voiron","finish":"Orcières-Merlette","km":185.2,"type":"mountain","summitFinish":true,"elevationM":3900,"climbs":[{"name":"Côte d'Engins","cat":"2"},{"name":"Côte de Monteynard","cat":"2"},{"name":"Côte des Terrasses","cat":"3"},{"name":"Orcières-Merlette","cat":"1"}],"desc":"Alpernas öppningsakt bjuder på ständigt böljande terräng innan den jämna slutstigningen till skidorten Orcières-Merlette avgör."},{"n":19,"date":"2026-07-24","start":"Gap","finish":"Alpe d'Huez","km":127.9,"type":"mountain","summitFinish":true,"elevationM":null,"climbs":[{"name":"Col Bayard","cat":"3"},{"name":"Col du Noyer","cat":"2"},{"name":"Col d'Ornon","cat":"2"},{"name":"Alpe d'Huez","cat":"HC"}],"desc":"Kort och intensiv alpetapp där den klassiska klättringen uppför Alpe d'Huez med sina 21 hårnålskurvor (13,8 km @ 8,1 %) väntar som final."},{"n":20,"date":"2026-07-25","start":"Le Bourg-d'Oisans","finish":"Alpe d'Huez","km":170.9,"type":"mountain","summitFinish":true,"elevationM":5450,"climbs":[{"name":"Col de la Croix de Fer","cat":"HC"},{"name":"Col du Télégraphe","cat":"1"},{"name":"Col du Galibier","cat":"HC"},{"name":"Alpe d'Huez via Col de Sarenne","cat":"HC"}],"desc":"Tourens kungsetapp – en koloss med 5 450 höjdmeter över Croix de Fer, Télégraphe och Galibier (tourens högsta punkt, 2 642 m) innan en andra rak toppmålgång på Alpe d'Huez, nådd via branta Col de Sarenne."},{"n":21,"date":"2026-07-26","start":"Thoiry","finish":"Paris (Champs-Élysées)","km":133.0,"type":"flat","summitFinish":false,"elevationM":null,"climbs":[{"name":"Côte de la Butte Montmartre (3 passager, kullersten 1,1 km @ 5,9%)","cat":null}],"desc":"Paradetappen till Paris avslutas som 2025 med tre passager över kullerstensbacken vid Montmartre – sista gången 10,3 km från mål – innan målgången på Champs-Élysées, vilket hotar den klassiska sprintfinalen."}]},"results":{"lastCompletedStage":4,"stages":[{"n":1,"date":"2026-07-04","route":"Barcelona → Barcelona · lagtempo","winner":"Visma","winnerTeam":"Visma","avgSpeedKmh":54.0,"top15":[{"rank":1,"rider":"Visma","team":"Visma","time":"21:47"},{"rank":2,"rider":"Ineos","team":"Ineos","time":"+0:08"},{"rank":3,"rider":"UAE","team":"UAE","time":"+0:12"},{"rank":4,"rider":"Lidl-Trek","team":"Lidl-Trek","time":"+0:16"},{"rank":5,"rider":"Red Bull","team":"Red Bull","time":"+0:19"},{"rank":6,"rider":"Decathlon","team":"Decathlon","time":"+0:39"},{"rank":7,"rider":"Alpecin","team":"Alpecin","time":"+0:39"},{"rank":8,"rider":"Groupama","team":"Groupama","time":"+0:41"},{"rank":9,"rider":"Bahrain","team":"Bahrain","time":"+0:47"},{"rank":10,"rider":"Jayco","team":"Jayco","time":"+0:51"},{"rank":11,"rider":"EF","team":"EF","time":"+0:57"},{"rank":12,"rider":"Q36.5","team":"Q36.5","time":"+0:57"},{"rank":13,"rider":"Soudal","team":"Soudal","time":"+0:58"},{"rank":14,"rider":"Uno-X","team":"Uno-X","time":"+1:00"},{"rank":15,"rider":"TotalEnergies","team":"TotalEnergies","time":"+1:02"}],"jerseysAfter":{"yellow":"Jonas Vingegaard","green":"Egan Bernal","polka":"Tadej Pogačar","white":"Juan Ayuso"},"summary":"Visma-Lease a Bike vann det inledande lagtempot i Barcelona på 21:47 (19,6 km), 8 sekunder före Netcompany-INEOS och 12 före UAE Team Emirates-XRG. Individuella tider räknades: Jonas Vingegaard släppte sina sista hjälpryttare (Jorgenson och Piganzoli) på Montjuïc-stigningen och tog gula tröjan, före Filippo Ganna (+0:08) och Tadej Pogačar (+0:12). INEOS förlorade Kévin Vauquelin till punktering 7 km från mål; specialregler gav grön tröja till Bernal och första bergströjan till Pogačar som snabbast över de sista 3,7 km.","abandons":[]},{"n":2,"date":"2026-07-05","route":"Tarragona → Barcelona","winner":"Isaac del Toro","winnerTeam":"UAE","avgSpeedKmh":46.0,"top15":[{"rank":1,"rider":"Isaac del Toro","team":"UAE","time":"3:40:01"},{"rank":2,"rider":"Tadej Pogačar","team":"UAE","time":"s.t."},{"rank":3,"rider":"Remco Evenepoel","team":"Red Bull","time":"s.t."},{"rank":4,"rider":"Jonas Vingegaard","team":"Visma","time":"s.t."},{"rank":5,"rider":"Mattias Skjelmose","team":"Lidl-Trek","time":"+0:03"},{"rank":6,"rider":"Tobias Halland Johannessen","team":"Uno-X","time":"+0:03"},{"rank":7,"rider":"Romain Grégoire","team":"Groupama","time":"+0:03"},{"rank":8,"rider":"Lenny Martinez","team":"Bahrain","time":"+0:03"},{"rank":9,"rider":"Paul Seixas","team":"Decathlon","time":"+0:03"},{"rank":10,"rider":"Tom Pidcock","team":"Q36.5","time":"+0:03"},{"rank":11,"rider":"Lennert Van Eetvelt","team":"Lotto","time":"+0:03"},{"rank":12,"rider":"Juan Ayuso","team":"Lidl-Trek","time":"+0:03"},{"rank":13,"rider":"Ilan Van Wilder","team":"Soudal","time":"+0:03"},{"rank":14,"rider":"Richard Carapaz","team":"EF","time":"+0:07"},{"rank":15,"rider":"Alex Baudin","team":"EF","time":"+0:10"}],"jerseysAfter":{"yellow":"Jonas Vingegaard","green":"Isaac del Toro","polka":"Alex Molenaar","white":"Isaac del Toro"},"summary":"En tidig utbrytning med Alex Molenaar, Felix Engelhardt och Frank van den Broek togs in inför finalvarven på Montjuïc. Isaac del Toro fick mekaniska problem cirka 60 km från mål och fick jaga länge, men UAE kontrollerade finalen; Skjelmose attackerade på sista 2 km men hämtades in, och Pogačar tycktes skänka segern till sin mexikanske lagkamrat i den branta avslutningen vid Olympiastadion. Vingegaard försvarade gula tröjan men såg Pogačar krympa försprånget från 12 till 6 sekunder tack vare bonussekunder.","abandons":[{"rider":"Clément Berthet","team":"Groupama","reason":"DNS – startade inte efter krasch på etapp 1"}]},{"n":3,"date":"2026-07-06","route":"Granollers → Les Angles","winner":"Tadej Pogačar","winnerTeam":"UAE","avgSpeedKmh":41.2,"top15":[{"rank":1,"rider":"Tadej Pogačar","team":"UAE","time":"4:45:11"},{"rank":2,"rider":"Jonas Vingegaard","team":"Visma","time":"+0:02"},{"rank":3,"rider":"Richard Carapaz","team":"EF","time":"+0:02"},{"rank":4,"rider":"Paul Seixas","team":"Decathlon","time":"+0:02"},{"rank":5,"rider":"Tobias Halland Johannessen","team":"Uno-X","time":"+0:04"},{"rank":6,"rider":"Lennert Van Eetvelt","team":"Lotto","time":"+0:04"},{"rank":7,"rider":"Florian Lipowitz","team":"Red Bull","time":"+0:04"},{"rank":8,"rider":"Remco Evenepoel","team":"Red Bull","time":"+0:04"},{"rank":9,"rider":"Isaac del Toro","team":"UAE","time":"+0:04"},{"rank":10,"rider":"Juan Ayuso","team":"Lidl-Trek","time":"+0:04"},{"rank":11,"rider":"Mattias Skjelmose","team":"Lidl-Trek","time":"+0:10"},{"rank":12,"rider":"Ilan Van Wilder","team":"Soudal","time":"+0:12"},{"rank":13,"rider":"Lenny Martinez","team":"Bahrain","time":"+0:12"},{"rank":14,"rider":"Jordan Jegat","team":"TotalEnergies","time":"+0:12"},{"rank":15,"rider":"Sergio Higuita","team":"Astana","time":"+0:18"}],"jerseysAfter":{"yellow":"Tadej Pogačar","green":"Tadej Pogačar","polka":"Alex Baudin","white":"Isaac del Toro"},"summary":"En stor utbrytning på runt 18–19 man gick efter ett par timmar och Alex Baudin gick över Collada de Toses först, tog bergströjan och var länge virtuell ledare innan gruppen hämtades in cirka 11 km från mål. Isaac del Toro drog upp den avslutande 1,7 km långa stigningen till Les Angles innan Pogačar attackerade och vann 2 sekunder före Vingegaard – hans 22:a etappseger i Tour de France. Med bonussekunderna hamnade Pogačar och Vingegaard på exakt samma totaltid, och Pogačar tog gula tröjan på särskiljning (bättre placeringar).","abandons":[{"rider":"Arnaud De Lie","team":"Lotto","reason":"DNF – bröt loppet, har kämpat med sjukdom sedan tourstarten"}]},{"n":4,"date":"2026-07-07","route":"Carcassonne → Foix","winner":"Mads Pedersen","winnerTeam":"Lidl-Trek","avgSpeedKmh":43.5,"top15":[{"rank":1,"rider":"Mads Pedersen","team":"Lidl-Trek","time":"4:10:45"},{"rank":2,"rider":"Quinn Simmons","team":"Lidl-Trek","time":"s.t."},{"rank":3,"rider":"Raúl García Pierna","team":"Movistar","time":"s.t."},{"rank":4,"rider":"Marco Frigo","team":"NSN","time":"s.t."},{"rank":5,"rider":"Ramses Debruyne","team":"Alpecin","time":"s.t."},{"rank":6,"rider":"Kévin Vauquelin","team":"Ineos","time":"s.t."},{"rank":7,"rider":"Sean Quinn","team":"EF","time":"s.t."},{"rank":8,"rider":"Torstein Træen","team":"Uno-X","time":"s.t."},{"rank":9,"rider":"Pablo Castrillo","team":"Movistar","time":"s.t."},{"rank":10,"rider":"Mathias Vacek","team":"Lidl-Trek","time":"s.t."},{"rank":11,"rider":"Michael Matthews","team":"Jayco","time":"+2:27"},{"rank":12,"rider":"Alexandre Delettre","team":"TotalEnergies","time":"+2:27"},{"rank":13,"rider":"Vlad Van Mechelen","team":"Bahrain","time":"+2:27"},{"rank":14,"rider":"Jasper Stuyven","team":"Soudal","time":"+2:27"},{"rank":15,"rider":"Alex Molenaar","team":"Caja Rural","time":"+2:27"}],"jerseysAfter":{"yellow":"Torstein Træen","green":"Mads Pedersen","polka":"Alex Baudin","white":"Mathias Vacek"},"summary":"I brutal hetta på över 40 grader gick en jätteutbrytning på 34 man som klungan lät få över 13 minuter. Tio man skiljde ut sig över Col de Montségur, och i Foix spurtade världsmästaren Mads Pedersen överlägset före lagkamraten Quinn Simmons för en Lidl-Trek-dubbel. Torstein Træen (Uno-X), åtta på etappen, tog över gula tröjan 28 sekunder före Sean Quinn, medan Pogačar föll till fjärde plats totalt, 7:53 efter.","abandons":[{"rider":"Kelland O'Brien","team":"Jayco","reason":"OTL – utanför tidsgränsen (över 46 minuter efter segraren, gränsen var 37:37)"}]}]},"standings":{"afterStage":4,"note":"Standings after stage 4 (Carcassonne-Foix, July 7, 2026), which finished today before this data was gathered. Sources: cyclingnews.com official classification tables (updated 7 July 2026); abandons from cyclingnews abandons tracker; combativity from stage reports (ici.fr/Wikipedia FR, cyclingnews live blogs).","gc":[{"rank":1,"rider":"Torstein Træen","team":"Uno-X","nat":"NO","gap":"","time":"13:02:46"},{"rank":2,"rider":"Sean Quinn","team":"EF","nat":"US","gap":"+0:28"},{"rank":3,"rider":"Mathias Vacek","team":"Lidl-Trek","nat":"CZ","gap":"+3:50"},{"rank":4,"rider":"Tadej Pogačar","team":"UAE","nat":"SI","gap":"+7:53"},{"rank":5,"rider":"Jonas Vingegaard","team":"Visma","nat":"DK","gap":"+7:53"},{"rank":6,"rider":"Ramses Debruyne","team":"Alpecin","nat":"BE","gap":"+8:06"},{"rank":7,"rider":"Remco Evenepoel","team":"Red Bull","nat":"BE","gap":"+8:16"},{"rank":8,"rider":"Isaac del Toro","team":"UAE","nat":"MX","gap":"+8:17"},{"rank":9,"rider":"Juan Ayuso","team":"Lidl-Trek","nat":"ES","gap":"+8:20"},{"rank":10,"rider":"Paul Seixas","team":"Decathlon","nat":"FR","gap":"+8:41"},{"rank":11,"rider":"Florian Lipowitz","team":"Red Bull","nat":"DE","gap":"+8:46"},{"rank":12,"rider":"Lenny Martinez","team":"Bahrain","nat":"FR","gap":"+9:02"},{"rank":13,"rider":"Tobias Halland Johannessen","team":"Uno-X","nat":"NO","gap":"+9:04"},{"rank":14,"rider":"Ilan Van Wilder","team":"Soudal","nat":"BE","gap":"+9:10"},{"rank":15,"rider":"Tom Pidcock","team":"Q36.5","nat":"GB","gap":"+9:15"},{"rank":16,"rider":"Richard Carapaz","team":"EF","nat":"EC","gap":"+9:38"},{"rank":17,"rider":"Lennert Van Eetvelt","team":"Lotto","nat":"BE","gap":"+9:40"},{"rank":18,"rider":"Mattias Skjelmose","team":"Lidl-Trek","nat":"DK","gap":"+9:43"},{"rank":19,"rider":"Davide Piganzoli","team":"Visma","nat":"IT","gap":"+10:08"},{"rank":20,"rider":"Thymen Arensman","team":"Ineos","nat":"NL","gap":"+10:12"},{"rank":21,"rider":"Jordan Jegat","team":"TotalEnergies","nat":"FR","gap":"+10:21"},{"rank":22,"rider":"Sergio Higuita","team":"Astana","nat":"CO","gap":"+11:16"},{"rank":23,"rider":"Cian Uijtdebroeks","team":"Movistar","nat":"BE","gap":"+11:17"},{"rank":24,"rider":"Pablo Castrillo","team":"Movistar","nat":"ES","gap":"+11:22"},{"rank":25,"rider":"Raúl García Pierna","team":"Movistar","nat":"ES","gap":"+11:34"},{"rank":26,"rider":"Yannis Voisard","team":"Tudor","nat":"CH","gap":"+11:43"},{"rank":27,"rider":"Egan Bernal","team":"Ineos","nat":"CO","gap":"+12:08"},{"rank":28,"rider":"José Félix Parra","team":"Caja Rural","nat":"ES","gap":"+12:14"},{"rank":29,"rider":"Harold Tejada","team":"Astana","nat":"CO","gap":"+12:31"},{"rank":30,"rider":"Alex Baudin","team":"EF","nat":"FR","gap":"+13:12"}],"points":[{"rank":1,"rider":"Mads Pedersen","team":"Lidl-Trek","pts":103,"nat":"DK"},{"rank":2,"rider":"Tadej Pogačar","team":"UAE","pts":55,"nat":"SI"},{"rank":3,"rider":"Jonas Vingegaard","team":"Visma","pts":44,"nat":"DK"},{"rank":4,"rider":"Quinn Simmons","team":"Lidl-Trek","pts":42,"nat":"US"},{"rank":5,"rider":"Isaac del Toro","team":"UAE","pts":39,"nat":"MX"},{"rank":6,"rider":"Biniam Girmay","team":"NSN","pts":39,"nat":"ER"},{"rank":7,"rider":"Remco Evenepoel","team":"Red Bull","pts":33,"nat":"BE"},{"rank":8,"rider":"Tobias Halland Johannessen","team":"Uno-X","pts":32,"nat":"NO"},{"rank":9,"rider":"Jasper Philipsen","team":"Alpecin","pts":30,"nat":"BE"},{"rank":10,"rider":"Paul Seixas","team":"Decathlon","pts":28,"nat":"FR"}],"kom":[{"rank":1,"rider":"Alex Baudin","team":"EF","pts":12,"nat":"FR"},{"rank":2,"rider":"Alex Molenaar","team":"Caja Rural","pts":10,"nat":"NL"},{"rank":3,"rider":"Nicolas Prodhomme","team":"Decathlon","pts":9,"nat":"FR"},{"rank":4,"rider":"Raúl García Pierna","team":"Movistar","pts":7,"nat":"ES"},{"rank":5,"rider":"Marco Frigo","team":"NSN","pts":5,"nat":"IT"},{"rank":6,"rider":"Jan Tratnik","team":"Red Bull","pts":5,"nat":"SI"},{"rank":7,"rider":"Brandon McNulty","team":"UAE","pts":4,"nat":"US"},{"rank":8,"rider":"Vlad Van Mechelen","team":"Bahrain","pts":4,"nat":"BE"},{"rank":9,"rider":"Tadej Pogačar","team":"UAE","pts":3,"nat":"SI"},{"rank":10,"rider":"Mathias Vacek","team":"Lidl-Trek","pts":3,"nat":"CZ"}],"youth":[{"rank":1,"rider":"Mathias Vacek","team":"Lidl-Trek","gap":"","time":"13:06:36","nat":"CZ"},{"rank":2,"rider":"Ramses Debruyne","team":"Alpecin","gap":"+4:16","nat":"BE"},{"rank":3,"rider":"Isaac del Toro","team":"UAE","gap":"+4:27","nat":"MX"},{"rank":4,"rider":"Juan Ayuso","team":"Lidl-Trek","gap":"+4:30","nat":"ES"},{"rank":5,"rider":"Paul Seixas","team":"Decathlon","gap":"+4:51","nat":"FR"},{"rank":6,"rider":"Lenny Martinez","team":"Bahrain","gap":"+5:12","nat":"FR"},{"rank":7,"rider":"Lennert Van Eetvelt","team":"Lotto","gap":"+5:50","nat":"BE"},{"rank":8,"rider":"Davide Piganzoli","team":"Visma","gap":"+6:18","nat":"IT"},{"rank":9,"rider":"Cian Uijtdebroeks","team":"Movistar","gap":"+7:27","nat":"BE"},{"rank":10,"rider":"Pablo Castrillo","team":"Movistar","gap":"+7:32","nat":"ES"}],"teams":[{"rank":1,"team":"Lidl-Trek","gap":"","time":"39:04:13"},{"rank":2,"team":"Red Bull","gap":"+19:12"},{"rank":3,"team":"EF","gap":"+21:48"},{"rank":4,"team":"Movistar","gap":"+26:05"},{"rank":5,"team":"UAE","gap":"+32:33"},{"rank":6,"team":"Ineos","gap":"+33:21"},{"rank":7,"team":"Uno-X","gap":"+34:37"},{"rank":8,"team":"Visma","gap":"+39:00"},{"rank":9,"team":"Decathlon","gap":"+41:39"},{"rank":10,"team":"TotalEnergies","gap":"+48:02"}],"abandons":[{"rider":"Clément Berthet","team":"Groupama","stage":2,"reason":"DNS – skador efter kraschen (brunnslock) i lagtempot på etapp 1"},{"rider":"Arnaud De Lie","team":"Lotto","stage":3,"reason":"DNF – sjukdom, klev av med mindre än 10 km kvar"},{"rider":"Kelland O'Brien","team":"Jayco","stage":4,"reason":"OTL – i mål utanför tidsgränsen efter att ha lidit i hettan"}],"combativity":[{"stage":1,"rider":null,"note":"No award - stage 1 was a team time trial in Barcelona"},{"stage":2,"rider":"Felix Engelhardt","team":"Jayco"},{"stage":3,"rider":"Alex Baudin","team":"EF"},{"stage":4,"rider":"Pablo Castrillo","team":"Movistar"}]},"startlist":{"teams":[{"name":"UAE Team Emirates XRG","short":"UAE","country":"AE","riders":[{"bib":1,"name":"Tadej Pogačar","nat":"SI","age":27},{"bib":2,"name":"Isaac del Toro","nat":"MX","age":22},{"bib":3,"name":"Felix Großschartner","nat":"AT","age":32},{"bib":4,"name":"Brandon McNulty","nat":"US","age":28},{"bib":5,"name":"Nils Politt","nat":"DE","age":32},{"bib":6,"name":"Florian Vermeersch","nat":"BE","age":27},{"bib":7,"name":"Tim Wellens","nat":"BE","age":35},{"bib":8,"name":"Adam Yates","nat":"GB","age":33}]},{"name":"Team Visma | Lease a Bike","short":"Visma","country":"NL","riders":[{"bib":11,"name":"Jonas Vingegaard","nat":"DK","age":29},{"bib":12,"name":"Edoardo Affini","nat":"IT","age":30},{"bib":13,"name":"Bruno Armirail","nat":"FR","age":32},{"bib":14,"name":"Victor Campenaerts","nat":"BE","age":34},{"bib":15,"name":"Per Strand Hagenes","nat":"NO","age":22},{"bib":16,"name":"Matteo Jorgenson","nat":"US","age":27},{"bib":17,"name":"Sepp Kuss","nat":"US","age":31},{"bib":18,"name":"Davide Piganzoli","nat":"IT","age":23}]},{"name":"Red Bull–Bora–Hansgrohe","short":"Red Bull","country":"DE","riders":[{"bib":21,"name":"Remco Evenepoel","nat":"BE","age":26},{"bib":22,"name":"Mattia Cattaneo","nat":"IT","age":35},{"bib":23,"name":"Nico Denz","nat":"DE","age":32},{"bib":24,"name":"Jai Hindley","nat":"AU","age":30},{"bib":25,"name":"Florian Lipowitz","nat":"DE","age":25},{"bib":26,"name":"Jan Tratnik","nat":"SI","age":36},{"bib":27,"name":"Tim van Dijke","nat":"NL","age":26},{"bib":28,"name":"Maxim Van Gils","nat":"BE","age":26}]},{"name":"Lidl–Trek","short":"Lidl-Trek","country":"US","riders":[{"bib":31,"name":"Juan Ayuso","nat":"ES","age":23},{"bib":32,"name":"Derek Gee-West","nat":"CA","age":31},{"bib":33,"name":"Mads Pedersen","nat":"DK","age":30},{"bib":34,"name":"Quinn Simmons","nat":"US","age":25},{"bib":35,"name":"Mattias Skjelmose","nat":"DK","age":25},{"bib":36,"name":"Toms Skujiņš","nat":"LV","age":35},{"bib":37,"name":"Mathias Vacek","nat":"CZ","age":24},{"bib":38,"name":"Carlos Verona","nat":"ES","age":33}]},{"name":"EF Education–EasyPost","short":"EF","country":"US","riders":[{"bib":41,"name":"Richard Carapaz","nat":"EC","age":33},{"bib":42,"name":"Kasper Asgreen","nat":"DK","age":31},{"bib":43,"name":"Alex Baudin","nat":"FR","age":25},{"bib":44,"name":"Ben Healy","nat":"IE","age":25},{"bib":45,"name":"Sean Quinn","nat":"US","age":26},{"bib":46,"name":"Georg Steinhauser","nat":"DE","age":24},{"bib":47,"name":"Michael Valgren","nat":"DK","age":34},{"bib":48,"name":"Max Walker","nat":"GB","age":24}]},{"name":"Decathlon CMA CGM Team","short":"Decathlon","country":"FR","riders":[{"bib":51,"name":"Paul Seixas","nat":"FR","age":19},{"bib":52,"name":"Tiesj Benoot","nat":"BE","age":32},{"bib":53,"name":"Cees Bol","nat":"NL","age":30},{"bib":54,"name":"Daan Hoole","nat":"NL","age":27},{"bib":55,"name":"Olav Kooij","nat":"NL","age":24},{"bib":56,"name":"Aurélien Paret-Peintre","nat":"FR","age":30},{"bib":57,"name":"Nicolas Prodhomme","nat":"FR","age":29},{"bib":58,"name":"Matthew Riccitello","nat":"US","age":24}]},{"name":"XDS Astana Team","short":"Astana","country":"KZ","riders":[{"bib":61,"name":"Sergio Higuita","nat":"CO","age":28},{"bib":62,"name":"Davide Ballerini","nat":"IT","age":31},{"bib":63,"name":"Aaron Gate","nat":"NZ","age":35},{"bib":64,"name":"Max Kanter","nat":"DE","age":28},{"bib":65,"name":"Harold Tejada","nat":"CO","age":29},{"bib":66,"name":"Mike Teunissen","nat":"NL","age":33},{"bib":67,"name":"Simone Velasco","nat":"IT","age":30},{"bib":68,"name":"Nicolas Vinokurov","nat":"KZ","age":23}]},{"name":"Team Bahrain Victorious","short":"Bahrain","country":"BH","riders":[{"bib":71,"name":"Lenny Martinez","nat":"FR","age":22},{"bib":72,"name":"Phil Bauhaus","nat":"DE","age":31},{"bib":73,"name":"Damiano Caruso","nat":"IT","age":38},{"bib":74,"name":"Kamil Gradek","nat":"PL","age":35},{"bib":75,"name":"Robert Stannard","nat":"AU","age":27},{"bib":76,"name":"Matej Mohorič","nat":"SI","age":31},{"bib":77,"name":"Antonio Tiberi","nat":"IT","age":25},{"bib":78,"name":"Vlad Van Mechelen","nat":"BE","age":22}]},{"name":"Netcompany–INEOS","short":"Ineos","country":"GB","riders":[{"bib":81,"name":"Egan Bernal","nat":"CO","age":29},{"bib":82,"name":"Thymen Arensman","nat":"NL","age":26},{"bib":83,"name":"Tobias Foss","nat":"NO","age":29},{"bib":84,"name":"Filippo Ganna","nat":"IT","age":29},{"bib":85,"name":"Dorian Godon","nat":"FR","age":30},{"bib":86,"name":"Michał Kwiatkowski","nat":"PL","age":36},{"bib":87,"name":"Josh Tarling","nat":"GB","age":22},{"bib":88,"name":"Kévin Vauquelin","nat":"FR","age":25}]},{"name":"Soudal Quick-Step","short":"Soudal","country":"BE","riders":[{"bib":91,"name":"Tim Merlier","nat":"BE","age":33},{"bib":92,"name":"Pascal Eenkhoorn","nat":"NL","age":29},{"bib":93,"name":"Valentin Paret-Peintre","nat":"FR","age":25},{"bib":94,"name":"Jasper Stuyven","nat":"BE","age":34},{"bib":95,"name":"Dylan van Baarle","nat":"NL","age":34},{"bib":96,"name":"Bert Van Lerberghe","nat":"BE","age":33},{"bib":97,"name":"Ilan Van Wilder","nat":"BE","age":26},{"bib":98,"name":"Louis Vervaeke","nat":"BE","age":32}]},{"name":"Alpecin–Premier Tech","short":"Alpecin","country":"BE","riders":[{"bib":101,"name":"Mathieu van der Poel","nat":"NL","age":31},{"bib":102,"name":"Ramses Debruyne","nat":"BE","age":23},{"bib":103,"name":"Silvan Dillier","nat":"CH","age":35},{"bib":104,"name":"Tim Marsman","nat":"NL","age":25},{"bib":105,"name":"Jasper Philipsen","nat":"BE","age":28},{"bib":106,"name":"Edward Planckaert","nat":"BE","age":31},{"bib":107,"name":"Jonas Rickaert","nat":"BE","age":32},{"bib":108,"name":"Emiel Verstrynge","nat":"BE","age":24}]},{"name":"Team Jayco AlUla","short":"Jayco","country":"AU","riders":[{"bib":111,"name":"Ben O'Connor","nat":"AU","age":30},{"bib":112,"name":"Pascal Ackermann","nat":"DE","age":32},{"bib":113,"name":"Luke Durbridge","nat":"AU","age":35},{"bib":114,"name":"Felix Engelhardt","nat":"DE","age":25},{"bib":115,"name":"Michael Matthews","nat":"AU","age":35},{"bib":116,"name":"Kelland O'Brien","nat":"AU","age":28},{"bib":117,"name":"Luke Plapp","nat":"AU","age":25},{"bib":118,"name":"Mauro Schmid","nat":"CH","age":26}]},{"name":"Uno-X Mobility","short":"Uno-X","country":"NO","riders":[{"bib":121,"name":"Tobias Halland Johannessen","nat":"NO","age":26},{"bib":122,"name":"Jonas Abrahamsen","nat":"NO","age":30},{"bib":123,"name":"Anthon Charmig","nat":"DK","age":28},{"bib":124,"name":"Magnus Cort","nat":"DK","age":33},{"bib":125,"name":"Anders Halland Johannessen","nat":"NO","age":26},{"bib":126,"name":"Anders Skaarseth","nat":"NO","age":31},{"bib":127,"name":"Torstein Træen","nat":"NO","age":30},{"bib":128,"name":"Søren Wærenskjold","nat":"NO","age":26}]},{"name":"NSN Cycling Team","short":"NSN","country":"CH","riders":[{"bib":131,"name":"Biniam Girmay","nat":"ER","age":26},{"bib":132,"name":"Lewis Askey","nat":"GB","age":25},{"bib":133,"name":"George Bennett","nat":"NZ","age":36},{"bib":134,"name":"Marco Frigo","nat":"IT","age":26},{"bib":135,"name":"Matis Louvel","nat":"FR","age":26},{"bib":136,"name":"Krists Neilands","nat":"LV","age":31},{"bib":137,"name":"Jake Stewart","nat":"GB","age":26},{"bib":138,"name":"Tom Van Asbroeck","nat":"BE","age":36}]},{"name":"Movistar Team","short":"Movistar","country":"ES","riders":[{"bib":141,"name":"Cian Uijtdebroeks","nat":"BE","age":23},{"bib":142,"name":"Pablo Castrillo","nat":"ES","age":25},{"bib":143,"name":"Jefferson Alveiro Cepeda","nat":"EC","age":30},{"bib":144,"name":"Raúl García Pierna","nat":"ES","age":25},{"bib":145,"name":"Michel Hessmann","nat":"DE","age":25},{"bib":146,"name":"Nelson Oliveira","nat":"PT","age":37},{"bib":147,"name":"Javier Romo","nat":"ES","age":27},{"bib":148,"name":"Einer Rubio","nat":"CO","age":28}]},{"name":"Lotto–Intermarché","short":"Lotto","country":"BE","riders":[{"bib":151,"name":"Arnaud De Lie","nat":"BE","age":24},{"bib":152,"name":"Huub Artz","nat":"NL","age":24},{"bib":153,"name":"Jenno Berckmoes","nat":"BE","age":25},{"bib":154,"name":"Lars Craps","nat":"BE","age":24},{"bib":155,"name":"Liam Slock","nat":"BE","age":25},{"bib":156,"name":"Lennert Van Eetvelt","nat":"BE","age":24},{"bib":157,"name":"Baptiste Veistroffer","nat":"FR","age":26},{"bib":158,"name":"Georg Zimmermann","nat":"DE","age":28}]},{"name":"Cofidis","short":"Cofidis","country":"FR","riders":[{"bib":161,"name":"Ion Izagirre","nat":"ES","age":37},{"bib":162,"name":"Piet Allegaert","nat":"BE","age":31},{"bib":163,"name":"Alex Aranburu","nat":"ES","age":30},{"bib":164,"name":"Jenthe Biermans","nat":"BE","age":30},{"bib":165,"name":"Milan Fretin","nat":"BE","age":25},{"bib":166,"name":"Alex Kirsch","nat":"LU","age":34},{"bib":167,"name":"Hugo Page","nat":"FR","age":24},{"bib":168,"name":"Benjamin Thomas","nat":"FR","age":30}]},{"name":"Pinarello–Q36.5 Pro Cycling Team","short":"Q36.5","country":"CH","riders":[{"bib":171,"name":"Tom Pidcock","nat":"GB","age":26},{"bib":172,"name":"Xabier Azparren","nat":"ES","age":27},{"bib":173,"name":"Chris Harper","nat":"AU","age":31},{"bib":174,"name":"Quinten Hermans","nat":"BE","age":30},{"bib":175,"name":"Damien Howson","nat":"AU","age":33},{"bib":176,"name":"Xandro Meurisse","nat":"BE","age":34},{"bib":177,"name":"Brent Van Moer","nat":"BE","age":28},{"bib":178,"name":"Fred Wright","nat":"GB","age":27}]},{"name":"Groupama–FDJ United","short":"Groupama","country":"FR","riders":[{"bib":181,"name":"Romain Grégoire","nat":"FR","age":23},{"bib":182,"name":"Clément Berthet","nat":"FR","age":28},{"bib":183,"name":"Clément Braz Afonso","nat":"FR","age":26},{"bib":184,"name":"Ewen Costiou","nat":"FR","age":23},{"bib":185,"name":"Lorenzo Germani","nat":"IT","age":24},{"bib":186,"name":"Guillaume Martin","nat":"FR","age":33},{"bib":187,"name":"Quentin Pacher","nat":"FR","age":33},{"bib":188,"name":"Clément Russo","nat":"FR","age":31}]},{"name":"Tudor Pro Cycling Team","short":"Tudor","country":"CH","riders":[{"bib":191,"name":"Julian Alaphilippe","nat":"FR","age":34},{"bib":192,"name":"Arvid de Kleijn","nat":"NL","age":32},{"bib":193,"name":"Marco Haller","nat":"AT","age":35},{"bib":194,"name":"Marc Hirschi","nat":"CH","age":27},{"bib":195,"name":"Rick Pluimers","nat":"NL","age":25},{"bib":196,"name":"Michael Storer","nat":"AU","age":29},{"bib":197,"name":"Matteo Trentin","nat":"IT","age":36},{"bib":198,"name":"Yannis Voisard","nat":"CH","age":27}]},{"name":"Team TotalEnergies","short":"TotalEnergies","country":"FR","riders":[{"bib":201,"name":"Jordan Jegat","nat":"FR","age":27},{"bib":202,"name":"Nicolas Breuillard","nat":"FR","age":26},{"bib":203,"name":"Joris Delbove","nat":"FR","age":25},{"bib":204,"name":"Alexandre Delettre","nat":"FR","age":28},{"bib":205,"name":"Thibault Guernalec","nat":"FR","age":28},{"bib":206,"name":"Mathis Le Berre","nat":"FR","age":25},{"bib":207,"name":"Anthony Turgis","nat":"FR","age":32},{"bib":208,"name":"Mattéo Vercher","nat":"FR","age":25}]},{"name":"Team Picnic PostNL","short":"Picnic","country":"NL","riders":[{"bib":211,"name":"Warren Barguil","nat":"FR","age":34},{"bib":212,"name":"Frits Biesterbos","nat":"NL","age":24},{"bib":213,"name":"Pavel Bittner","nat":"CZ","age":23},{"bib":214,"name":"John Degenkolb","nat":"DE","age":37},{"bib":215,"name":"Robbe Dhondt","nat":"BE","age":22},{"bib":216,"name":"Niklas Märkl","nat":"DE","age":27},{"bib":217,"name":"Julius van den Berg","nat":"NL","age":29},{"bib":218,"name":"Frank van den Broek","nat":"NL","age":25}]},{"name":"Caja Rural–Seguros RGA","short":"Caja Rural","country":"ES","riders":[{"bib":221,"name":"Fernando Gaviria","nat":"CO","age":31},{"bib":222,"name":"Abel Balderstone","nat":"ES","age":25},{"bib":223,"name":"Sebastian Berwick","nat":"AU","age":26},{"bib":224,"name":"Alex Molenaar","nat":"NL","age":26},{"bib":225,"name":"Joel Nicolau","nat":"ES","age":28},{"bib":226,"name":"Stefano Oldani","nat":"IT","age":28},{"bib":227,"name":"Jakub Otruba","nat":"CZ","age":28},{"bib":228,"name":"José Félix Parra","nat":"ES","age":29}]}],"contenders":[{"name":"Tadej Pogačar","team":"UAE Team Emirates XRG","age":27,"tdfWins":4,"tdfStageWins":22,"gtWins":5,"careerWins":123,"note":"Regerande mästare. Jagar en rekordtangerande femte Tour-seger (som Anquetil, Merckx, Hinault, Indurain). Tog gult på etapp 3 med sin 22:a etappseger."},{"name":"Jonas Vingegaard","team":"Team Visma | Lease a Bike","age":29,"tdfWins":2,"tdfStageWins":4,"gtWins":4,"careerWins":55,"note":"Vann Giro d'Italia 2026 (5 etapper) och jagar nu Giro–Tour-dubbeln – senast lyckades Pantani 1998. Åttonde ryttaren i historien att vinna alla tre Grand Tours."},{"name":"Remco Evenepoel","team":"Red Bull–Bora–Hansgrohe","age":26,"tdfWins":0,"tdfStageWins":2,"gtWins":1,"careerWins":70,"note":"Första Touren med Red Bull–Bora. Trea 2024, Vuelta-vinnare 2022, dubbel OS-guldmedaljör 2024 och trefaldig världsmästare på tempo. Perfekt facit i 2026 års säsongsstart."},{"name":"Isaac del Toro","team":"UAE Team Emirates XRG","age":22,"tdfWins":0,"tdfStageWins":1,"gtWins":0,"careerWins":40,"note":"Tour-debutant som vann etapp 2 – andre mexikanen någonsin att vinna en TdF-etapp (efter Raúl Alcalá). Tvåa i Giron 2025, vann UAE Tour och Tirreno–Adriatico 2026."},{"name":"Juan Ayuso","team":"Lidl–Trek","age":23,"tdfWins":0,"tdfStageWins":0,"gtWins":0,"careerWins":18,"note":"Tour-debut i nya laget Lidl-Trek efter den uppslitande brytningen med UAE. Trea i Vueltan 2022 som 19-åring. Bar vita tröjan efter etapp 1."},{"name":"Paul Seixas","team":"Decathlon CMA CGM Team","age":19,"tdfWins":0,"tdfStageWins":0,"gtWins":0,"careerWins":8,"note":"Yngste Tour-startaren på 89 år (sedan 1937) – och ändå fransk kapten. Vann Baskien runt och Flèche Wallonne 2026. Hela Frankrike hoppas på förste hemmasegraren sedan 1985."},{"name":"Florian Lipowitz","team":"Red Bull–Bora–Hansgrohe","age":25,"tdfWins":0,"tdfStageWins":0,"gtWins":0,"careerWins":5,"note":"Trea och bäste ungdom i Touren 2025 vid debuten. F.d. skidskytt. Delat kaptenskap med Evenepoel hos Red Bull–Bora."}],"stats":{"ridersPerNation":[{"nat":"BE","count":31},{"nat":"FR","count":30},{"nat":"NL","count":17},{"nat":"DE","count":12},{"nat":"IT","count":12},{"nat":"AU","count":11},{"nat":"ES","count":11},{"nat":"NO","count":8},{"nat":"GB","count":7},{"nat":"DK","count":7}],"youngest":{"name":"Paul Seixas","age":19},"oldest":{"name":"Damiano Caruso","age":38},"mostParticipations":{"name":"Ion Izagirre, Warren Barguil, Luke Durbridge","count":12},"defendingChampion":"Tadej Pogačar (2025, hans 4:e titel)","winnerPrizeEUR":500000,"totalPrizeEUR":2302800,"funFacts":["Pogačar jagar sin femte Tour-seger – det skulle tangera rekordet som bara Anquetil, Merckx, Hinault och Indurain (5 st) delar.","Vingegaard vann Giro d'Italia 2026 med fem etappsegrar och försöker nu ta Giro–Tour-dubbeln – ingen har klarat den sedan Marco Pantani 1998.","Paul Seixas, 19, är den yngste Tour-startaren på 89 år (sedan 1937) – och ändå Decathlon CMA CGM:s kapten med nummer 51.","Bara 30 fransmän står på startlinjen – lägst antal sedan 1963. Belgien är största nation med 31 ryttare.","Touren 2026 startade i Barcelona med lagtempo – Visma vann etapp 1 och Vingegaard tog första gula tröjan, innan Pogačar snodde den på etapp 3.","Isaac del Toro vann etapp 2 som Tour-debutant och blev blott andre mexikan att vinna en TdF-etapp, efter Raúl Alcalá (1989-90).","Pogačars etappseger på etapp 3 var hans 22:a i Touren – femte flest genom tiderna (Cavendish har rekordet med 35).","Stora frånvaron: Wout van Aert (armbågsinfektion), Roglič (satsar allt på en rekordfemte Vuelta), gröna tröjan-vinnaren Jonathan Milan (kör Giron), David Gaudu (petad) samt Oscar Onley och Felix Gall från 2025 års topp 5.","Prispotten är 2 302 800 euro – vinnaren får 500 000 euro. Potten krymper faktiskt jämfört med tidigare år.","Tre lag har nya identiteter 2026: Lotto–Intermarché (belgisk fusion), NSN Cycling Team (fd Israel-Premier Tech, numera schweizisk licens) och Netcompany–INEOS.","Juan Ayuso möter sitt gamla lag UAE efter det bittra kontraktsbrottet 2025 – nu som Lidl-Treks kapten, i samma lag som sprintstjärnan Mads Pedersen.","Ingen svensk ryttare i startfältet – men Skandinavien är starkt: Norge har 8 och Danmark 7 ryttare, inklusive hela Uno-X Mobility.","Ion Izagirre, Warren Barguil och Luke Durbridge gör alla sin 12:e Tour de France – flest i årets klunga.","Damiano Caruso, 38, är äldst i fältet – han föddes 19 år före yngste ryttaren Paul Seixas."]}},"timeline":[{"n":1,"yellow":"Jonas Vingegaard","green":"Egan Bernal","polka":"Tadej Pogačar","white":"Juan Ayuso"},{"n":2,"yellow":"Jonas Vingegaard","green":"Isaac del Toro","polka":"Alex Molenaar","white":"Isaac del Toro"},{"n":3,"yellow":"Tadej Pogačar","green":"Tadej Pogačar","polka":"Alex Baudin","white":"Isaac del Toro"},{"n":4,"yellow":"Torstein Træen","green":"Mads Pedersen","polka":"Alex Baudin","white":"Mathias Vacek"}]}</script>
+<script>
+"use strict";
+const D = JSON.parse(document.getElementById("tdf-data").textContent);
+const M = D.meta, R = D.route, RES = D.results, S = D.standings, SL = D.startlist;
+
+/* ---------- helpers ---------- */
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const flag = n => n ? String.fromCodePoint(...[...n.toUpperCase()].map(c => 127397 + c.charCodeAt(0))) : "";
+const MON = ["","jan","feb","mars","april","maj","juni","juli","aug","sep","okt","nov","dec"];
+const fmtDate = iso => { const [y,m,d] = iso.split("-").map(Number); return `${d} ${MON[m]}`; };
+const TYPE_LBL = {flat:"Platt", hilly:"Kuperad", mountain:"Berg", itt:"Tempo", ttt:"Lagtempo"};
+const NATN = {BE:"Belgien",FR:"Frankrike",NL:"Nederländerna",DE:"Tyskland",IT:"Italien",AU:"Australien",ES:"Spanien",NO:"Norge",GB:"Storbritannien",DK:"Danmark",US:"USA",SI:"Slovenien",CH:"Schweiz",CO:"Colombia",CZ:"Tjeckien",MX:"Mexiko",EC:"Ecuador",KZ:"Kazakstan",PL:"Polen",PT:"Portugal",AT:"Österrike",CA:"Kanada",IE:"Irland",LV:"Lettland",LU:"Luxemburg",NZ:"Nya Zeeland",ER:"Eritrea",BH:"Bahrain",AE:"Förenade Arabemiraten"};
+const gapSec = g => { if(!g) return 0; const p = g.replace("+","").split(":").map(Number); return p.length===3 ? p[0]*3600+p[1]*60+p[2] : p[0]*60+p[1]; };
+const teamOf = short => SL.teams.find(t => t.short === short);
+const riderNat = name => { for(const t of SL.teams) for(const r of t.riders) if(r.name===name) return r.nat; return null; };
+const outSet = new Set(S.abandons.map(a => a.rider));
+const typeBadge = t => `<span class="badge b-${t}">${TYPE_LBL[t]}</span>`;
+const stageByN = n => R.stages.find(s => s.n === n);
+const resByN = n => RES.stages.find(s => s.n === n);
+
+/* ---------- IDAG ---------- */
+function renderIdag(){
+  const gc1 = S.gc[0], gc2 = S.gc[1];
+  const last = resByN(M.lastStage), next = stageByN(M.lastStage + 1);
+  const pog = S.gc.find(r => r.rider.includes("Pogačar"));
+  const jl = last.jerseysAfter;
+  const jmeta = [
+    ["j-green","Poäng · Maillot vert", jl.green],
+    ["j-polka","Bergspris · À pois", jl.polka],
+    ["j-white","Ungdom · Blanc", jl.white],
+    ["j-yellow","Lagtävling", S.teams[0].team + " (lag)"],
+  ];
+  let h = `
+  <div class="hero">
+    <div class="lab disp">MAILLOT JAUNE · EFTER ETAPP ${S.afterStage}</div>
+    <div class="name disp">${flag(gc1.nat)} ${esc(gc1.rider)}</div>
+    <div class="sub">${esc(gc1.team)} · totaltid ${gc1.time}</div>
+    <div class="gapline num"><span>2:a ${esc(gc2.rider)} ${gc2.gap}</span><span>${pog ? "Pogačar "+pog.gap : ""}</span></div>
+  </div>
+  <h2 class="sec disp">Tröjorna</h2>
+  <div class="jrow">
+    ${jmeta.map(([c,lab,nm]) => { const info = nm && !nm.includes("(lag)") ? SL.teams.find(t=>t.riders.some(r=>r.name===nm)) : null;
+      return `<div class="jcard"><span class="j ${c}"></span><div class="who"><div class="lab">${lab}</div><div class="nm">${esc(nm)}</div>${info?`<div class="tm">${esc(info.short)}</div>`:""}</div></div>`; }).join("")}
+  </div>
+  <h2 class="sec disp">Senast · Etapp ${last.n}</h2>
+  <button class="card" style="width:100%;text-align:left" onclick="openStage(${last.n})">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline">
+      <strong>${esc(last.route)}</strong><span class="chev muted">›</span>
+    </div>
+    <div class="small muted" style="margin:4px 0 8px">${fmtDate(last.date)} · snitt ${String(last.avgSpeedKmh).replace(".",",")} km/h</div>
+    ${last.top15.slice(0,3).map(r => `<div style="display:flex;gap:8px;font-size:14px;padding:2px 0" class="num"><span class="muted" style="width:16px">${r.rank}</span><span style="flex:1">${esc(r.rider)}</span><span class="muted">${esc(r.time)}</span></div>`).join("")}
+    <p class="small" style="margin:10px 0 0">${esc(last.summary)}</p>
+  </button>
+  ${next ? `<h2 class="sec disp">Härnäst · Etapp ${next.n}</h2>
+  <button class="card" style="width:100%;text-align:left" onclick="openStage(${next.n})">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline">
+      <strong>${esc(next.start)} → ${esc(next.finish)}</strong><span class="chev muted">›</span>
+    </div>
+    <div class="small muted" style="margin:4px 0 8px">${fmtDate(next.date)} · ${String(next.km).replace(".",",")} km · ${typeBadge(next.type)}${next.summitFinish ? ' <span class="badge b-mountain">Toppmål</span>':""}</div>
+    <p class="small" style="margin:0">${esc(next.desc)}</p>
+  </button>` : ""}
+  <h2 class="sec disp">Loppet hittills</h2>
+  <div class="card">
+    <div class="prog num">
+      <div><div class="v">${M.lastStage}/21</div><div class="k">Etapper</div></div>
+      <div><div class="v">${Math.round(M.kmDone)}</div><div class="k">km körda</div></div>
+      <div><div class="v">${M.ridersLeft}</div><div class="k">Åkare kvar</div></div>
+    </div>
+    <div class="meter"><i style="width:${(100*M.kmDone/M.kmTotal).toFixed(1)}%"></i></div>
+    <div class="small muted num" style="margin-top:6px">${Math.round(M.kmDone)} av ${Math.round(M.kmTotal)} km · ${Math.round(M.kmTotal - M.kmDone)} km återstår till Paris</div>
+  </div>`;
+  document.getElementById("v-idag").innerHTML = h;
+}
+
+/* ---------- ETAPPER ---------- */
+function renderEtapper(){
+  const maxKm = Math.max(...R.stages.map(s => s.km));
+  const strip = R.stages.map(s => {
+    const cls = s.n <= M.lastStage ? "done" : (s.n === M.lastStage+1 ? "next" : "");
+    const col = getComputedStyle(document.documentElement).getPropertyValue(`--t-${s.type==="itt"||s.type==="ttt"?"tt":s.type==="mountain"?"mtn":s.type}`);
+    return `<button class="${cls}" style="height:${Math.max(22, 100*s.km/maxKm)}%;background:${col.trim()}" onclick="openStage(${s.n})" aria-label="Etapp ${s.n}"></button>`;
+  }).join("");
+  const restByAfter = {}; // rest day comes after stage finishing the day before
+  for(const rd of R.restDays){
+    const before = R.stages.filter(s => s.date < rd.date).pop();
+    if(before) restByAfter[before.n] = rd;
+  }
+  let list = "";
+  for(const s of R.stages){
+    const done = s.n <= M.lastStage;
+    list += `<button class="stage ${done?"done":""}" onclick="openStage(${s.n})">
+      <span class="no disp num">${s.n}</span>
+      <span class="mid">
+        <span class="rt">${esc(s.start)} → ${esc(s.finish)}</span>
+        <span class="meta num">${fmtDate(s.date)} · ${String(s.km).replace(".",",")} km ${typeBadge(s.type)}${s.summitFinish?' <span class="badge b-mountain">Toppmål</span>':""}</span>
+        ${done && s.winner ? `<span class="win">🏆 ${esc(s.winner)}</span>` : ""}
+      </span>
+      <span class="chev">›</span>
+    </button>`;
+    if(restByAfter[s.n]) list += `<div class="rest">Vilodag ${fmtDate(restByAfter[s.n].date)} · ${esc(restByAfter[s.n].location)}</div>`;
+  }
+  const tc = R.stageTypeCounts;
+  document.getElementById("v-etapper").innerHTML = `
+    <h2 class="sec disp">21 etapper · ${String(M.kmTotal).replace(".",",")} km</h2>
+    <div class="small muted" style="margin:0 2px 6px">${tc.flat} platta · ${tc.hilly} kuperade · ${tc.mountain} berg · ${tc.itt} tempo · ${tc.ttt} lagtempo. Tryck på en stapel eller etapp.</div>
+    <div class="strip" aria-hidden="true">${strip}</div>
+    ${list}`;
+}
+
+/* ---------- stage detail ---------- */
+let lastScroll = 0;
+function openStage(n){
+  const s = stageByN(n), r = resByN(n);
+  document.getElementById("det-ttl").textContent = `Etapp ${n} · ${s.start} → ${s.finish}`;
+  let h = `
+    <div class="card" style="margin-top:14px">
+      <div class="small muted num">${fmtDate(s.date)} · ${String(s.km).replace(".",",")} km · ${TYPE_LBL[s.type]}${s.summitFinish?" · toppmålgång":""}${s.elevationM?` · ${s.elevationM.toLocaleString("sv-SE")} höjdmeter`:""}</div>
+      <p style="margin:8px 0 0;font-size:14.5px">${esc(s.desc)}</p>
+      ${s.climbs && s.climbs.length ? `<div style="margin-top:10px">${s.climbs.map(c => `<div style="display:flex;gap:8px;padding:3px 0;font-size:13.5px"><span class="tag">${c.cat ? (c.cat==="HC"?"HC":"Kat "+c.cat) : "Stigning"}</span><span style="flex:1">${esc(c.name)}</span></div>`).join("")}</div>` : ""}
+    </div>`;
+  if(r){
+    h += `<h2 class="sec disp">Resultat</h2>
+    <div class="card"><div class="small muted num" style="margin-bottom:6px">Snittfart ${String(r.avgSpeedKmh).replace(".",",")} km/h</div>
+    <div class="scrollx"><table>
+      <tr><th></th><th>${n===1?"Lag":"Åkare"}</th><th class="r">Tid</th></tr>
+      ${r.top15.map(row => `<tr${row.rank===1?' class="lead"':""}><td class="rk num">${row.rank}</td><td><div class="who2"><div class="nm">${esc(row.rider)}</div>${n===1?"":`<div class="tm">${esc(row.team)}</div>`}</div></td><td class="r num">${esc(row.time)}</td></tr>`).join("")}
+    </table></div></div>
+    <h2 class="sec disp">Efter etappen</h2>
+    <div class="jrow">
+      ${[["j-yellow","Gul",r.jerseysAfter.yellow],["j-green","Grön",r.jerseysAfter.green],["j-polka","Bergströja",r.jerseysAfter.polka],["j-white","Vit",r.jerseysAfter.white]].map(([c,l,nm]) =>
+        `<div class="jcard"><span class="j ${c}"></span><div class="who"><div class="lab">${l}</div><div class="nm">${esc(nm)}</div></div></div>`).join("")}
+    </div>
+    <div class="card" style="margin-top:12px"><strong style="font-size:14px">Så gick det till</strong><p class="small" style="margin:6px 0 0">${esc(r.summary)}</p></div>
+    ${r.abandons && r.abandons.length ? `<div class="card"><strong style="font-size:14px;color:var(--red-ink)">Lämnade loppet</strong>${r.abandons.map(a => `<div class="small" style="margin-top:6px"><strong>${esc(a.rider)}</strong> (${esc(a.team)}) — ${esc(a.reason)}</div>`).join("")}</div>` : ""}`;
+  } else {
+    h += `<div class="card"><span class="small muted">Etappen har inte körts ännu — körs ${fmtDate(s.date)}.</span></div>`;
+  }
+  document.getElementById("det-body").innerHTML = h;
+  lastScroll = window.scrollY;
+  document.getElementById("detail").classList.add("open");
+  document.getElementById("detail").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+}
+function closeStage(){
+  document.getElementById("detail").classList.remove("open");
+  document.body.style.overflow = "";
+  window.scrollTo(0, lastScroll);
+}
+
+/* ---------- STÄLLNING ---------- */
+let segMode = "gc";
+function renderStallning(){
+  const modes = [["gc","Gul"],["points","Grön"],["kom","Berg"],["youth","Vit"],["teams","Lag"]];
+  const seg = `<div class="seg">${modes.map(([k,l]) => `<button class="${segMode===k?"on"+(k==="gc"?" sy":""):""}" onclick="setSeg('${k}')">${l}</button>`).join("")}</div>`;
+  let body = "";
+  if(segMode === "gc"){
+    const top = S.gc.slice(0,12), mx = Math.max(...top.map(r => gapSec(r.gap)));
+    body += `<div class="card"><strong style="font-size:14px">Tidsgap till gula tröjan</strong><div class="bars">${
+      top.map(r => `<div class="brow ${r.rank===1?"lead":""} num"><span class="bl">${flag(r.nat)} ${esc(shortName(r.rider))}</span><span class="tr"><i style="width:${r.rank===1?100:Math.max(2,100*gapSec(r.gap)/mx)}%"></i></span><span class="bv">${r.rank===1?"ledare":esc(r.gap)}</span></div>`).join("")
+    }</div><div class="small muted" style="margin-top:8px">Gul stapel = ledaren (full bredd). Övrigas stapel visar tidsgap.</div></div>
+    <div class="card"><div class="scrollx"><table>
+      <tr><th></th><th>Åkare</th><th class="r">Gap</th></tr>
+      ${S.gc.map(r => `<tr${r.rank===1?' class="lead"':""}><td class="rk num">${r.rank}</td><td><div class="who2"><div class="nm">${flag(r.nat)} ${esc(r.rider)}</div><div class="tm">${esc(r.team)}</div></div></td><td class="r num">${r.rank===1?esc(r.time):esc(r.gap)}</td></tr>`).join("")}
+    </table></div></div>`;
+  } else if(segMode === "teams"){
+    body += `<div class="card"><div class="scrollx"><table>
+      <tr><th></th><th>Lag</th><th class="r">Gap</th></tr>
+      ${S.teams.map(r => `<tr${r.rank===1?' class="lead"':""}><td class="rk num">${r.rank}</td><td>${esc(r.team)}</td><td class="r num">${r.rank===1?esc(r.time):esc(r.gap)}</td></tr>`).join("")}
+    </table></div></div>`;
+  } else {
+    const rows = S[segMode], isPts = segMode==="points"||segMode==="kom";
+    body += `<div class="card"><div class="scrollx"><table>
+      <tr><th></th><th>Åkare</th><th class="r">${isPts?"Poäng":"Gap"}</th></tr>
+      ${rows.map(r => `<tr${r.rank===1?' class="lead"':""}><td class="rk num">${r.rank}</td><td><div class="who2"><div class="nm">${flag(r.nat||riderNat(r.rider)||"")} ${esc(r.rider)}</div><div class="tm">${esc(r.team)}</div></div></td><td class="r num">${isPts?r.pts:(r.rank===1?esc(r.time||""):esc(r.gap))}</td></tr>`).join("")}
+    </table></div></div>`;
+  }
+  const tl = `<h2 class="sec disp">Tröjbärare etapp för etapp</h2>
+  <div class="card"><div class="scrollx"><table style="min-width:520px">
+    <tr><th>Etapp</th><th>🟡 Gul</th><th>🟢 Grön</th><th>🔴 Berg</th><th>⚪ Vit</th></tr>
+    ${D.timeline.map(t => `<tr><td class="rk num">${t.n}</td><td>${esc(shortName(t.yellow))}</td><td>${esc(shortName(t.green))}</td><td>${esc(shortName(t.polka))}</td><td>${esc(shortName(t.white))}</td></tr>`).join("")}
+  </table></div><div class="small muted" style="margin-top:8px">Tröjbäraren efter respektive etapp.</div></div>`;
+  document.getElementById("v-stallning").innerHTML = `<h2 class="sec disp">Classement · efter etapp ${S.afterStage}</h2>${seg}${body}${tl}`;
+}
+function setSeg(k){ segMode = k; renderStallning(); window.scrollTo(0,0); }
+function shortName(full){
+  if(!full) return "";
+  const parts = full.split(" ");
+  if(parts.length === 1) return full;
+  return parts[0][0] + ". " + parts.slice(1).join(" ");
+}
+
+/* ---------- ÅKARE ---------- */
+let q = "";
+function renderAkare(){
+  const qq = q.trim().toLowerCase();
+  let total = 0, h = "";
+  for(const t of SL.teams){
+    const hits = t.riders.filter(r =>
+      !qq || r.name.toLowerCase().includes(qq) || t.name.toLowerCase().includes(qq) ||
+      t.short.toLowerCase().includes(qq) || (NATN[r.nat]||"").toLowerCase().includes(qq));
+    if(!hits.length) continue;
+    total += hits.length;
+    h += `<div class="teamhead disp"><span class="sn">${flag(t.country)} ${esc(t.short)}</span><span class="fn">${esc(t.name)}</span></div>
+    <div class="card" style="padding:6px 12px">${hits.map(r => {
+      const out = outSet.has(r.name);
+      const ab = out ? S.abandons.find(a => a.rider === r.name) : null;
+      return `<div class="rider ${out?"out":""}"><span class="bib num">${r.bib}</span><span class="nm">${flag(r.nat)} ${esc(r.name)}</span>${out?`<span class="tag">Ute · etapp ${ab.stage}</span>`:""}<span class="ag num">${r.age} år</span></div>`;
+    }).join("")}</div>`;
+  }
+  document.getElementById("ak-list").innerHTML = h || `<div class="card muted">Inga träffar.</div>`;
+  document.getElementById("ak-count").textContent = qq ? (total === 1 ? "1 träff" : `${total} träffar`) : `${M.ridersStarted} åkare · 23 lag · ${M.ridersLeft} kvar i loppet`;
+}
+function initAkare(){
+  document.getElementById("v-akare").innerHTML = `
+    <h2 class="sec disp">Startlistan</h2>
+    <div class="search"><input type="search" id="ak-q" placeholder="Sök åkare, lag eller land …" autocomplete="off"></div>
+    <div class="small muted" id="ak-count" style="margin:-6px 2px 10px"></div>
+    <div id="ak-list"></div>`;
+  document.getElementById("ak-q").addEventListener("input", e => { q = e.target.value; renderAkare(); });
+  renderAkare();
+}
+
+/* ---------- STATS ---------- */
+function renderStats(){
+  const st = SL.stats;
+  const doneRes = RES.stages;
+  const spdMax = Math.max(...doneRes.map(s => s.avgSpeedKmh));
+  const natMax = st.ridersPerNation[0].count;
+  const money = v => v.toLocaleString("sv-SE") + " €";
+  const h = `
+  <h2 class="sec disp">Nyckeltal</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="v">${esc(st.defendingChampion.split(" (")[0])}</div><div class="k">Regerande mästare</div></div>
+    <div class="kpi"><div class="v num">${money(st.winnerPrizeEUR)}</div><div class="k">Till slutsegraren</div></div>
+    <div class="kpi"><div class="v num">${esc(st.youngest.name)} · ${st.youngest.age}</div><div class="k">Yngst i fältet</div></div>
+    <div class="kpi"><div class="v num">${esc(st.oldest.name)} · ${st.oldest.age}</div><div class="k">Äldst i fältet</div></div>
+    <div class="kpi"><div class="v num">${String(spdMax).replace(".",",")} km/h</div><div class="k">Snabbaste etappsnittet</div></div>
+    <div class="kpi"><div class="v num">${money(st.totalPrizeEUR)}</div><div class="k">Total prispott</div></div>
+  </div>
+  <h2 class="sec disp">Favoriternas meritlista</h2>
+  <div class="card"><div class="scrollx"><table style="min-width:540px">
+    <tr><th>Åkare</th><th class="r">Ålder</th><th class="r">TdF-segrar</th><th class="r">TdF-etapper</th><th class="r">GT-segrar</th><th class="r">Karriärsegrar</th></tr>
+    ${SL.contenders.map(c => `<tr><td><div class="who2"><div class="nm">${esc(c.name)}</div><div class="tm">${esc(c.team)}</div></div></td><td class="r num">${c.age}</td><td class="r num">${c.tdfWins}</td><td class="r num">${c.tdfStageWins}</td><td class="r num">${c.gtWins}</td><td class="r num">${c.careerWins}</td></tr>`).join("")}
+  </table></div></div>
+  ${SL.contenders.map(c => `<div class="fact"><strong>${esc(c.name)}:</strong> ${esc(c.note)}</div>`).join("")}
+  <h2 class="sec disp">Snittfart per etapp</h2>
+  <div class="card"><div class="bars">${doneRes.map(s => `<div class="brow num"><span class="bl">Etapp ${s.n} · ${esc(shortName(s.winner))}</span><span class="tr"><i style="width:${(100*s.avgSpeedKmh/spdMax).toFixed(1)}%"></i></span><span class="bv">${String(s.avgSpeedKmh).replace(".",",")}</span></div>`).join("")}</div><div class="small muted" style="margin-top:8px">km/h, vinnarens snittfart. Etapp 1 = lagtempo.</div></div>
+  <h2 class="sec disp">Nationer i klungan</h2>
+  <div class="card"><div class="bars">${st.ridersPerNation.map(nn => `<div class="brow num"><span class="bl">${flag(nn.nat)} ${esc(NATN[nn.nat]||nn.nat)}</span><span class="tr"><i style="width:${(100*nn.count/natMax).toFixed(1)}%"></i></span><span class="bv">${nn.count}</span></div>`).join("")}</div><div class="small muted" style="margin-top:8px">Antal åkare per nation (topp 10 av ${M.ridersStarted} startande). ${esc(st.mostParticipations.name)} gör alla sin ${st.mostParticipations.count}:e Tour.</div></div>
+  <h2 class="sec disp">Lämnat loppet (${S.abandons.length})</h2>
+  <div class="card">${S.abandons.map(a => `<div class="small" style="padding:5px 0;border-bottom:1px solid var(--hair)"><strong>${esc(a.rider)}</strong> (${esc(a.team)}) — etapp ${a.stage}. ${esc(a.reason)}</div>`).join("")}</div>
+  <h2 class="sec disp">Mest offensiv · Prix de la combativité</h2>
+  <div class="card">${S.combativity.map(c => `<div class="small num" style="padding:5px 0;border-bottom:1px solid var(--hair)"><strong>Etapp ${c.stage}:</strong> ${c.rider ? esc(c.rider) + (c.team ? " ("+esc(c.team)+")" : "") : esc(c.note||"—")}</div>`).join("")}</div>
+  <h2 class="sec disp">Nördfakta</h2>
+  ${st.funFacts.map(f => `<div class="fact">${esc(f)}</div>`).join("")}`;
+  document.getElementById("v-stats").innerHTML = h;
+}
+
+/* ---------- nav ---------- */
+function show(v){
+  document.querySelectorAll(".view").forEach(el => el.classList.toggle("on", el.id === "v-"+v));
+  document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", b.dataset.v === v));
+  window.scrollTo(0,0);
+}
+document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => show(b.dataset.v)));
+
+/* ---------- boot ---------- */
+document.getElementById("mast-stage").textContent = `Efter etapp ${M.lastStage} av 21`;
+document.getElementById("mast-upd").textContent = `Uppdaterad ${fmtDate(M.updated)}`;
+document.getElementById("foot-upd").textContent = `Senast uppdaterad efter etapp ${M.lastStage} · ${fmtDate(M.updated)} 2026`;
+renderIdag(); renderEtapper(); renderStallning(); initAkare(); renderStats();
+show("idag");
+</script>
