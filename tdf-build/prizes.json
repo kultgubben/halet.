@@ -763,6 +763,169 @@
     }
    ],
    "note": "Flack målskala (50-30-20-…): Pedersen tog 50 p i mål + 16 i spurten = 66 p på dagen. Træen tog över gula tröjan. Inga separata bonussprintar."
+  },
+  {
+   "n": 5,
+   "sprint": {
+    "name": "Vic-en-Bigorre (km 113.5)",
+    "top": [
+     {
+      "rider": "Baptiste Veistroffer",
+      "pts": 25
+     },
+     {
+      "rider": "Max Kanter",
+      "pts": 20
+     },
+     {
+      "rider": "Mads Pedersen",
+      "pts": 16
+     },
+     {
+      "rider": "Biniam Girmay",
+      "pts": 14
+     },
+     {
+      "rider": "Jasper Philipsen",
+      "pts": 12
+     },
+     {
+      "rider": "Anthony Turgis",
+      "pts": 10
+     },
+     {
+      "rider": "Fernando Gaviria",
+      "pts": 9
+     },
+     {
+      "rider": "Jake Stewart",
+      "pts": 8
+     },
+     {
+      "rider": "Tim Merlier",
+      "pts": 7
+     },
+     {
+      "rider": "Mike Teunissen",
+      "pts": 6
+     },
+     {
+      "rider": "Tim Marsman",
+      "pts": 5
+     },
+     {
+      "rider": "Aaron Gate",
+      "pts": 4
+     },
+     {
+      "rider": "Quinn Simmons",
+      "pts": 3
+     },
+     {
+      "rider": "Mathis Le Berre",
+      "pts": 2
+     },
+     {
+      "rider": "Dylan van Baarle",
+      "pts": 1
+     }
+    ],
+    "note": "Veistroffer tog max ur utbrytningen, 2:35 före klungan. Bakom honom körde XDS Astana ett fullt utdelningståg åt Kanter som slog Pedersen i klungspurten."
+   },
+   "climbs": [
+    {
+     "name": "Côte de Baleix (1.0 km, 8.8%, km 132.7)",
+     "cat": 3,
+     "top": [
+      {
+       "rider": "Baptiste Veistroffer",
+       "pts": 2
+      },
+      {
+       "rider": "Alex Baudin",
+       "pts": 1
+      }
+     ],
+     "note": "Etappens enda kategoriserade stigning – Casteide-Doat (km 38.4) var bara en vägpunkt utan bergspoäng. Baudin tvåa över krönet och försvarade prickiga tröjan."
+    }
+   ],
+   "finishPoints": [
+    {
+     "rider": "Olav Kooij",
+     "pts": 70
+    },
+    {
+     "rider": "Max Kanter",
+     "pts": 50
+    },
+    {
+     "rider": "Tim Merlier",
+     "pts": 40
+    },
+    {
+     "rider": "Huub Artz",
+     "pts": 35
+    },
+    {
+     "rider": "Jasper Philipsen",
+     "pts": 30
+    },
+    {
+     "rider": "Biniam Girmay",
+     "pts": 26
+    },
+    {
+     "rider": "Mads Pedersen",
+     "pts": 24
+    },
+    {
+     "rider": "Milan Fretin",
+     "pts": 22
+    },
+    {
+     "rider": "Anthony Turgis",
+     "pts": 20
+    },
+    {
+     "rider": "Søren Wærenskjold",
+     "pts": 18
+    },
+    {
+     "rider": "Jenno Berckmoes",
+     "pts": 16
+    },
+    {
+     "rider": "Pascal Ackermann",
+     "pts": 14
+    },
+    {
+     "rider": "Clément Russo",
+     "pts": 12
+    },
+    {
+     "rider": "Rick Pluimers",
+     "pts": 10
+    },
+    {
+     "rider": "Dorian Godon",
+     "pts": 8
+    }
+   ],
+   "bonus": [
+    {
+     "rider": "Olav Kooij",
+     "sec": 10
+    },
+    {
+     "rider": "Max Kanter",
+     "sec": 6
+    },
+    {
+     "rider": "Tim Merlier",
+     "sec": 4
+    }
+   ],
+   "note": "Kooij tog maximala 70 poäng i mål (letour.fr:s officiella flackskala: 70-50-40-35-30-26-24-22-20-18-16-14-12-10-8-6-4-2; plats 16-18 Bittner 6, Gaviria 4, Bauhaus 2). Pedersen försvarade grönt med 16 p på mellanspurten och 24 p i mål – nu 143 mot Girmays 79. Veistroffer dammsög utbrytarpoängen: 25 vid spurten och 2 på Baleix."
   }
  ]
 }

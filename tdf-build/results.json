@@ -1,5 +1,5 @@
 {
- "lastCompletedStage": 4,
+ "lastCompletedStage": 5,
  "stages": [
   {
    "n": 1,
@@ -450,6 +450,114 @@
      "reason": "OTL – utanför tidsgränsen (över 46 minuter efter segraren, gränsen var 37:37)"
     }
    ]
+  },
+  {
+   "n": 5,
+   "date": "2026-07-08",
+   "route": "Lannemezan → Pau",
+   "winner": "Olav Kooij",
+   "winnerTeam": "Decathlon CMA CGM",
+   "avgSpeedKmh": 45.4,
+   "top15": [
+    {
+     "rank": 1,
+     "rider": "Olav Kooij",
+     "team": "Decathlon CMA CGM",
+     "time": "3:29:07"
+    },
+    {
+     "rank": 2,
+     "rider": "Max Kanter",
+     "team": "XDS Astana",
+     "time": "s.t."
+    },
+    {
+     "rank": 3,
+     "rider": "Tim Merlier",
+     "team": "Soudal-QuickStep",
+     "time": "s.t."
+    },
+    {
+     "rank": 4,
+     "rider": "Huub Artz",
+     "team": "Lotto-Intermarché",
+     "time": "s.t."
+    },
+    {
+     "rank": 5,
+     "rider": "Jasper Philipsen",
+     "team": "Alpecin-Premier Tech",
+     "time": "s.t."
+    },
+    {
+     "rank": 6,
+     "rider": "Biniam Girmay",
+     "team": "NSN Cycling Team",
+     "time": "s.t."
+    },
+    {
+     "rank": 7,
+     "rider": "Mads Pedersen",
+     "team": "Lidl-Trek",
+     "time": "s.t."
+    },
+    {
+     "rank": 8,
+     "rider": "Milan Fretin",
+     "team": "Cofidis",
+     "time": "s.t."
+    },
+    {
+     "rank": 9,
+     "rider": "Anthony Turgis",
+     "team": "TotalEnergies",
+     "time": "s.t."
+    },
+    {
+     "rank": 10,
+     "rider": "Søren Wærenskjold",
+     "team": "Uno-X Mobility",
+     "time": "s.t."
+    },
+    {
+     "rank": 11,
+     "rider": "Jenno Berckmoes",
+     "team": "Lotto-Intermarché",
+     "time": "s.t."
+    },
+    {
+     "rank": 12,
+     "rider": "Pascal Ackermann",
+     "team": "Team Jayco-AlUla",
+     "time": "s.t."
+    },
+    {
+     "rank": 13,
+     "rider": "Clément Russo",
+     "team": "Groupama-FDJ United",
+     "time": "s.t."
+    },
+    {
+     "rank": 14,
+     "rider": "Rick Pluimers",
+     "team": "Tudor Pro Cycling",
+     "time": "s.t."
+    },
+    {
+     "rank": 15,
+     "rider": "Dorian Godon",
+     "team": "Netcompany INEOS",
+     "time": "s.t."
+    }
+   ],
+   "jerseysAfter": {
+    "yellow": "Torstein Træen",
+    "green": "Mads Pedersen",
+    "polka": "Alex Baudin",
+    "white": "Mathias Vacek"
+   },
+   "summary": "Baptiste Veistroffer (Lotto-Intermarché) låg ensam i utbrytning i 144 km innan klungan tog upp honom med 14 km kvar. Finalen blev kaotisk – en masskrasch 5,5 km från mål tog bland andra Michael Matthews och flera av Merliers utdelningsmän – men i Pau spurtade Olav Kooij överlägset förbi Max Kanter och Tim Merlier och tog i sin Tourdebut Decathlon CMA CGM:s första etappseger i Tour de France. Klungan med gula tröjan Træen rullade in 14 sekunder senare och hela toppen av totalställningen är oförändrad.",
+   "abandons": []
   }
  ]
 }
