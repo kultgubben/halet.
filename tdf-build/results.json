@@ -1,5 +1,5 @@
 {
- "lastCompletedStage": 5,
+ "lastCompletedStage": 6,
  "stages": [
   {
    "n": 1,
@@ -558,6 +558,135 @@
    },
    "summary": "Baptiste Veistroffer (Lotto-Intermarché) låg ensam i utbrytning i 144 km innan klungan tog upp honom med 14 km kvar. Finalen blev kaotisk – en masskrasch 5,5 km från mål tog bland andra Michael Matthews och flera av Merliers utdelningsmän – men i Pau spurtade Olav Kooij överlägset förbi Max Kanter och Tim Merlier och tog i sin Tourdebut Decathlon CMA CGM:s första etappseger i Tour de France. Klungan med gula tröjan Træen rullade in 14 sekunder senare och hela toppen av totalställningen är oförändrad.",
    "abandons": []
+  },
+  {
+   "n": 6,
+   "date": "2026-07-09",
+   "route": "Pau → Gavarnie-Gèdre",
+   "winner": "Tadej Pogačar",
+   "winnerTeam": "UAE Team Emirates-XRG",
+   "avgSpeedKmh": 41.055,
+   "top15": [
+    {
+     "rank": 1,
+     "rider": "Tadej Pogačar",
+     "team": "UAE Team Emirates-XRG",
+     "time": "4:32:07"
+    },
+    {
+     "rank": 2,
+     "rider": "Jonas Vingegaard",
+     "team": "Visma-Lease a Bike",
+     "time": "+2:38"
+    },
+    {
+     "rank": 3,
+     "rider": "Isaac del Toro",
+     "team": "UAE Team Emirates-XRG",
+     "time": "+2:57"
+    },
+    {
+     "rank": 4,
+     "rider": "Remco Evenepoel",
+     "team": "Red Bull-Bora-Hansgrohe",
+     "time": "+2:57"
+    },
+    {
+     "rank": 5,
+     "rider": "Paul Seixas",
+     "team": "Decathlon CMA CGM",
+     "time": "+2:57"
+    },
+    {
+     "rank": 6,
+     "rider": "Florian Lipowitz",
+     "team": "Red Bull-Bora-Hansgrohe",
+     "time": "+2:57"
+    },
+    {
+     "rank": 7,
+     "rider": "Juan Ayuso",
+     "team": "Lidl-Trek",
+     "time": "+2:57"
+    },
+    {
+     "rank": 8,
+     "rider": "Mattias Skjelmose",
+     "team": "Lidl-Trek",
+     "time": "+2:57"
+    },
+    {
+     "rank": 9,
+     "rider": "Lenny Martinez",
+     "team": "Bahrain Victorious",
+     "time": "+3:02"
+    },
+    {
+     "rank": 10,
+     "rider": "Sepp Kuss",
+     "team": "Visma-Lease a Bike",
+     "time": "+3:06"
+    },
+    {
+     "rank": 11,
+     "rider": "Egan Bernal",
+     "team": "Netcompany INEOS",
+     "time": "+4:47"
+    },
+    {
+     "rank": 12,
+     "rider": "Jordan Jegat",
+     "team": "TotalEnergies",
+     "time": "+8:18"
+    },
+    {
+     "rank": 13,
+     "rider": "Harold Tejada",
+     "team": "XDS Astana",
+     "time": "+8:18"
+    },
+    {
+     "rank": 14,
+     "rider": "Ilan Van Wilder",
+     "team": "Soudal-QuickStep",
+     "time": "+8:18"
+    },
+    {
+     "rank": 15,
+     "rider": "Tom Pidcock",
+     "team": "Pinarello-Q36.5",
+     "time": "+8:18"
+    }
+   ],
+   "jerseysAfter": {
+    "yellow": "Tadej Pogačar",
+    "green": "Mads Pedersen",
+    "polka": "Tadej Pogačar",
+    "white": "Isaac del Toro"
+   },
+   "summary": "Tadej Pogačar sprängde loppet på Col du Tourmalet – med Isaac del Toro som draghjälp attackerade han 4-5 km från toppen, red själva sista 43 kilometrarna och vann etappen med 2:38 ner till Jonas Vingegaard, som tappade den gula tröjan efter bara två dagar i den. Gårdagens ledare Torstein Træen kraschade i utförsbacken från Tourmalet, bröt revben och fick en hjärnskakning – han fullföljde etappen men ställer inte upp på etapp 7, medan Pogačar nu leder totalt med 2:42 före Vingegaard.",
+   "abandons": [
+    {
+     "rider": "Cian Uijtdebroeks",
+     "team": "Movistar Team",
+     "reason": "DNF – kraschade och klev av på Col du Tourmalet efter dagar av mag- och febersjukdom"
+    },
+    {
+     "rider": "Arvid de Kleijn",
+     "team": "Tudor Pro Cycling",
+     "reason": "DNF – klev av tidigt på etappen, hade kämpat med muskelbristningar sedan lagtempot på etapp 1"
+    },
+    {
+     "rider": "Bert Van Lerberghe",
+     "team": "Soudal-QuickStep",
+     "reason": "DNF – klev av under etappen, ett bakslag för lagkamraten Tim Merliers spurttåg"
+    },
+    {
+     "rider": "Alex Molenaar",
+     "team": "Caja Rural-Seguros RGA",
+     "reason": "DNS – ställde inte upp efter fraktur på höger mellanhandsben, följd av krasch i massvälten i Pau på etapp 5"
+    }
+   ]
   }
  ]
 }

@@ -1,217 +1,217 @@
 {
- "afterStage": 5,
- "note": "Standings after stage 5 (Lannemezan-Pau, July 8, 2026). Sources: letour.fr official classification tables (rankings/stage-5 incl. AJAX fragments ipg/img/ipe/ime/ice) cross-checked against firstcycling.com stage 5 page; both fully consistent. No abandons on stage 5 (181 starters, 181 finishers).",
+ "afterStage": 6,
+ "note": "Standings after stage 6 (Pau → Gavarnie-Gèdre, July 9, 2026). Sources: cyclingnews.com (stage report + 'classifications update' + live blog + abandons pages), Wikipedia (fr) stage-6 infobox, rouleur.cc full GC table, cyclinguptodate.com, cyclingweekly.com, cyclingstage.com, flobikes.com, bikeradar.com, escapecollective.com, procyclinguk.com, domestiquecycling.com. GC top1-20 cross-checked between cyclingnews and rouleur.cc; rouleur's table is used as authoritative where the two disagreed (cyclingnews had swapped rows 9/10 for Vacek/Skjelmose — verified against cumulative-time arithmetic from stage-day gaps, which matches rouleur: Skjelmose +4:57, Vacek +7:10). Points/KOM/youth/teams tables from cyclingnews classifications update, reconciled against pre-stage-5 baselines (Pedersen 143→168 = +25 sprint pts only, matches exactly; Pogačar green 55→75 = +20 stage-win finish pts, matches; Vingegaard 44→61=+17 (2nd), Del Toro 39→54=+15 (3rd) — all confirm mountain-stage finish scale 20-17-15-13-11-10-9-8-7-6-5-4-3-2-1). KOM reconciles to Pogačar 3→28 (+20 Tourmalet HC 1st + 5 Gavarnie-Gèdre cat.2 1st), Martinez 0→16 (+10 Aspin 1st + 6 Tourmalet HC 6th), Seixas 0→12 (Tourmalet HC 3rd only). IMPORTANT: Col du Tourmalet is reported as Hors Catégorie (17.1km @ 7.3%, 20-15-12-10-8-6-4-2 point scale, Souvenir Jacques Goddet prize) in essentially every detailed source, not category 1 as assumed in the pre-stage brief — the KOM math only reconciles under the HC scale, so it is used here. Gavarnie-Gèdre finish confirmed category 2 (18.7km @ 3.7%) in cyclingstage.com/franceletour.com.",
  "gc": [
   {
    "rank": 1,
-   "rider": "Torstein Træen",
-   "team": "Uno-X Mobility",
-   "nat": "NO",
-   "gap": "",
-   "time": "16:32:07"
-  },
-  {
-   "rank": 2,
-   "rider": "Sean Quinn",
-   "team": "EF Education-EasyPost",
-   "nat": "US",
-   "gap": "+0:28"
-  },
-  {
-   "rank": 3,
-   "rider": "Mathias Vacek",
-   "team": "Lidl-Trek",
-   "nat": "CZ",
-   "gap": "+3:50"
-  },
-  {
-   "rank": 4,
    "rider": "Tadej Pogačar",
    "team": "UAE Team Emirates-XRG",
    "nat": "SI",
-   "gap": "+7:53"
+   "gap": "",
+   "time": "21:11:57"
   },
   {
-   "rank": 5,
+   "rank": 2,
    "rider": "Jonas Vingegaard",
    "team": "Visma-Lease a Bike",
    "nat": "DK",
-   "gap": "+7:53"
+   "gap": "+2:42"
   },
   {
-   "rank": 6,
-   "rider": "Ramses Debruyne",
-   "team": "Alpecin-Premier Tech",
-   "nat": "BE",
-   "gap": "+8:06"
+   "rank": 3,
+   "rider": "Isaac del Toro",
+   "team": "UAE Team Emirates-XRG",
+   "nat": "MX",
+   "gap": "+3:27"
   },
   {
-   "rank": 7,
+   "rank": 4,
    "rider": "Remco Evenepoel",
    "team": "Red Bull-Bora-Hansgrohe",
    "nat": "BE",
-   "gap": "+8:16"
+   "gap": "+3:30"
   },
   {
-   "rank": 8,
-   "rider": "Isaac Del Toro",
-   "team": "UAE Team Emirates-XRG",
-   "nat": "MX",
-   "gap": "+8:17"
-  },
-  {
-   "rank": 9,
+   "rank": 5,
    "rider": "Juan Ayuso",
    "team": "Lidl-Trek",
    "nat": "ES",
-   "gap": "+8:20"
+   "gap": "+3:34"
   },
   {
-   "rank": 10,
+   "rank": 6,
    "rider": "Paul Seixas",
    "team": "Decathlon CMA CGM",
    "nat": "FR",
-   "gap": "+8:41"
+   "gap": "+3:55"
   },
   {
-   "rank": 11,
+   "rank": 7,
    "rider": "Florian Lipowitz",
    "team": "Red Bull-Bora-Hansgrohe",
    "nat": "DE",
-   "gap": "+8:46"
+   "gap": "+4:00"
   },
   {
-   "rank": 12,
+   "rank": 8,
    "rider": "Lenny Martinez",
    "team": "Bahrain Victorious",
    "nat": "FR",
-   "gap": "+9:02"
+   "gap": "+4:21"
+  },
+  {
+   "rank": 9,
+   "rider": "Mattias Skjelmose",
+   "team": "Lidl-Trek",
+   "nat": "DK",
+   "gap": "+4:57"
+  },
+  {
+   "rank": 10,
+   "rider": "Mathias Vacek",
+   "team": "Lidl-Trek",
+   "nat": "CZ",
+   "gap": "+7:10"
+  },
+  {
+   "rank": 11,
+   "rider": "Egan Bernal",
+   "team": "Netcompany INEOS",
+   "nat": "CO",
+   "gap": "+9:12"
+  },
+  {
+   "rank": 12,
+   "rider": "Sean Quinn",
+   "team": "EF Education-EasyPost",
+   "nat": "US",
+   "gap": "+9:35"
   },
   {
    "rank": 13,
    "rider": "Tobias Halland Johannessen",
    "team": "Uno-X Mobility",
    "nat": "NO",
-   "gap": "+9:04"
+   "gap": "+9:42"
   },
   {
    "rank": 14,
    "rider": "Ilan Van Wilder",
    "team": "Soudal-QuickStep",
    "nat": "BE",
-   "gap": "+9:10"
+   "gap": "+9:45"
   },
   {
    "rank": 15,
    "rider": "Tom Pidcock",
    "team": "Pinarello-Q36.5",
    "nat": "GB",
-   "gap": "+9:15"
+   "gap": "+9:50"
   },
   {
    "rank": 16,
    "rider": "Richard Carapaz",
    "team": "EF Education-EasyPost",
    "nat": "EC",
-   "gap": "+9:38"
+   "gap": "+10:46"
   },
   {
    "rank": 17,
-   "rider": "Mattias Skjelmose",
-   "team": "Lidl-Trek",
-   "nat": "DK",
-   "gap": "+9:43"
-  },
-  {
-   "rank": 18,
    "rider": "Davide Piganzoli",
    "team": "Visma-Lease a Bike",
    "nat": "IT",
-   "gap": "+10:08"
+   "gap": "+10:46"
   },
   {
-   "rank": 19,
-   "rider": "Thymen Arensman",
-   "team": "Netcompany INEOS",
-   "nat": "NL",
-   "gap": "+10:12"
-  },
-  {
-   "rank": 20,
+   "rank": 18,
    "rider": "Lennert Van Eetvelt",
    "team": "Lotto-Intermarché",
    "nat": "BE",
-   "gap": "+10:13"
+   "gap": "+10:51"
   },
   {
-   "rank": 21,
+   "rank": 19,
    "rider": "Jordan Jegat",
    "team": "TotalEnergies",
    "nat": "FR",
-   "gap": "+10:21"
+   "gap": "+10:56"
   },
   {
-   "rank": 22,
-   "rider": "Sergio Higuita",
-   "team": "XDS Astana",
-   "nat": "CO",
-   "gap": "+11:16"
-  },
-  {
-   "rank": 23,
-   "rider": "Cian Uijtdebroeks",
-   "team": "Movistar Team",
+   "rank": 20,
+   "rider": "Ramses Debruyne",
+   "team": "Alpecin-Premier Tech",
    "nat": "BE",
-   "gap": "+11:17"
+   "gap": "+11:26"
   },
   {
-   "rank": 24,
-   "rider": "Raúl García Pierna",
-   "team": "Movistar Team",
-   "nat": "ES",
-   "gap": "+11:34"
-  },
-  {
-   "rank": 25,
+   "rank": 21,
    "rider": "Yannis Voisard",
    "team": "Tudor Pro Cycling",
    "nat": "CH",
-   "gap": "+11:43"
+   "gap": "+12:21"
   },
   {
-   "rank": 26,
-   "rider": "Egan Bernal",
-   "team": "Netcompany INEOS",
-   "nat": "CO",
-   "gap": "+12:08"
-  },
-  {
-   "rank": 27,
-   "rider": "José Félix Parra",
-   "team": "Caja Rural-Seguros RGA",
-   "nat": "ES",
-   "gap": "+12:14"
-  },
-  {
-   "rank": 28,
+   "rank": 22,
    "rider": "Harold Tejada",
    "team": "XDS Astana",
    "nat": "CO",
-   "gap": "+12:31"
+   "gap": "+13:06"
   },
   {
-   "rank": 29,
+   "rank": 23,
    "rider": "Pablo Castrillo",
    "team": "Movistar Team",
    "nat": "ES",
-   "gap": "+12:44"
+   "gap": "+13:22"
+  },
+  {
+   "rank": 24,
+   "rider": "Sepp Kuss",
+   "team": "Visma-Lease a Bike",
+   "nat": "US",
+   "gap": "+13:33"
+  },
+  {
+   "rank": 25,
+   "rider": "Adam Yates",
+   "team": "UAE Team Emirates-XRG",
+   "nat": "GB",
+   "gap": "+14:31"
+  },
+  {
+   "rank": 26,
+   "rider": "Brandon McNulty",
+   "team": "UAE Team Emirates-XRG",
+   "nat": "US",
+   "gap": "+18:26"
+  },
+  {
+   "rank": 27,
+   "rider": "Thymen Arensman",
+   "team": "Netcompany INEOS",
+   "nat": "NL",
+   "gap": "+19:19"
+  },
+  {
+   "rank": 28,
+   "rider": "Torstein Træen",
+   "team": "Uno-X Mobility",
+   "nat": "NO",
+   "gap": "+22:12"
+  },
+  {
+   "rank": 29,
+   "rider": "Sergio Higuita",
+   "team": "XDS Astana",
+   "nat": "CO",
+   "gap": "+24:32"
   },
   {
    "rank": 30,
-   "rider": "Ion Izagirre",
-   "team": "Cofidis",
-   "nat": "ES",
-   "gap": "+13:28"
+   "rider": "Tiesj Benoot",
+   "team": "Decathlon CMA CGM",
+   "nat": "BE",
+   "gap": "+25:06"
   }
  ],
  "points": [
@@ -219,186 +219,186 @@
    "rank": 1,
    "rider": "Mads Pedersen",
    "team": "Lidl-Trek",
-   "pts": 143
+   "pts": 168
   },
   {
    "rank": 2,
-   "rider": "Biniam Girmay",
-   "team": "NSN Cycling Team",
-   "pts": 79
+   "rider": "Max Kanter",
+   "team": "XDS Astana",
+   "pts": 93
   },
   {
    "rank": 3,
-   "rider": "Max Kanter",
-   "team": "XDS Astana",
-   "pts": 77
+   "rider": "Biniam Girmay",
+   "team": "NSN Cycling Team",
+   "pts": 91
   },
   {
    "rank": 4,
    "rider": "Jasper Philipsen",
    "team": "Alpecin-Premier Tech",
-   "pts": 72
+   "pts": 86
   },
   {
    "rank": 5,
+   "rider": "Tadej Pogačar",
+   "team": "UAE Team Emirates-XRG",
+   "pts": 75
+  },
+  {
+   "rank": 6,
    "rider": "Olav Kooij",
    "team": "Decathlon CMA CGM",
    "pts": 70
   },
   {
-   "rank": 6,
-   "rider": "Tadej Pogačar",
-   "team": "UAE Team Emirates-XRG",
-   "pts": 55
+   "rank": 7,
+   "rider": "Jonas Vingegaard",
+   "team": "Visma-Lease a Bike",
+   "pts": 61
   },
   {
-   "rank": 7,
+   "rank": 8,
    "rider": "Tim Merlier",
    "team": "Soudal-QuickStep",
    "pts": 55
   },
   {
-   "rank": 8,
-   "rider": "Quinn Simmons",
-   "team": "Lidl-Trek",
-   "pts": 45
-  },
-  {
    "rank": 9,
-   "rider": "Jonas Vingegaard",
-   "team": "Visma-Lease a Bike",
-   "pts": 44
+   "rider": "Isaac del Toro",
+   "team": "UAE Team Emirates-XRG",
+   "pts": 54
   },
   {
    "rank": 10,
-   "rider": "Isaac Del Toro",
-   "team": "UAE Team Emirates-XRG",
-   "pts": 39
+   "rider": "Quinn Simmons",
+   "team": "Lidl-Trek",
+   "pts": 53
   }
  ],
  "kom": [
   {
    "rank": 1,
+   "rider": "Tadej Pogačar",
+   "team": "UAE Team Emirates-XRG",
+   "pts": 28
+  },
+  {
+   "rank": 2,
+   "rider": "Jonas Vingegaard",
+   "team": "Visma-Lease a Bike",
+   "pts": 19
+  },
+  {
+   "rank": 3,
+   "rider": "Lenny Martinez",
+   "team": "Bahrain Victorious",
+   "pts": 16
+  },
+  {
+   "rank": 4,
    "rider": "Alex Baudin",
    "team": "EF Education-EasyPost",
    "pts": 13
   },
   {
-   "rank": 2,
-   "rider": "Alex Molenaar",
-   "team": "Caja Rural-Seguros RGA",
+   "rank": 5,
+   "rider": "Paul Seixas",
+   "team": "Decathlon CMA CGM",
+   "pts": 12
+  },
+  {
+   "rank": 6,
+   "rider": "Valentin Paret-Peintre",
+   "team": "Soudal-QuickStep",
    "pts": 10
   },
   {
-   "rank": 3,
+   "rank": 7,
+   "rider": "Isaac del Toro",
+   "team": "UAE Team Emirates-XRG",
+   "pts": 10
+  },
+  {
+   "rank": 8,
+   "rider": "Florian Lipowitz",
+   "team": "Red Bull-Bora-Hansgrohe",
+   "pts": 10
+  },
+  {
+   "rank": 9,
    "rider": "Nicolas Prodhomme",
    "team": "Decathlon CMA CGM",
    "pts": 9
   },
   {
-   "rank": 4,
+   "rank": 10,
    "rider": "Raúl García Pierna",
    "team": "Movistar Team",
    "pts": 7
-  },
-  {
-   "rank": 5,
-   "rider": "Marco Frigo",
-   "team": "NSN Cycling Team",
-   "pts": 5
-  },
-  {
-   "rank": 6,
-   "rider": "Jan Tratnik",
-   "team": "Red Bull-Bora-Hansgrohe",
-   "pts": 5
-  },
-  {
-   "rank": 7,
-   "rider": "Brandon McNulty",
-   "team": "UAE Team Emirates-XRG",
-   "pts": 4
-  },
-  {
-   "rank": 8,
-   "rider": "Vlad Van Mechelen",
-   "team": "Bahrain Victorious",
-   "pts": 4
-  },
-  {
-   "rank": 9,
-   "rider": "Tadej Pogačar",
-   "team": "UAE Team Emirates-XRG",
-   "pts": 3
-  },
-  {
-   "rank": 10,
-   "rider": "Mathias Vacek",
-   "team": "Lidl-Trek",
-   "pts": 3
   }
  ],
  "youth": [
   {
    "rank": 1,
-   "rider": "Mathias Vacek",
-   "team": "Lidl-Trek",
+   "rider": "Isaac del Toro",
+   "team": "UAE Team Emirates-XRG",
    "gap": "",
-   "time": "16:35:57"
+   "time": "21:15:24"
   },
   {
    "rank": 2,
-   "rider": "Ramses Debruyne",
-   "team": "Alpecin-Premier Tech",
-   "gap": "+4:16"
+   "rider": "Juan Ayuso",
+   "team": "Lidl-Trek",
+   "gap": "+0:07"
   },
   {
    "rank": 3,
-   "rider": "Isaac Del Toro",
-   "team": "UAE Team Emirates-XRG",
-   "gap": "+4:27"
+   "rider": "Paul Seixas",
+   "team": "Decathlon CMA CGM",
+   "gap": "+0:28"
   },
   {
    "rank": 4,
-   "rider": "Juan Ayuso",
-   "team": "Lidl-Trek",
-   "gap": "+4:30"
+   "rider": "Lenny Martinez",
+   "team": "Bahrain Victorious",
+   "gap": "+0:54"
   },
   {
    "rank": 5,
-   "rider": "Paul Seixas",
-   "team": "Decathlon CMA CGM",
-   "gap": "+4:51"
+   "rider": "Mathias Vacek",
+   "team": "Lidl-Trek",
+   "gap": "+3:43"
   },
   {
    "rank": 6,
-   "rider": "Lenny Martinez",
-   "team": "Bahrain Victorious",
-   "gap": "+5:12"
+   "rider": "Davide Piganzoli",
+   "team": "Visma-Lease a Bike",
+   "gap": "+7:19"
   },
   {
    "rank": 7,
-   "rider": "Davide Piganzoli",
-   "team": "Visma-Lease a Bike",
-   "gap": "+6:18"
+   "rider": "Lennert Van Eetvelt",
+   "team": "Lotto-Intermarché",
+   "gap": "+7:24"
   },
   {
    "rank": 8,
-   "rider": "Lennert Van Eetvelt",
-   "team": "Lotto-Intermarché",
-   "gap": "+6:23"
+   "rider": "Ramses Debruyne",
+   "team": "Alpecin-Premier Tech",
+   "gap": "+7:59"
   },
   {
    "rank": 9,
-   "rider": "Cian Uijtdebroeks",
+   "rider": "Pablo Castrillo",
    "team": "Movistar Team",
-   "gap": "+7:27"
+   "gap": "+9:57"
   },
   {
    "rank": 10,
-   "rider": "Raúl García Pierna",
-   "team": "Movistar Team",
-   "gap": "+7:44"
+   "rider": "Antonio Tiberi",
+   "team": "Bahrain Victorious",
+   "gap": "+23:36"
   }
  ],
  "teams": [
@@ -406,52 +406,52 @@
    "rank": 1,
    "team": "Lidl-Trek",
    "gap": "",
-   "time": "49:32:02"
+   "time": "63:25:20"
   },
   {
    "rank": 2,
    "team": "Red Bull-Bora-Hansgrohe",
-   "gap": "+19:26"
+   "gap": "+27:01"
   },
   {
    "rank": 3,
-   "team": "EF Education-EasyPost",
-   "gap": "+23:59"
+   "team": "UAE Team Emirates-XRG",
+   "gap": "+27:08"
   },
   {
    "rank": 4,
-   "team": "Movistar Team",
-   "gap": "+26:19"
+   "team": "Visma-Lease a Bike",
+   "gap": "+36:22"
   },
   {
    "rank": 5,
-   "team": "UAE Team Emirates-XRG",
-   "gap": "+32:47"
+   "team": "EF Education-EasyPost",
+   "gap": "+58:43"
   },
   {
    "rank": 6,
-   "team": "Netcompany INEOS",
-   "gap": "+33:21"
+   "team": "Decathlon CMA CGM",
+   "gap": "+1:01:19"
   },
   {
    "rank": 7,
-   "team": "Uno-X Mobility",
-   "gap": "+34:37"
+   "team": "Netcompany INEOS",
+   "gap": "+1:04:01"
   },
   {
    "rank": 8,
-   "team": "Visma-Lease a Bike",
-   "gap": "+39:14"
+   "team": "Movistar Team",
+   "gap": "+1:19:19"
   },
   {
    "rank": 9,
-   "team": "Decathlon CMA CGM",
-   "gap": "+41:39"
+   "team": "Pinarello-Q36.5",
+   "gap": "+1:19:40"
   },
   {
    "rank": 10,
-   "team": "TotalEnergies",
-   "gap": "+48:02"
+   "team": "Uno-X Mobility",
+   "gap": "+1:25:51"
   }
  ],
  "abandons": [
@@ -472,6 +472,36 @@
    "team": "Team Jayco-AlUla",
    "stage": 4,
    "reason": "OTL – i mål utanför tidsgränsen efter att ha lidit i hettan"
+  },
+  {
+   "rider": "Alex Molenaar",
+   "team": "Caja Rural-Seguros RGA",
+   "stage": 6,
+   "reason": "DNS – fraktur på höger mellanhandsben efter massvälten i Pau på etapp 5, klarade covid-/hjärnskakningsprotokoll men kunde inte ställa upp på etapp 6"
+  },
+  {
+   "rider": "Cian Uijtdebroeks",
+   "team": "Movistar Team",
+   "stage": 6,
+   "reason": "DNF – klev av på Col du Tourmalet efter dagar med mag- och febersjukdom"
+  },
+  {
+   "rider": "Arvid de Kleijn",
+   "team": "Tudor Pro Cycling",
+   "stage": 6,
+   "reason": "DNF – klev av tidigt på etappen, hade dragits med muskelbristningar sedan lagtempot på etapp 1"
+  },
+  {
+   "rider": "Bert Van Lerberghe",
+   "team": "Soudal-QuickStep",
+   "stage": 6,
+   "reason": "DNF – klev av under etappen, ett bakslag för Tim Merliers spurttåg"
+  },
+  {
+   "rider": "Torstein Træen",
+   "team": "Uno-X Mobility",
+   "stage": 7,
+   "reason": "DNS – fullföljde etapp 6 (51:a, +29:55) men bryter inför etapp 7 efter krasch i utförsbacken från Tourmalet: hjärnskakning och flera revbensfrakturer. Han tappade därmed även den gula tröjan han burit sedan etapp 4."
   }
  ],
  "combativity": [
@@ -499,6 +529,11 @@
    "stage": 5,
    "rider": "Baptiste Veistroffer",
    "team": "Lotto-Intermarché"
+  },
+  {
+   "stage": 6,
+   "rider": "Tadej Pogačar",
+   "team": "UAE Team Emirates-XRG"
   }
  ]
 }

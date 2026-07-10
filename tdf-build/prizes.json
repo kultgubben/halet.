@@ -926,6 +926,199 @@
     }
    ],
    "note": "Kooij tog maximala 70 poäng i mål (letour.fr:s officiella flackskala: 70-50-40-35-30-26-24-22-20-18-16-14-12-10-8-6-4-2; plats 16-18 Bittner 6, Gaviria 4, Bauhaus 2). Pedersen försvarade grönt med 16 p på mellanspurten och 24 p i mål – nu 143 mot Girmays 79. Veistroffer dammsög utbrytarpoängen: 25 vid spurten och 2 på Baleix."
+  },
+  {
+   "n": 6,
+   "sprint": {
+    "name": "Pouzac (km 59.1 / 127 km from finish)",
+    "top": [
+     {
+      "rider": "Mads Pedersen",
+      "pts": 25
+     },
+     {
+      "rider": "Victor Campenaerts",
+      "pts": 20
+     },
+     {
+      "rider": "Max Kanter",
+      "pts": 16
+     },
+     {
+      "rider": "Jasper Philipsen",
+      "pts": 14
+     },
+     {
+      "rider": "Biniam Girmay",
+      "pts": 12
+     }
+    ],
+    "note": "Pedersen och Campenaerts (kvar av morgonens utbrytning sedan Lotto-ryttaren Huub Artz tillrättavisats för farlig styrposition och släppts tillbaka) tog de två första niporna, sedan spurtade klungan om resten med Kanter före Philipsen och Girmay."
+   },
+   "climbs": [
+    {
+     "name": "Col d'Aspin (12 km, 6.5%, 1.cat)",
+     "cat": 1,
+     "top": [
+      {
+       "rider": "Lenny Martinez",
+       "pts": 10
+      },
+      {
+       "rider": "Valentin Paret-Peintre",
+       "pts": 8
+      },
+      {
+       "rider": "Tim Wellens",
+       "pts": 6
+      },
+      {
+       "rider": "Nils Politt",
+       "pts": 4
+      },
+      {
+       "rider": "Ben O'Connor",
+       "pts": 2
+      },
+      {
+       "rider": "Victor Campenaerts",
+       "pts": 1
+      }
+     ],
+     "note": "Martinez slog Paret-Peintre med en cykellängd i toppspurten och tog max poäng."
+    },
+    {
+     "name": "Col du Tourmalet (17.1 km, 7.3%, hors catégorie)",
+     "cat": "HC",
+     "top": [
+      {
+       "rider": "Tadej Pogačar",
+       "pts": 20
+      },
+      {
+       "rider": "Jonas Vingegaard",
+       "pts": 15
+      },
+      {
+       "rider": "Paul Seixas",
+       "pts": 12
+      },
+      {
+       "rider": "Florian Lipowitz",
+       "pts": 10
+      },
+      {
+       "rider": "Isaac del Toro",
+       "pts": 8
+      },
+      {
+       "rider": "Lenny Martinez",
+       "pts": 6
+      }
+     ],
+     "note": "Souvenir Jacques Goddet (25 000 kr / 5000 euro) till Pogačar som attackerade 4-5 km från krönet med hjälp av del Toro; Vingegaard följde ca 30 sekunder efter. Klassad hors catégorie, inte 1.cat som antaget i förhandstipset."
+    },
+    {
+     "name": "Gavarnie-Gèdre (mål, 18.7 km, 3.7%, 2.cat)",
+     "cat": 2,
+     "top": [
+      {
+       "rider": "Tadej Pogačar",
+       "pts": 5
+      },
+      {
+       "rider": "Jonas Vingegaard",
+       "pts": 3
+      },
+      {
+       "rider": "Isaac del Toro",
+       "pts": 2
+      },
+      {
+       "rider": "Remco Evenepoel",
+       "pts": 1
+      }
+     ],
+     "note": "Den långa, flacka slutstigningen är klassad som 2:a kategorin (18,7 km @ 3,7%) trots sin blygsamma lutning – ren längdklassning, historiskt mål för första gången på Touren."
+    }
+   ],
+   "finishPoints": [
+    {
+     "rider": "Tadej Pogačar",
+     "pts": 20
+    },
+    {
+     "rider": "Jonas Vingegaard",
+     "pts": 17
+    },
+    {
+     "rider": "Isaac del Toro",
+     "pts": 15
+    },
+    {
+     "rider": "Remco Evenepoel",
+     "pts": 13
+    },
+    {
+     "rider": "Paul Seixas",
+     "pts": 11
+    },
+    {
+     "rider": "Florian Lipowitz",
+     "pts": 10
+    },
+    {
+     "rider": "Juan Ayuso",
+     "pts": 9
+    },
+    {
+     "rider": "Mattias Skjelmose",
+     "pts": 8
+    },
+    {
+     "rider": "Lenny Martinez",
+     "pts": 7
+    },
+    {
+     "rider": "Sepp Kuss",
+     "pts": 6
+    },
+    {
+     "rider": "Egan Bernal",
+     "pts": 5
+    },
+    {
+     "rider": "Jordan Jegat",
+     "pts": 4
+    },
+    {
+     "rider": "Harold Tejada",
+     "pts": 3
+    },
+    {
+     "rider": "Ilan Van Wilder",
+     "pts": 2
+    },
+    {
+     "rider": "Tom Pidcock",
+     "pts": 1
+    }
+   ],
+   "bonus": [
+    {
+     "rider": "Tadej Pogačar",
+     "sec": 10
+    },
+    {
+     "rider": "Jonas Vingegaard",
+     "sec": 6
+    },
+    {
+     "rider": "Isaac del Toro",
+     "sec": 4
+    }
+   ],
+   "note": "Pogačar tog max överallt: etappseger (20 mål-p, letour.fr:s bergsskala 20-17-15-13-11-10-9-8-7-6-5-4-3-2-1), Souvenir Jacques Goddet över Tourmalet (20 p, hors catégorie-skala 20-15-12-10-8-6-4-2) och toppen av 2.kat-målstigningen (5 p, skala 5-3-2-1) – därav språnget från 9:a till ledare i bergströjan (3 till 28 p). Grönt försvarades av Pedersen (143→168, enbart mellanspurtens 25 p eftersom han inte var i närheten av poänggivande placeringar i mål på en bergsetapp). Bonussekunderna (10-6-4) förklarar exakt Vingegaards språng från etappunderläge 2:38 till 2:42 i totalställningen (de låg exakt lika, +7:53, före etappen); del Toros GC-lucka på 3:27 inkluderar även hans lilla marginal till Pogačar sedan tidigare etapper utöver dagens 2:57 och bonusarna."
   }
  ]
 }
